@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.github.stellarcn.firefly" version="2.1.10" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>firefly</name>
+<widget id="com.ety001.idol.idol" version="2.1.10" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>IDOL</name>
     <description>
         stellar wallet
     </description>
@@ -62,10 +62,8 @@
     <chcp>
         <auto-download enabled="false" />
         <auto-install enabled="false" />
-        <config-file url="https://update.fchain.io/v2/chcp.json" />
+        <config-file url="https://7f839f48.ngrok.io/chcp.json" />
     </chcp>
-    <engine name="ios" spec="^4.5.5" />
-    <engine name="android" spec="^7.1.0" />
     <plugin name="cordova-plugin-device" spec="^1.1.7" />
     <plugin name="cordova-plugin-whitelist" spec="^1" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.1.0" />
@@ -83,4 +81,7 @@
     <plugin name="firefly-cordova-plugin-themeablebrowser" spec="^0.3.1" />
     <plugin name="firefly-cordova-plugin-qrscanner" spec="^2.5.2" />
     <plugin name="cordova-plugin-add-swift-support" spec="^1.7.2" />
+    <engine name="ios" spec="^4.5.5" />
+    <engine name="android" spec="^7.1.0" />
+    <engine name="browser" spec="^5.0.4" />
 </widget>

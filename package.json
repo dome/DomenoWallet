@@ -33,6 +33,7 @@
     "bip39": "^2.4.0",
     "cordova": "^8.0.0",
     "cordova-android": "^7.1.0",
+    "cordova-browser": "^5.0.4",
     "cordova-clipboard": "^1.1.1",
     "cordova-hot-code-push-plugin": "^1.5.3",
     "cordova-ios": "^4.5.5",
@@ -174,7 +175,8 @@
     },
     "platforms": [
       "ios",
-      "android"
+      "android",
+      "browser"
     ]
   }
 }
