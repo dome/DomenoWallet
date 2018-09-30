@@ -1,43 +1,50 @@
 <template>
   <div>
     <tool-bar :title="$t(title)"
-              :showmenuicon="false"
-              :showbackicon="true"
-              @goback="back">
+              :showmenuicon="true"
+              :showbackicon="false"
+              >
+      <v-btn icon @click.native="showAccounts" slot="left-tool">
+        <i class="material-icons font28">menu</i>
+      </v-btn>
       <v-btn icon slot="right-tool" @click="readAll">
         <i class="material-icons font28">done_all</i>
       </v-btn>
-      
+
 
     </tool-bar>
-      <ul class="content">
-        <li v-for="(item ,index) in messages" class="item" @click="goToDetils(item)" :key="index">
-          <div :class="'item-title' + (reads.indexOf(item.link) === -1  ? '':' read')"> 
-            {{item.title }}
-          </div>
-          <div class="item-time">
-             {{ item.date }}
-          </div>
-          <span class="circular" v-if="reads.indexOf(item.link) === -1 "></span>
-        </li>
-      </ul>
+    <accounts-nav :show="showaccountsview" @close="closeView"/>
+    <ul class="content">
+      <li v-for="(item ,index) in messages" class="item" @click="goToDetils(item)" :key="index">
+        <div :class="'item-title' + (reads.indexOf(item.link) === -1  ? '':' read')">
+          {{item.title }}
+        </div>
+        <div class="item-time">
+           {{ item.date }}
+        </div>
+        <span class="circular" v-if="reads.indexOf(item.link) === -1 "></span>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
   import ToolBar from "@/components/Toolbar"
   import Scroll from "@/components/Scroll"
+  import AccountsNav from '@/components/AccountsNav'
   import {mapActions,mapState ,mapGetters} from "vuex"
     export default {
         name: "message-center",
       data(){
           return{
+            showaccountsview: false,
             title: 'MessageCenter',
           }
       },
       components:{
         ToolBar,
-        Scroll
+        Scroll,
+        AccountsNav
       },
       methods:{
         ...mapActions([
@@ -55,9 +62,15 @@
         readAll(){
           this.readAllMsg()
           this.$toasted.show(this.$t('ReadAllMsg'))
-        }, 
-        
-        
+        },
+        showAccounts(){
+            this.showaccountsview = true
+        },
+        closeView(){
+            this.showaccountsview = false
+        },
+
+
       },
       computed:{
         ...mapGetters([
@@ -86,7 +99,7 @@
           white-space: nowrap
           overflow hidden
           &.read
-            color: $secondarycolor.font  
+            color: $secondarycolor.font
 
         .item-time
           font-size: .35rem
@@ -104,6 +117,6 @@
           height .2rem
           background: $primarycolor.red
           border-radius .2rem
-          right .1rem 
+          right .1rem
           top .1rem
 </style>

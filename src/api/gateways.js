@@ -11,7 +11,8 @@ export const APP_VERSION = pkg.version
 
 export const APP_GITHUB = pkg.github
 
-export const OFFICIAL_SITE = 'https://fchain.io'
+export const OFFICIAL_SITE = 'https://www.idol.network'
+// export const OFFICIAL_SITE = 'https://fchain.io'
 
 // APP 最新版本信息
 export const CHECK_UPDATE = 'https://raw.githubusercontent.com/StellarCN/firefly/master/package.json'
@@ -81,7 +82,7 @@ export const NO_FUNDINS = ['XCN-GCNY5OXYSY4FKHOPT2SPOQZAOEIGXB5LBYW3HVU3OWSTQITS
 
 export const BASE_RESERVE = 0.5
 
-//fee 100stroops 
+//fee 100stroops
 export const BASE_FEE = 0.00001
 
 // 默认axios超时时间
@@ -89,7 +90,8 @@ export const AXIOS_DEFAULT_TIMEOUT = 5000
 
 let _default_trade_pair = undefined
 // 默认交易对从fchain获取
-const API_TRADE_PAIR = `https://api.fchain.io/tradepairs`
+const API_TRADE_PAIR = `https://www.easy-mock.com/mock/5bafd8bbf4f19a3b9565b8ab/idol/tradepairs`
+// const API_TRADE_PAIR = `https://api.fchain.io/tradepairs`
 export function defaultTradePairsAPI(){
   let t = new Date().getTime()
   axios.get(API_TRADE_PAIR+'?r='+t,{
@@ -176,7 +178,7 @@ export const COINS_ICON = {
   HKDT: 'icon-hkdt',
   XCN: 'icon-XCN',
   WICC: 'icon-WICC'
-  
+
 }
 
 export const FF_ICON = 'icon-zhanwei'
@@ -249,7 +251,7 @@ export function initFundConfig(callback){
   let r = new Date().getTime()
   let url = null
   if(DEBUG){
-    url = `${fund_config_url_debug}?r=${r}` 
+    url = `${fund_config_url_debug}?r=${r}`
   }else{
     url = `${fund_config_url}?r=${r}`
   }
@@ -273,7 +275,7 @@ export function fetchFundConfig(){
   let r = new Date().getTime()
   let url = null
   if(DEBUG){
-    url = `${fund_config_url_debug}?r=${r}` 
+    url = `${fund_config_url_debug}?r=${r}`
   }else{
     url = `${fund_config_url}?r=${r}`
   }
@@ -308,8 +310,8 @@ export function fetchSysDApps(){
       reject(response.error)
     })
   })
-  
-  
+
+
 
     // .then(response=>{
     //   return Promise.resolve(response.data)

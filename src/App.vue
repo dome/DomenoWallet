@@ -27,7 +27,7 @@
         </div>
       </div>
     </v-dialog>
-   
+
 
 
   </v-app>
@@ -64,7 +64,7 @@ export default {
       devicelang: null,
       showFuzzyView: false,
       tabBarShow: false,
-      tabBarItems: ['MyAssets', 'TradeCenter', 'Apps', 'My'],
+      tabBarItems: ['MyAssets', 'TradeCenter', 'MessageCenter', 'My'],
 
       messagesInterval: null,
       updateConfirmDlg: false,
@@ -86,7 +86,7 @@ export default {
     showTabbar(value){
       // console.log('-------------2:'+value)
       this.tabBarShow = value
-    }    
+    }
   },
   computed: {
     ...mapState({
@@ -171,7 +171,7 @@ export default {
             if (this.address) {
               //this.getAccountInfo(this.address)
               //closeStreams();
-              
+
               // initStreams(this.address);
               this.getAllAssetHosts();
             }
@@ -239,7 +239,7 @@ export default {
     //每小时执行一次
     this.messagesInterval = setInterval(()=>{
       this.getMessages()
-    }, 3600000)    
+    }, 3600000)
   },
   destroyed() {
       clearInterval(this.messagesInterval)
@@ -420,7 +420,7 @@ export default {
   font-size: 16px
 
 .upDlg
-  z-index: 999  
+  z-index: 999
 
 @css {
   html{

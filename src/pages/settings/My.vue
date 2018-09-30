@@ -69,7 +69,7 @@ export default {
     data(){
         return {
             showaccountsview: false,
-            menus: [               
+            menus: [
                 {
                     title: "ManageAccount",
                     name: "ManageAccount",
@@ -85,16 +85,16 @@ export default {
                     name: "MyAddress",
                     icon: "bookmark"
                 },
-                {
-                    title: 'kyc',
-                    name: 'KYC',
-                    icon: "security"
-                },
-                 {
-                    title: "Menu.Funding",
-                    name: "Funding",
-                    icon: "import_export"
-                },
+                // {
+                //     title: 'kyc',
+                //     name: 'KYC',
+                //     icon: "security"
+                // },
+                //  {
+                //     title: "Menu.Funding",
+                //     name: "Funding",
+                //     icon: "import_export"
+                // },
                 {
                     title: "Menu.Settings",
                     name: "Settings",
@@ -105,21 +105,21 @@ export default {
                 //     name: "Apps",
                 //     icon: "apps"
                 // },
-                {
-                    title: "Menu.Help",
-                    name: "Help",
-                    icon: "help"
-                },
-                {
-                title: "Menu.MessageCenter",
-                name: "MessageCenter",
-                icon: "message"
-              },   
-               {
-                title: "tickets",
-                name: "Tickets",
-                icon: "assignment"
-              }
+                // {
+                //     title: "Menu.Help",
+                //     name: "Help",
+                //     icon: "help"
+                // },
+              //   {
+              //   title: "Menu.MessageCenter",
+              //   name: "MessageCenter",
+              //   icon: "message"
+              // },
+              //  {
+              //   title: "tickets",
+              //   name: "Tickets",
+              //   icon: "assignment"
+              // }
             ],
             myofferpage:{ name: 'History', params: { active: 'offer' } },
             historypage:{ name: 'History', params: { active: 'transaction' } }

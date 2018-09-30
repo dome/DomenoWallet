@@ -2,10 +2,10 @@
 <!-- <v-card class="menu-card"> -->
   <div class="tabbar-wrapper">
     <v-bottom-nav :value="true" :active.sync="active" color="dark" class="tb-menu" app fixed>
-        <v-btn flat v-for="(item,index) in menus" :key="index" :value="index" @click="redirect(index,item.name)"> 
+        <v-btn flat v-for="(item,index) in menus" :key="index" :value="index" @click="redirect(index,item.name)">
           <span>{{$t(item.title)}}</span>
           <v-icon>{{item.icon}}</v-icon>
-          <div  v-if="index!==active && index===3 && unReadCount !==0 "  class="unread-wrapper"></div>
+          <div  v-if="index!==active && index===2 && unReadCount !==0 "  class="unread-wrapper"></div>
         </v-btn>
     </v-bottom-nav>
     <!-- <div class="bottom-safe-area"></div> -->
@@ -32,10 +32,10 @@ export default {
           icon: "trending_up"
         },
         {
-          title: "Title.ThirdApp",
-          name: "Apps",
-          path: "/apps/all",
-          icon: "apps"
+          title: "Menu.MessageCenter",
+          name: "MessageCenter",
+          path: "/account/message",
+          icon: "message"
         },
         // {
         //   title: "Menu.Funding",
@@ -53,7 +53,7 @@ export default {
       active: -1
     };
   },
-  
+
   watch: {
     '$route'(to,from){
       let names = this.menus.map(item=> item.name)
@@ -61,7 +61,7 @@ export default {
       if(i >= 0){
         this.active = i
       }
-    }    
+    }
   },
   beforeMount() {
     let name = this.$route.name;
@@ -114,7 +114,7 @@ export default {
   width: 10px
   height: 10px
   border-radius: 5px
-  background: $primarycolor.red 
+  background: $primarycolor.red
   right: 20px
   top:5px
   position: absolute

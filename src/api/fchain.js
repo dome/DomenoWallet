@@ -21,10 +21,10 @@ export function getAssetPrice(assets){
   return axios.get(uri)
 }
 
-/** 
+/**
  * 查询充值提现记录
  * curl -X GET --header 'Accept: application/json' 'http://127.0.0.1:5000/api/dwrecords?account=GBIZJJMFITQLABS4OUBD6CCN6SXIOYX6456K6EXWZYFT3523AZPJWAPU&asset_code=XCN&asset_issuer=GCNY5OXYSY4FKHOPT2SPOQZAOEIGXB5LBYW3HVU3OWSTQITS65M5RCNY'
- * @param { String } account 
+ * @param { String } account
  * @param { String } asset code
  * @param { String } asset issuer
  * @return { Object } { 'deposit':[{'amount':'1','tx_id':1,'time':1}], 'withdraw': [{'amount':'1','tx_id':1,'time':1}] }
@@ -79,7 +79,8 @@ export function getAllEffectOffers(account,start_time,end_time){
   return axios.get(uri, {timeout: 60000})
 }
 
-const FCHAIN_FEED_URL = 'https://fchain.io/feed/'
+const FCHAIN_FEED_URL = 'https://www.easy-mock.com/mock/5bafd8bbf4f19a3b9565b8ab/idol/feed'
+// const FCHAIN_FEED_URL = 'https://fchain.io/feed/'
 
 export function getFchainRss(){
   return new Promise((resolve,reject) => {
@@ -93,24 +94,40 @@ export function getFchainRss(){
       url = CORS_PROXY+FCHAIN_FEED_URL
     }
     cordova.plugin.http.get(url, {},  {}, (response) => {
-      let data = response.data
-      parseString(data, (err,result)=>{
-        let channel = result.rss.channel
-        if(channel && channel.length > 0){
-          //主要字段： title（数组）,pubDate数组，link（数组）,content:encoded(数组)
-          resolve(channel[0].item.map(d=>{
-            return {
-              'title': d.title[0], 
-              'date': moment(d.pubDate[0]).format('YYYY-MM-DD HH:mm:ss'), 
-              'link': d.link[0],
-              'content': d['content:encoded'][0] 
-            }
-          }))
-        }else{
-          resolve([])
-        }
+      let data = JSON.parse(response.data)
+      console.log('1234', data)
+      let newsList = data.item
+      if(newsList && newsList.length > 0){
+        //主要字段： title（数组）,pubDate数组，link（数组）,content:encoded(数组)
+        resolve(newsList.map(d=>{
+          return {
+            'title': d.title[0],
+            'date': moment(d.pubDate[0]).format('YYYY-MM-DD HH:mm:ss'),
+            'link': d.link[0],
+            'content': d['content:encoded'][0]
+          }
+        }))
+      }else{
+        resolve([])
+      }
+      // parseString(data, (err,result)=>{
+      //   console.log('1234', JSON.stringify(result))
+      //   let channel = result.rss.channel
+      //   if(channel && channel.length > 0){
+      //     //主要字段： title（数组）,pubDate数组，link（数组）,content:encoded(数组)
+      //     resolve(channel[0].item.map(d=>{
+      //       return {
+      //         'title': d.title[0],
+      //         'date': moment(d.pubDate[0]).format('YYYY-MM-DD HH:mm:ss'),
+      //         'link': d.link[0],
+      //         'content': d['content:encoded'][0]
+      //       }
+      //     }))
+      //   }else{
+      //     resolve([])
+      //   }
 
-      })
+      // })
 
     }, (response) => {
         reject(response.error)
