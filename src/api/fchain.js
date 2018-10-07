@@ -95,7 +95,6 @@ export function getFchainRss(){
     }
     cordova.plugin.http.get(url, {},  {}, (response) => {
       let data = JSON.parse(response.data)
-      console.log('1234', data)
       let newsList = data.item
       if(newsList && newsList.length > 0){
         //主要字段： title（数组）,pubDate数组，link（数组）,content:encoded(数组)
