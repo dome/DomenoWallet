@@ -15,7 +15,8 @@ export const OFFICIAL_SITE = 'https://www.idol.network'
 // export const OFFICIAL_SITE = 'https://fchain.io'
 
 // APP 最新版本信息
-export const CHECK_UPDATE = 'https://raw.githubusercontent.com/StellarCN/firefly/master/package.json'
+// export const CHECK_UPDATE = 'https://raw.githubusercontent.com/StellarCN/firefly/master/package.json'
+export const CHECK_UPDATE = 'https://raw.githubusercontent.com/ety001/firefly/master/package.json'
 //资产说明
 export const ASSET_INFO_BASE_URL = 'https://raw.githubusercontent.com/StellarCN/firefly/docs/assets/'
 
