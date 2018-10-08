@@ -34,15 +34,74 @@ export const INFLATION_POOL = [
 
 
 //默认交易对
-export const TRADE_PAIRS = [  {
-    from: {      code: 'XLM'   },
-    to: {      code: 'XCN',      issuer: 'GCNY5OXYSY4FKHOPT2SPOQZAOEIGXB5LBYW3HVU3OWSTQITS65M5RCNY' }
-  },  {    from: {      code: 'XLM'    },
-    to: {      code: 'BTC',      issuer: 'GATEMHCCKCY67ZUCKTROYN24ZYT5GK4EQZ65JJLDHKHRUZI3EUEKMTCH'}
-  },  {    from: {      code: 'XLM'    },
-    to: {      code: 'ETH',
-      issuer: 'GBETHKBL5TCUTQ3JPDIYOZ5RDARTMHMEKIO2QZQ7IOZ4YC5XV3C2IKYU'
-    }  }
+export const TRADE_PAIRS = [
+  {
+    "to": {
+      "code": "XCN",
+      "issuer": "GCNY5OXYSY4FKHOPT2SPOQZAOEIGXB5LBYW3HVU3OWSTQITS65M5RCNY"
+    },
+    "from": {
+      "code": "IDOL",
+      "issuer": "GCHMWSKQV6PFLI5NHQKJDR7P52SEM4Z6X4RGW7PMVDUBCFSSESTJ4J2L"
+    }
+  },
+  {
+    "to": {
+      "code": "XLM"
+    },
+    "from": {
+      "code": "IDOL",
+      "issuer": "GCHMWSKQV6PFLI5NHQKJDR7P52SEM4Z6X4RGW7PMVDUBCFSSESTJ4J2L"
+    }
+  },
+  {
+    "to": {
+      "code": "XLM"
+    },
+    "from": {
+      "code": "XYG",
+      "issuer": "GCCVQB3LQ6AH7AHV7DO5BUMB2H4KGG5274SLI3DE6HW5YHNU3QRLFEEJ"
+    }
+  },
+  {
+    "to": {
+      "code": "XCN",
+      "issuer": "GCNY5OXYSY4FKHOPT2SPOQZAOEIGXB5LBYW3HVU3OWSTQITS65M5RCNY"
+    },
+    "from": {
+      "code": "XYG",
+      "issuer": "GCCVQB3LQ6AH7AHV7DO5BUMB2H4KGG5274SLI3DE6HW5YHNU3QRLFEEJ"
+    }
+  },
+  {
+    "to": {
+      "code": "XCN",
+      "issuer": "GCNY5OXYSY4FKHOPT2SPOQZAOEIGXB5LBYW3HVU3OWSTQITS65M5RCNY"
+    },
+    "from": {
+      "code": "XLM"
+    }
+  },
+  {
+    "to": {
+      "code": "XCN",
+      "issuer": "GCNY5OXYSY4FKHOPT2SPOQZAOEIGXB5LBYW3HVU3OWSTQITS65M5RCNY"
+    },
+    "from": {
+      "code": "BTC",
+      "issuer": "GATEMHCCKCY67ZUCKTROYN24ZYT5GK4EQZ65JJLDHKHRUZI3EUEKMTCH"
+    }
+  },
+  {
+    "to": {
+      "code": "XCN",
+      "issuer": "GCNY5OXYSY4FKHOPT2SPOQZAOEIGXB5LBYW3HVU3OWSTQITS65M5RCNY"
+    },
+    "from": {
+      "code": "ETH",
+      "issuer": "GBETHKBL5TCUTQ3JPDIYOZ5RDARTMHMEKIO2QZQ7IOZ4YC5XV3C2IKYU"
+    }
+  }
 ]
 
 
@@ -119,7 +178,8 @@ export function defaultTradePairsAPI(){
 }
 
 export function getDefaultTradePairs(){
-  return _default_trade_pair || TRADE_PAIRS
+  // return _default_trade_pair || TRADE_PAIRS
+  return TRADE_PAIRS
 }
 
 export function getPackageJson(){
