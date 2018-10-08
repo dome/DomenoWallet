@@ -61,6 +61,9 @@ server.route({
 server.route({
   method: 'GET',
   path: '/v2/api/trade_aggregations',
+  options: {
+    cors: true
+  },
   handler: (request, h) => {
     let timeout = 5000
     if (request.query.r) {
