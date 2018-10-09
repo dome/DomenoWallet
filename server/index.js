@@ -135,18 +135,18 @@ const getTradePair = async (pointPair) => {
         tradeDicts.forEach(trade => {
           if (pair.from.isNative()) {
             if (trade.base_asset_type === 'native' && trade.counter_asset_code === pair.to.code && trade.counter_asset_issuer === pair.to.issuer) {
-              tmp['stat']['latest_price_xcn'] = trade.price.n / trade.price.d
-              tmp['stat']['latest_price'] = trade.price.n / trade.price.d
+              tmp['stat']['latest_price_xcn'] = (trade.price.n / trade.price.d).toFixed(7)
+              tmp['stat']['latest_price'] = (trade.price.n / trade.price.d).toFixed(7)
             }
           } else if (pair.to.isNative()) {
             if (trade.counter_asset_type === 'native' && trade.base_asset_code === pair.from.code && trade.base_asset_issuer === pair.from.issuer) {
-              tmp['stat']['latest_price_xcn'] = trade.price.n / trade.price.d
-              tmp['stat']['latest_price'] = trade.price.n / trade.price.d
+              tmp['stat']['latest_price_xcn'] = (trade.price.n / trade.price.d).toFixed(7)
+              tmp['stat']['latest_price'] = (trade.price.n / trade.price.d).toFixed(7)
             }
           } else {
             if (trade.counter_asset_code === pair.to.code && trade.counter_asset_issuer === pair.to.issuer && trade.base_asset_code === pair.from.code && trade.base_asset_issuer === pair.from.issuer) {
-              tmp['stat']['latest_price_xcn'] = trade.price.n / trade.price.d
-              tmp['stat']['latest_price'] = trade.price.n / trade.price.d
+              tmp['stat']['latest_price_xcn'] = (trade.price.n / trade.price.d).toFixed(7)
+              tmp['stat']['latest_price'] = (trade.price.n / trade.price.d).toFixed(7)
             }
           }
         })
