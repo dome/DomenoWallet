@@ -282,12 +282,13 @@ export function getAddressPinInfo(url){
 }
 
 
+export const DEFAULT_IDOL_TRADEPAIR_API = 'http://192.168.31.201:8877/v2/api/trade_aggregations'
 export const DEFAULT_TRADEPAIR_API = 'https://api.fchain.io/v2/api/trade_aggregations'
 
 // 查询默认的交易对和行情
 export function getDefaultSysTradePairAndStat(){
   let t = new Date().getTime()
-  return axios.get(DEFAULT_TRADEPAIR_API+'?r='+t)
+  return axios.get(DEFAULT_IDOL_TRADEPAIR_API+'?r='+t)
 }
 
 //查询某个交易对的行情

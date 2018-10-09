@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 <template>
   <div class="page">
@@ -7,7 +7,7 @@
       <v-btn icon @click.native="showAccounts" slot="left-tool">
           <i class="material-icons font28">menu</i>
       </v-btn>
-    
+
        <v-btn icon slot='right-tool' @click="pickershow()">
         <i class="material-icons font28">&#xE145;</i>
       </v-btn>
@@ -16,15 +16,15 @@
     <accounts-nav :show="showaccountsview" @close="closeView"/>
 
     <div class="content">
-      <picker @select="pairchosen" 
-              :data="items" 
+      <picker @select="pairchosen"
+              :data="items"
               :selected-index="[itemsInitOrder,itemsInitOrder]"
               ref="picker1"
-              title="" 
+              title=""
               :cancelTxt="$t('Cancel')"
               :confirmTxt="$t('Confirm')"
       ></picker>
-      
+
 
 
       <card class="trade-card" padding="0px 0px">
@@ -32,7 +32,7 @@
           <scroll :refresh="reloadTradePairs" :readLabelTxt="readLabelTxt">
 
             <v-tabs  v-model="tagIndex" class="tabs-bg-dark" hide-slider grow color="transparent">
-              <v-tab class="tab1" @click="doFilter(item)" 
+              <v-tab class="tab1" @click="doFilter(item)"
                 v-for="(item,index) in allTags" :key="index">
                   {{allTagsLabel[index]}}
               </v-tab>
@@ -52,7 +52,7 @@
                           <div class="issuer" v-else-if="assethosts[pair.from.issuer]">{{assethosts[pair.from.issuer]}}</div>
                           <div class="issuer" v-else>{{pair.from.issuer | miniaddress}}</div>
                         </div>
-                        
+
                         <div class="flex1 exchange-wrapper" v-if="pair.custom" @click="trade(index,pair)">
                           <div class="exchange">
                             <i class="icons material-icons">&#xE8D4;</i>
@@ -67,8 +67,8 @@
                       </div>
                     </v-flex>
                     <v-flex xs8 @click="trade(index,pair)">
-                      <k-line 
-                        :base="pair.from" :counter="pair.to" 
+                      <k-line
+                        :base="pair.from" :counter="pair.to"
                         :height="56" :timeout="10*index"
                         :tradepairIndex="pair.tradepairIndex"
                         :ref="'kline'+pair.tradepairIndex"
@@ -85,7 +85,7 @@
                 </li>
               </ul>
             </v-tab-item>
-            
+
             </v-tabs>
 
           </scroll>
@@ -125,13 +125,15 @@ import { getTrades } from '@/api/trade'
 var moment = require('moment')
 import {Decimal} from 'decimal.js'
 import Scroll from '@/components/Scroll'
-import { REMOVE_TRADEPAIR_KLINE_DATA } from '@/store/modules/AccountsStore' 
+import { REMOVE_TRADEPAIR_KLINE_DATA } from '@/store/modules/AccountsStore'
 import { ZH_CN } from '@/locales/index'
 
 const TAG_ALL = 'All', TAG_XCN = 'XCN', TAG_XLM = 'XLM', TAG_BTC = 'BTC', TAG_ETH = 'ETH', TAG_CUSTOM = '_CUSTOM', TAG_XFF = 'XFF'
 
-const TAGS_ZH_CN = [TAG_XCN, TAG_BTC, TAG_XLM, TAG_CUSTOM]
-const TAGS_OTHER = [TAG_BTC, TAG_XLM, TAG_XCN, TAG_CUSTOM]
+const TAGS_ZH_CN = [TAG_XCN, TAG_XLM, TAG_CUSTOM]
+// const TAGS_ZH_CN = [TAG_XCN, TAG_BTC, TAG_XLM, TAG_CUSTOM]
+const TAGS_OTHER = [TAG_XLM, TAG_XCN, TAG_CUSTOM]
+// const TAGS_OTHER = [TAG_BTC, TAG_XLM, TAG_XCN, TAG_CUSTOM]
 
 export default {
   data(){
@@ -177,10 +179,10 @@ export default {
       if(this.lastUpdateTradePairStatTime){
         return this.$t('lastUpdate')+':' + new moment(this.lastUpdateTradePairStatTime).format('YYYY-MM-DD HH:mm:ss')
       }else{
-        return 'ReleaseToRefresh'  
+        return 'ReleaseToRefresh'
       }
     },
-    
+
     pairItems(){
       let custom=[];
       let custom_ids = []
@@ -197,7 +199,7 @@ export default {
       })
 
       let syspairs = Object.assign({}, this.sysTradePairs)
-      
+
       let copypairs = {}
       for(let key  in syspairs){
         let arr=  syspairs[key]
@@ -228,7 +230,7 @@ export default {
         })
         return result
       }
-      this.tradepairs.sys.forEach((item,index)=>{        
+      this.tradepairs.sys.forEach((item,index)=>{
         if(this.filterTag === TAG_ALL || item.to.code === this.filterTag){
           result.push(Object.assign({},item,{tradepairIndex: 'sys_'+index, custom: false}))
         }
@@ -255,7 +257,7 @@ export default {
       this.balances.forEach((element,i)=>{
         let y = {'value':i,text:{'code':element.code,host:hosts[i]}}
         x.push(y)
-      })     
+      })
       return x
       // return [{values,hosts},{values,hosts}]
     },
@@ -268,7 +270,7 @@ export default {
   watch:{
   },
   beforeMount(){
-    
+
     this.initTagAndLables()
     //保存默认的交易对
     // this.saveDefaultTradePairs()
@@ -309,10 +311,12 @@ export default {
       let locale = this.app.locale
       if(locale && locale.key !== ZH_CN.key){
         this.allTags = TAGS_OTHER
-        this.allTagsLabel = [TAG_BTC, TAG_XLM, TAG_XCN, this.$t('custom')]
+        this.allTagsLabel = [TAG_XLM, TAG_XCN, this.$t('custom')]
+        // this.allTagsLabel = [TAG_BTC, TAG_XLM, TAG_XCN, this.$t('custom')]
       }else{
         this.allTags = TAGS_ZH_CN
-        this.allTagsLabel = [TAG_XCN, TAG_BTC, TAG_XLM, this.$t('custom')]
+        this.allTagsLabel = [TAG_XCN, TAG_XLM, this.$t('custom')]
+        // this.allTagsLabel = [TAG_XCN, TAG_BTC, TAG_XLM, this.$t('custom')]
       }
       this.tagIndex = 0
       this.filterTag = this.allTags[0]
@@ -382,7 +386,7 @@ export default {
       let from_issuer = this.balances[indexPair[0]].issuer
       let to_code = this.balances[indexPair[1]].code
       let to_issuer = this.balances[indexPair[1]].issuer
-      let pair =  { from: {code:from_code,issuer:from_issuer}, 
+      let pair =  { from: {code:from_code,issuer:from_issuer},
               to: { code: to_code, issuer: to_issuer}  }
       let key = from_code + (from_issuer||'stellar.org') + to_code + (to_issuer||'stellar.org')
       for (let tp of this.tradepairs.custom){
@@ -390,7 +394,7 @@ export default {
         let key2 = tp.to.code + (tp.to.issuer||'stellar.org')+tp.from.code + (tp.from.issuer||'stellar.org')
         if(key === key1 || key === key2){
           this.$toasted.error(this.$t('Error.AddTradePair.ExistPair'))
-          return 
+          return
         }
       }
       return this.addOK(pair)
@@ -507,7 +511,7 @@ export default {
     },
     delPairFromCustom(pair){
       let idf1 = isNativeAsset(pair.from) ? 'XLM' : pair.from.code+'-'+pair.from.issuer
-      let idt1 = isNativeAsset(pair.to) ? 'XLM' : pair.to.code +'-'+pair.to.issuer 
+      let idt1 = isNativeAsset(pair.to) ? 'XLM' : pair.to.code +'-'+pair.to.issuer
       let key1 = idf1 + "_" + idt1;
       let key2 = idt1 + "_" + idf1;
       let index = -1
@@ -530,7 +534,7 @@ export default {
       }
     }
 
-   
+
   },
   components: {
     Toolbar,
@@ -563,7 +567,7 @@ export default {
   .pair-wrapper
     position: relative
     z-index: 2
-    padding: 2px 2px 
+    padding: 2px 2px
     padding-bottom: 0px
     background: $secondarycolor.gray
     width: 100%
@@ -610,7 +614,7 @@ export default {
   background: $primarycolor.gray
 .tradepair-li:last-child
   border-bottom: 0px
-.operate-box 
+.operate-box
   position: absolute
   z-index: 1
   height: 100%
