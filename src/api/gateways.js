@@ -282,7 +282,7 @@ export function getAddressPinInfo(url){
 }
 
 
-export const DEFAULT_IDOL_TRADEPAIR_API = 'http://192.168.31.201:8877/v2/api/trade_aggregations'
+export const DEFAULT_IDOL_TRADEPAIR_API = 'https://bsapi.idol.network/v2/api/trade_aggregations'
 export const DEFAULT_TRADEPAIR_API = 'https://api.fchain.io/v2/api/trade_aggregations'
 
 // 查询默认的交易对和行情

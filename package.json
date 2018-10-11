@@ -32,9 +32,9 @@
     "better-scroll": "^1.4.2",
     "bip39": "^2.4.0",
     "cordova": "^8.0.0",
-    "cordova-android": "^7.1.0",
+    "cordova-android": "^6.3.0",
     "cordova-browser": "^5.0.4",
-    "cordova-clipboard": "^1.1.1",
+    "cordova-clipboard": "^1.2.1",
     "cordova-hot-code-push-plugin": "^1.5.3",
     "cordova-ios": "^4.5.5",
     "cordova-plugin-add-swift-support": "^1.7.2",
@@ -159,8 +159,10 @@
       "cordova-plugin-whitelist": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-statusbar": {},
-      "cordova-clipboard": {},
-      "cordova-plugin-camera": {},
+      "cordova-plugin-camera": {
+        "CAMERA_USAGE_DESCRIPTION": " ",
+        "PHOTOLIBRARY_USAGE_DESCRIPTION": " "
+      },
       "cordova-sqlite-storage": {},
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-globalization": {},
@@ -171,12 +173,13 @@
       "cordova-plugin-wkwebview-engine": {},
       "firefly-cordova-plugin-themeablebrowser": {},
       "firefly-cordova-plugin-qrscanner": {},
+      "cordova-clipboard": {},
       "cordova-plugin-add-swift-support": {}
     },
     "platforms": [
-      "ios",
+      "browser",
       "android",
-      "browser"
+      "ios"
     ]
   }
 }
