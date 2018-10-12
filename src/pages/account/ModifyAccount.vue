@@ -1,7 +1,7 @@
 <template>
   <div class="page">
-    <toolbar :title="$t(title)" 
-      :showmenuicon="showmenuicon" 
+    <toolbar :title="$t(title)"
+      :showmenuicon="showmenuicon"
       :showbackicon="showbackicon"
       @goback="back"
       />
@@ -16,13 +16,13 @@
               v-model="name"
               class="white-input"
               required
-            ></v-text-field>  
+            ></v-text-field>
           <v-text-field
               name="federation"
               :label="$t('FederationAddress')"
               v-model="federation"
               class="white-input"
-            ></v-text-field>  
+            ></v-text-field>
           <v-text-field
               name="inflation"
               :label="$t('InflationAddress')"
@@ -30,7 +30,7 @@
               class="white-input"
               multi-line
               rows=2
-            ></v-text-field>  
+            ></v-text-field>
           <div class="hintinfo">
             <div class="inflation">{{$t('InflationDesc')}}</div>
             <div class="inflation">
@@ -39,7 +39,7 @@
             </div>
           </div>
         </div>
-        
+
       </card>
       <div class="btn-group">
          <v-btn class="primary btn-save" primary @click.stop="save">{{$t('Save')}}</v-btn>
@@ -143,7 +143,7 @@ export default {
           console.error(err)
           this.$toasted.error(this.$t('SaveFailed'))
         })
-      
+
 
     },
     saveInflationAndFed(){
@@ -195,7 +195,7 @@ export default {
   margin-top: -20px
   .inflation
     .suggest
-      color: $primarycolor.green
+      color: $primarycolor.purple
 
 
 .btn-group

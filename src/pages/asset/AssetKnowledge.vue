@@ -1,14 +1,14 @@
 // 资产详情
 <template>
   <div class="page">
-    <toolbar :title="asset_code" 
-      :showmenuicon="showmenuicon" 
+    <toolbar :title="asset_code"
+      :showmenuicon="showmenuicon"
       :showbackicon="showbackicon"
       @goback="back"
-      :shadow=false  
+      :shadow=false
       ref="toolbar"
       >
-    </toolbar>   
+    </toolbar>
     <div class="content_all">
           <div class="content_asset_image" v-if="asset_info.image!=undefined&&asset_info.image!=null&&asset_info.image!=''">
             <span><img width="200px" height="200px" :src="asset_info.image"/></span>
@@ -25,12 +25,12 @@
             <span>{{$t("AssetDomain")}}</span><br/>
             <span class="content_contentcolor" @click="openURL(asset_info.domain)">{{asset_info.domain}}</span>
             </div>
-          
+
           <div class="content_asset_info_info" v-if="info">
             <div>{{$t("AssetSummary")}}</div>
             <div class="content_contentcolor" v-image-wrapper v-html="info"></div>
             </div>
-          
+
           <div class="is_networkerror" v-if="isNetWorkError">
                <v-alert  type="error" :value="true">
                   {{$t("NetWorkErrorMessage")}}
@@ -50,8 +50,8 @@
               <span>{{$t("AssetNotExistMessage")}}</span>
             </div>
           </div>
-      
-      </div>   
+
+      </div>
   </div>
 </template>
 
@@ -74,7 +74,7 @@ export default {
         asset_code:'',
         asset_issuer:'',
         asset_info:{},
-     
+
         showmenuicon: false,
         showbackicon: true,
         isNetWorkError:false,
@@ -101,25 +101,25 @@ export default {
       key = 'info_zh_cn'
       return this.asset_info[key]
     }
-  
+
   },
- 
+
   beforeMount(){
          this.asset_code= this.$route.params.asset_code
           this.asset_issuer = this.$route.params.asset_issuer
           var test = getAssetInfo( this.asset_code,this.asset_issuer)
           .then(response=>{
-            this.asset_info = response.data       
+            this.asset_info = response.data
           }).catch((err,response)=>{
             if(err.response && err.response.data &&err.response.status === 404 ){
               this.isNotFound =true
             }else{
-              this.isNetWorkError = true              
+              this.isNetWorkError = true
             }
           })
   },
   mounted(){
-    
+
   },
   methods: {
     ...mapActions({
@@ -133,8 +133,8 @@ export default {
     },
     openURL(url) {
       window.open(url, "_system");
-    }, 
-    
+    },
+
   },
   components: {
     Card,
@@ -142,7 +142,7 @@ export default {
     swiper,
     swiperSlide,
     Loading
-    
+
   }
 
 
@@ -158,7 +158,7 @@ export default {
   margin:10px 10px
   height:100%
   border-radius:5px
-  color:$primarycolor.green
+  color:$primarycolor.purple
 .content_asset_image
   margin-top:5px
   margin-bottom:5px
@@ -166,7 +166,7 @@ export default {
 .content_asset_code_info
   margin-top:5px
   margin-bottom:5px
-  
+
 .content_asset_issuer_info
   margin-top:5px
   margin-bottom:5px

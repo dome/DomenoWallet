@@ -1,10 +1,10 @@
 /*
  * 交易界面toolbar，可以选择交易对
- * @Author: mazhaoyong@gmail.com 
- * @Date: 2018-02-08 15:40:36 
+ * @Author: mazhaoyong@gmail.com
+ * @Date: 2018-02-08 15:40:36
  * @Last Modified by: mazhaoyong@gmail.com
  * @Last Modified time: 2018-08-20 11:36:30
- * @License MIT 
+ * @License MIT
  */
 
 
@@ -31,7 +31,7 @@
         <div class="flex1 tb-icon"><i class="icons material-icons font28">keyboard_arrow_down</i></div>
         <div class="flex1">&nbsp;</div>
       </div>
-      
+
       <v-btn icon @click="doSwitchTradePair">
         <i class="material-icons font28">swap_horiz</i>
       </v-btn>
@@ -70,7 +70,7 @@
     </div>
 
 
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -128,7 +128,7 @@ export default {
     CounterBalance(){
       return this.assetBalance(this.CounterAsset)
     },
-    
+
   },
   methods: {
     ...mapActions({
@@ -153,7 +153,7 @@ export default {
     nativeBalance(){
       let d = defaultsDeep({}, this.balances.filter(item=>isNativeAsset(item))[0])
       let t = this.native.balance - this.reserve - this.base_reserve - 0.0001
-      if(t < 0 ) t = 0 
+      if(t < 0 ) t = 0
       d.balance = Number(t.toFixed(7))
       return d;
     },
@@ -171,7 +171,7 @@ export default {
   components:{
     StatusBar,
   }
-  
+
 
 
 }
@@ -207,7 +207,7 @@ export default {
 .row100
   width: 100vw
   &.active
-    color: $primarycolor.green
+    color: $primarycolor.purple
 .tb-dlg
   position: fixed
   top: 0

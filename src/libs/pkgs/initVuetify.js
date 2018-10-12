@@ -2,12 +2,12 @@ import Vue from 'vue'
 import VApp from 'vuetify/es5/components/VApp'
 import Vuetify from 'vuetify/es5/components/Vuetify'
 import transitions from 'vuetify/es5/components/transitions'
-import VAlert from 'vuetify/es5/components/VAlert' 
-import VAvatar from 'vuetify/es5/components/VAvatar' 
-import VBadge from 'vuetify/es5/components/VBadge' 
-import  VBottomNav from 'vuetify/es5/components/VBottomNav' 
-import  VBottomSheet from 'vuetify/es5/components/VBottomSheet' 
-import  VBtn from 'vuetify/es5/components/VBtn' 
+import VAlert from 'vuetify/es5/components/VAlert'
+import VAvatar from 'vuetify/es5/components/VAvatar'
+import VBadge from 'vuetify/es5/components/VBadge'
+import  VBottomNav from 'vuetify/es5/components/VBottomNav'
+import  VBottomSheet from 'vuetify/es5/components/VBottomSheet'
+import  VBtn from 'vuetify/es5/components/VBtn'
 import  VBtnToggle from 'vuetify/es5/components/VBtnToggle'
 import  VCard from 'vuetify/es5/components/VCard'
 import  VDatePicker from 'vuetify/es5/components/VDatePicker'
@@ -32,7 +32,7 @@ import VTextField from 'vuetify/es5/components/VTextField'
 import VToolbar from 'vuetify/es5/components/VToolbar'
 import VTooltip from 'vuetify/es5/components/VTooltip'
 
-// import { Vuetify, VApp, VAlert, VAvatar, VBadge, 
+// import { Vuetify, VApp, VAlert, VAvatar, VBadge,
 //   VBottomNav, VBottomSheet, VBtn, VBtnToggle,VCard,
 //   VDatePicker,VDialog,VDivider,VFooter,VGrid,VIcon,
 //   VList,VMenu,VNavigationDrawer,VProgressCircular,
@@ -44,13 +44,13 @@ import { Ripple,Touch, ClickOutside } from 'vuetify/es5/directives'
 
 Vue.use(Vuetify, {
   components: {
-    VApp, 
-    VAlert, 
-    VAvatar, 
-    VBadge, 
-  VBottomNav, 
-  VBottomSheet, 
-  VBtn, 
+    VApp,
+    VAlert,
+    VAvatar,
+    VBadge,
+  VBottomNav,
+  VBottomSheet,
+  VBtn,
   VBtnToggle,
   VCard,
   VDatePicker,
@@ -66,7 +66,7 @@ Vue.use(Vuetify, {
     ClickOutside,
   },
   theme: {
-    primary: '#21ce90',
+    primary: '#8c5fff', // #21ce90
     error: "#f35833",
     notice: "#303034",
   }

@@ -106,7 +106,7 @@ export default {
                     this.working = false
                      this.$emit('ok')
                     // this.getAccountInfo(this.account.address).then(data=>{
-                        
+
                     //     //  this.$emit('ok')
                     // }).catch(err=>{
                     //     // this.$toasted.error(this.$t('Error.PasswordWrong'))
@@ -141,7 +141,7 @@ export default {
       line-height: 40px
       font-size: 32px
       text-align: center
-      color: $primarycolor.green
+      color: $primarycolor.purple
       padding: 10px 10px
     .label
       color: $secondarycolor.font
@@ -162,6 +162,6 @@ export default {
       line-height: 40px
       text-align: center
       font-size: 16px
-      color: $primarycolor.green
+      color: $primarycolor.purple
 
 </style>

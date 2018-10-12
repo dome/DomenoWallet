@@ -18,9 +18,9 @@
         <v-flex xs6  @click="createAccount">
           <span>{{$t('CreateAccount')}}</span>
         </v-flex>
-       </v-layout>  
-    </div>  
-  </div>  
+       </v-layout>
+    </div>
+  </div>
 </template>
 <script>
 import { mapState,mapActions} from 'vuex'
@@ -60,9 +60,9 @@ export default {
   font-size: 32px
 .create-account-page.page
   .footer
-    background: $primarycolor.green!important
+    background: $primarycolor.purple !important
 .create-account-page
-  background: $primarycolor.green
+  background: $primarycolor.purple
   color: $primarycolor.font
   padding-top: 40%
   height: 100vh

@@ -23,7 +23,7 @@ export default {
   left: 0
   right: 0
   height: 100%
-  background: $primarycolor.green
+  background: $primarycolor.purple
   text-align: center
   vertical-align:middle
   padding-top: 45%

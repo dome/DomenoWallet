@@ -1,10 +1,10 @@
 /*
  * 折线图
- * @Author: mazhaoyong@gmail.com 
- * @Date: 2018-01-26 15:59:49 
+ * @Author: mazhaoyong@gmail.com
+ * @Date: 2018-01-26 15:59:49
  * @Last Modified by: mazhaoyong@gmail.com
  * @Last Modified time: 2018-06-05 16:54:52
- * @License MIT 
+ * @License MIT
  */
 
 <template>
@@ -16,8 +16,8 @@
       <div class="flex1">
         <div class="rate">
             <div v-if="titleData.rate!==null && typeof titleData.rate!=='undefined'" :class="'rate-btn textcenter ' + (( titleData.change >=0 ^ redUpGreenDown)? 'up':'down')">
-                <span v-if="titleData.rate>0">+</span>{{titleData.rate}}%    
-            </div>    
+                <span v-if="titleData.rate>0">+</span>{{titleData.rate}}%
+            </div>
         </div>
       </div>
   </div>
@@ -28,8 +28,8 @@ import { mapState } from 'vuex'
 var moment = require('moment')
 //var echarts = require('echarts')
 import echarts from '@/libs/pkgs/initEcharts'
-import { getTradeAggregation, getTradeAggregation1min, 
-    getTradeAggregation15min, getTradeAggregation1hour, 
+import { getTradeAggregation, getTradeAggregation1min,
+    getTradeAggregation15min, getTradeAggregation1hour,
     getTradeAggregation1day, getTradeAggregation1week,
     RESOLUTION_1MIN,RESOLUTION_1HOUR,RESOLUTION_1DAY } from '@/api/tradeAggregation'
 import { getAsset,isNativeAsset } from '@/api/assets'
@@ -52,7 +52,7 @@ export default {
             //data: [],
             tinterval: null,//定时器
             lasttime: null,//上次的执行时间
-            
+
             //lastTradeAggregation:null,
             //最新的成交价格统计
             //lastTrade:null,
@@ -130,7 +130,7 @@ export default {
         // lineData(){
         //     return this.tradePairKLineData[this.tradepairIndex]
         // },
-    
+
         //7天的聚合数据
         // sevenDayTradeAggregation(){
         //     return this.lineData ? this.lineData.sevenDayTradeAggregation : null
@@ -167,13 +167,13 @@ export default {
                     })
           }
           return {}
-      },  
+      },
       cid(){
           return `${this.base.code}-${this.base.issuer}-${this.counter.code}-${this.counter.issuer}`
       }
     },
     watch: {
-      
+
     },
     beforeMount () {
         //生成随机的id
@@ -215,7 +215,7 @@ export default {
                     // this.initView()
                     // this.fetch();
                 }, this.timeout)
-            })    
+            })
         },
         //请求api，获取数据
         fetch(){
@@ -233,7 +233,7 @@ export default {
                 end_time = this.end
             }
           this.working = true
-          getTradeAggregation(getAsset(this.base), getAsset(this.counter), 
+          getTradeAggregation(getAsset(this.base), getAsset(this.counter),
                 start_time, end_time, this.resolution, 200, 'desc')
             .then(data => {
                 this.lasttime = end_time
@@ -309,12 +309,12 @@ export default {
             }
             return result;
         },
-        
+
         // 查询24小时的统计数据
         fetchLastTradeAggregation(){
           this.loading = true
           let start_time = 0, end_time = new Date().getTime()
-          getTradeAggregation(getAsset(this.base), getAsset(this.counter), 
+          getTradeAggregation(getAsset(this.base), getAsset(this.counter),
                 start_time, end_time, RESOLUTION_1DAY, 1, 'desc')
             .then(data => {
                 this.loading = false
@@ -325,11 +325,11 @@ export default {
                         index: this.tradepairIndex,
                         date: end_time,
                         data: records[0]
-                    })   
+                    })
                     this.$nextTick(()=>{
                         this.lineData = this.tradePairKLineData[this.tradepairIndex]
                     })
-                    
+
                 }else{
                     //查询orderbook，构造数据
                     getOrderbook(getAsset(this.base), getAsset(this.counter))
@@ -352,7 +352,7 @@ export default {
                             this.$nextTick(()=>{
                                 this.lineData = {orderbook_price:  price}
                             })
-                            
+
                         })
                         .catch(err=>{
 
@@ -417,9 +417,9 @@ export default {
 .rate
   vertical-align: middle
   &.up
-    color: $primarycolor.green
+    color: $primarycolor.buy
   &.down
-    color: $primarycolor.red
+    color: $primarycolor.sell
 .price
     line-height: 50px
     height: 50px
@@ -445,9 +445,9 @@ export default {
         font-size: 14px
         color: $primarycolor.font
         &.up
-            background: $primarycolor.green
+            background: $primarycolor.buy
         &.down
-            background: $primarycolor.red
+            background: $primarycolor.sell
 
 .working
     padding-top: 8px

@@ -3,8 +3,8 @@
  */
 <template>
   <div class="page">
-    <toolbar :title="$t(title)" 
-      :showmenuicon="showmenuicon" 
+    <toolbar :title="$t(title)"
+      :showmenuicon="showmenuicon"
       :showbackicon="showbackicon"
       />
     <scroll :refresh="onRefresh">
@@ -39,7 +39,7 @@
             </v-layout>
           </div>
         </div>
-        
+
       </card>
 
       <h4 class="subtitle">{{$t('History')}}</h4>
@@ -53,7 +53,7 @@
                 </div>
               </v-flex>
               <v-flex xs8 class="history-wrapper">
-                <div v-if="item.isInbound!=null && item.isInbound!=undefined" 
+                <div v-if="item.isInbound!=null && item.isInbound!=undefined"
                     :class="'history-amount' + (item.isInbound ? ' add ':' minus ') ">
                     <span class="inbound" v-if="item.isInbound">+</span>
                     <span class="inbound" v-else>-</span>
@@ -97,7 +97,7 @@ export default {
       title: 'Title.MyWallet',
       showbackicon: false,
       showmenuicon: true,
-      noticeText: '',  
+      noticeText: '',
       notice: false,
       snackbarText: '',
       snackbar: false,
@@ -134,12 +134,12 @@ export default {
       });
       return data
     }
-  
+
   },
   mounted(){
     //getAddressByAccountId()
-    document.removeEventListener("backbutton", this.onBackKeyDown, false); 
-    document.addEventListener("backbutton", this.onBackKeyDown, false); 
+    document.removeEventListener("backbutton", this.onBackKeyDown, false);
+    document.addEventListener("backbutton", this.onBackKeyDown, false);
     if(this.account.address){
       this.fetchData()
     }
@@ -151,7 +151,7 @@ export default {
   beforeDestroy(){
     window.clearInterval(this.intervalID);
     document.removeEventListener("backbutton", this.onBackKeyDown, false);
-    document.removeEventListener("backbutton", this.exitApp, false); 
+    document.removeEventListener("backbutton", this.exitApp, false);
   },
   methods: {
     ...mapActions([
@@ -232,20 +232,20 @@ export default {
       console.log('-----on refresh---------')
       return this.load()
     },
-    onBackKeyDown() {  
-        this.$toasted.show(this.$t('App.ClickOneMoreTimeExit'));  
-        document.removeEventListener("backbutton", this.onBackKeyDown, false); // 注销返回键  
-        document.addEventListener("backbutton", this.exitApp, false);//绑定退出事件  
-        // 3秒后重新注册  
-        this.intervalID = window.setInterval(() => {  
-            document.removeEventListener("backbutton", this.exitApp, false); // 注销返回键  
-            document.addEventListener("backbutton", this.onBackKeyDown, false); // 返回键  
-            window.clearInterval(this.intervalID);  
-        }, 3000);  
+    onBackKeyDown() {
+        this.$toasted.show(this.$t('App.ClickOneMoreTimeExit'));
+        document.removeEventListener("backbutton", this.onBackKeyDown, false); // 注销返回键
+        document.addEventListener("backbutton", this.exitApp, false);//绑定退出事件
+        // 3秒后重新注册
+        this.intervalID = window.setInterval(() => {
+            document.removeEventListener("backbutton", this.exitApp, false); // 注销返回键
+            document.addEventListener("backbutton", this.onBackKeyDown, false); // 返回键
+            window.clearInterval(this.intervalID);
+        }, 3000);
     }  ,
-    exitApp(){  
-        navigator.app.exitApp();  
-    },  
+    exitApp(){
+        navigator.app.exitApp();
+    },
     toNameCard(){
       this.$router.push({name:'AccountNameCard'})
     },
@@ -286,7 +286,7 @@ export default {
           border-radius: 70px
           .avatar
             font-size: 38px
-            color: $primarycolor.green
+            color: $primarycolor.purple
 .name
   margin-top: 15px
   font-size: 20px
@@ -318,7 +318,7 @@ export default {
   vertical-align: middle
   font-size: 18px
   padding-top: 5%
-  color: $primarycolor.green
+  color: $primarycolor.purple
 .myassets-total
   font-size: 14px
   color: $secondarycolor.font
@@ -343,7 +343,7 @@ export default {
 .history-amount
   text-align: right
 .history-amount.add
-  color: $primarycolor.green
+  color: $primarycolor.purple
 .history-amount.minus
   color: $primarycolor.red
 </style>

@@ -1,16 +1,16 @@
 <template>
   <div class="page" dark v-bind:class="{hidebackground: scannerView}">
-   <toolbar :title="$t(title)" 
-      :showmenuicon="showmenuicon" 
+   <toolbar :title="$t(title)"
+      :showmenuicon="showmenuicon"
       :showbackicon="showbackicon"
       ref="toolbar"
       :shadow=false
       >
-      <i class="material-icons" slot="right-tool" 
+      <i class="material-icons" slot="right-tool"
         @click="closeQRScanner"
         v-if="scannerView">&#xE5CD;</i>
-   </toolbar> 
-      
+   </toolbar>
+
     <div class="menu-wrapper" v-if="!scannerView">
       <ul class="menu-ul">
         <li :class="'menu-li ' + (active==='deposit'?'active':'')" @click="switchMenu('deposit')">{{$t('DW.Deposit')}}</li>
@@ -74,7 +74,7 @@
                   <div class="extra_info">{{standardDepositData.extra_info}}</div>
                 </div>
               </div>
- 
+
               <div v-else>
                 <div class="label" v-if="depositData.deposit_info">{{$t('DW.DepositInfo')}}</div>
                 <div class="deposit_info" @click="copy(depositData.deposit_info)">{{depositData.deposit_info}}</div>
@@ -93,10 +93,10 @@
               @closeScanner="closeScanner"
               ref="withdraw"
             ></withdraw-standard>
-            
+
           </div>
 
-         
+
         </div>
 
       </div>
@@ -116,13 +116,13 @@
 
 
     </div>
-<!--   
+<!--
     <tab-bar /> -->
 
    <bottom-notice :show.sync="notice" :text="noticeText">    </bottom-notice>
 
    <un-fund-notice v-if="accountNotFundDlg" @close="closeAccountNotFoundDlg">></un-fund-notice>
-  
+
   </div>
 </template>
 
@@ -162,7 +162,7 @@ export default {
       withdrawAccountId:"",
       showmenuicon: true,
       showbackicon: true,
-      noticeText: '',  
+      noticeText: '',
       notice: false,
       withdrawurl: '',//提现的数据提交地址
       scannerView: false,
@@ -193,7 +193,7 @@ export default {
       return data
     },
 
-  
+
   },
   mounted(){
     if(!this.islogin){
@@ -278,7 +278,7 @@ export default {
     getDeposit(home_domain,asset){
       console.log('------asset ---')
       console.log(asset)
-      //先按照标准协议去查询，然后再按照自定义的协议去查询 
+      //先按照标准协议去查询，然后再按照自定义的协议去查询
       //let address = 'GCZEFX6VA7F57BCZ3YINU55ZBJ2ST6CCHZTFIDIW2C5QAIL4FOUVB6LZ'
       let address = this.account.address
       queryStandardDeposite(home_domain, asset.code, address)
@@ -316,7 +316,7 @@ export default {
             this.working = false
           })
         })
-        
+
     },
     getWithdraw(home_domain,asset){
       console.log(`---------get withdraw info ------`)
@@ -413,7 +413,7 @@ export default {
     },
 
 
-   
+
   },
   components: {
     Toolbar,
@@ -442,7 +442,7 @@ export default {
     padding-bottom: 40px
 
   .mytoolbar
-    background: $primarycolor.green
+    background: $primarycolor.purple
     color: $primarycolor.font
     width: 100%
     height:56px
@@ -460,7 +460,7 @@ export default {
       text-align: center
       font-size: 20px
   .menu-wrapper
-    background: $primarycolor.green
+    background: $primarycolor.purple
     height: 56px!important
     line-height: 56px!important
     margin-top: -1px!important
@@ -481,7 +481,7 @@ export default {
       .menu-li.active
         border-bottom: 2px solid $primarycolor.font
 .selectasset
-  color: $primarycolor.green
+  color: $primarycolor.purple
 .asset-select-code
   font-size: 16px
 .asset-select-issuer
@@ -492,7 +492,7 @@ export default {
   .data
     .label
       font-size: 16px
-      color: $primarycolor.green
+      color: $primarycolor.purple
     .deposit_info
       font-size: 18px
       padding-top: 2px
@@ -504,7 +504,7 @@ export default {
       color: $secondarycolor.font
   .noservice
     font-size: 16px
-    color: $primarycolor.green
+    color: $primarycolor.purple
     padding-bottom: 2px
   .noservicedesc
     color: $secondarycolor.font

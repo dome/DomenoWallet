@@ -3,8 +3,8 @@
  */
 <template>
   <div class="page">
-    <toolbar :title="$t(title)" 
-      :showmenuicon="showmenuicon" 
+    <toolbar :title="$t(title)"
+      :showmenuicon="showmenuicon"
       :showbackicon="showbackicon"
       @goback="back"
       />
@@ -65,9 +65,9 @@
                     <i class="iconfont horizon icon-dot" v-else></i>
                   </v-flex>
               </v-flex>
-              
+
               <v-flex class="tag-wrapper" xs12 v-if="this.horizon_version_chinapublic!=null">
-                <span :class="{horizon_timeusestyle:true, 
+                <span :class="{horizon_timeusestyle:true,
                     horizon_timeusebgcone:timeUse_chinapublic<=50,
                     horizon_timeusebgctwo:timeUse_chinapublic<=100&&timeUse_chinapublic>50,
                     horizon_timeusebgcthree:timeUse_chinapublic<=150&&timeUse_chinapublic>100,
@@ -99,7 +99,7 @@
               </v-flex> -->
             </v-layout>
           </v-container>
-        </div> 
+        </div>
       </card>
       <div class="btn-group btns">
         <v-btn class="btn-save" color="error" @click="save">{{$t('Save')}}</v-btn>
@@ -114,7 +114,7 @@ import Toolbar from '@/components/Toolbar'
 import Card from '@/components/Card'
 import { mapState, mapActions} from 'vuex'
 import { OFFICIAL_HORIZON,CHINA_HORIZON,WANCLOUD_HORIZON,FCHAIN_HORIZON } from '@/api/horizon'
- 
+
 import { getAddressPinInfo } from '@/api/gateways'
 import * as accountapi from '@/api/account'
 export default {
@@ -154,7 +154,7 @@ export default {
     fchain(){
       return FCHAIN_HORIZON
     }
-  
+
   },
   beforeMount(){
     this.horizon = this.app.horizon
@@ -229,7 +229,7 @@ export default {
           this.$toasted.error(this.$t('Error.SaveHorizonFail'))
         })
     }
-   
+
   },
   components: {
     Toolbar,
@@ -245,7 +245,7 @@ export default {
   display flex
   justify-content center
   align-items center
-  color: $primarycolor.green
+  color: $primarycolor.purple
   .iconfont
     font-size: .7rem
 .page
@@ -272,7 +272,7 @@ export default {
         height: 36px
 
 .horizon_pinstyle
-  background:$primarycolor.green
+  background:$primarycolor.purple
   border-radius:5px
   text-align:center
 .horizon_timeusestyle

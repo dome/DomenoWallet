@@ -3,8 +3,8 @@
  */
 <template>
   <div class="page">
-    <toolbar :title="$t(title)" 
-      :showmenuicon="showmenuicon" 
+    <toolbar :title="$t(title)"
+      :showmenuicon="showmenuicon"
       :showbackicon="showbackicon"
       @goback="goback"
       />
@@ -17,11 +17,11 @@
       <div class="value" @click="copy(account.federationAddress)">{{account.federationAddress}}&nbsp;</div>
       <div class="label test_namecard_barcode">{{$t('StellarAddressBarCode')}}</div>
       <!-- <div class="value" @click="copy(account.memo)">{{account.memo}}&nbsp;</div> -->
-      
+
       <div class="qrcode">
         <qrcode :text="qrtext" :callback="qrcodecallback"/>
       </div>
-      
+
     </div>
     <!-- <div class="footer">
       <v-layout row wrap>
@@ -31,7 +31,7 @@
         <v-flex xs6 @click="save">
           <span>{{$t('Save')}}</span>
         </v-flex>
-       </v-layout>  
+       </v-layout>
     </div> -->
   </div>
 </template>
@@ -86,10 +86,10 @@ export default {
     save(){
       //TODO 调用shx-cordova-saveb64-image保存二维码
       let params = {
-          data: this.qrcodebase64, 
-          prefix: this.account.name + "-namecard" , 
-          format: 'png', 
-          quality: 100, 
+          data: this.qrcodebase64,
+          prefix: this.account.name + "-namecard" ,
+          format: 'png',
+          quality: 100,
           mediaScanner: true
       };
       if(window.imageSaver){
@@ -104,7 +104,7 @@ export default {
       }else{
         console.error(`no image save -----------`)
       }
-    
+
     },
     copy(value){
       if(cordova.plugins.clipboard){
@@ -141,7 +141,7 @@ export default {
   background: $primarycolor.gray
   .label
     font-size: 14px
-    color: $primarycolor.green
+    color: $primarycolor.purple
     padding-top: 2px
     padding-bottom: 2px
   .value
@@ -167,7 +167,7 @@ export default {
   line-height:56px
   font-size:20px
   text-align:center
-  color:$primarycolor.green
+  color:$primarycolor.purple
 .test_namecard_barcode
   text-align:center
 

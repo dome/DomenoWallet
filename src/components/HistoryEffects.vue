@@ -27,11 +27,11 @@
                         </v-layout>
                         <v-layout xs12>
                                 <v-flex xs5 class="itemstyleo_trade">+{{item.bought_amount}}{{item.bought_asset_code}}</v-flex>
-                                <v-flex xs1 class="itemstylet_trade">/</v-flex>    
-                                <v-flex xs6 class="itemstyleth_trade" >-{{item.sold_amount}}{{item.sold_asset_type==="native"?"XLM":item.sold_asset_code}}</v-flex>    
+                                <v-flex xs1 class="itemstylet_trade">/</v-flex>
+                                <v-flex xs6 class="itemstyleth_trade" >-{{item.sold_amount}}{{item.sold_asset_type==="native"?"XLM":item.sold_asset_code}}</v-flex>
                         </v-layout>
                           <v-layout>
-                        </v-layout>                             
+                        </v-layout>
                     </v-flex>
                     <v-flex v-if="item.type=='trustline_created'" xs12 class="content_style">
                         <v-layout xs12>
@@ -53,7 +53,7 @@
                         </v-layout>
                         <v-layout xs12>
                             <v-flex xs7 class="itemtime_trustline_r">{{getlocaltime(item.time,item.tx)}}</v-flex>
-                            <v-flex xs5 class="itemstyleth_trustline_r">{{$t("AssetCode")}}：{{item.asset_type==="native"?"XLM":item.asset_code}}</v-flex> 
+                            <v-flex xs5 class="itemstyleth_trustline_r">{{$t("AssetCode")}}：{{item.asset_type==="native"?"XLM":item.asset_code}}</v-flex>
                         </v-layout>
                         <v-layout>
                             <v-flex xs12 class="itemstylet_trustline_r">{{$t("AssetIssuer")}}:{{getEffectsDataMiniAddress(item.asset_issuer)}}</v-flex>
@@ -133,7 +133,7 @@
                         <div v-if="!loading_flag && !loadmore_isflag">{{$t("NoMoreData")}}</div>
                     </v-flex>
             </div>
-        
+
         </scroll>
     </div>
 </template>
@@ -217,7 +217,7 @@ export default {
                     console.log(item)
                     })
                     })
-                    
+
               }).catch(err=>{
                   this.loading_flag = false
                   console.error(err)
@@ -277,7 +277,7 @@ export default {
       }
 
     },
-    components: {       
+    components: {
       Toolbar,
       Card,
       Scroll,
@@ -308,7 +308,7 @@ export default {
     font-size:16px
     padding-top:3px
 .itemtype
-    color:$primarycolor.green
+    color:$primarycolor.purple
     // padding-left:5px
     font-size:16px
     text-align:center
@@ -337,7 +337,7 @@ export default {
 
 .itemtype_account_created
     font-size:16px
-    color:$primarycolor.green
+    color:$primarycolor.purple
     padding-left:5px
 .itemtime_account_created
     font-size:16px
@@ -354,7 +354,7 @@ export default {
     font-size:16px
     padding-top:3px
 .itemtype_trustline_c
-    color:$primarycolor.green
+    color:$primarycolor.purple
     padding-left:5px
     font-size:16px
     padding-top:3px
@@ -407,7 +407,7 @@ export default {
     text-align:left
 
 .itemtype_signer_created
-    color:$primarycolor.green
+    color:$primarycolor.purple
     font-size:16px
     padding-left:5px
 .itemtime_signer_created
@@ -467,7 +467,7 @@ export default {
     font-size:16px
     padding-top:3px
 .itemtype_account_credited
-    color:$primarycolor.green
+    color:$primarycolor.purple
     padding-left:5px
     font-size:16px
     padding-top:3px
@@ -508,7 +508,7 @@ export default {
     padding-top:3px
     // text-align:right
 .itemtype_trade
-    color:$primarycolor.green
+    color:$primarycolor.purple
     padding-left:5px
     font-size:16px
     padding-top:3px
@@ -564,7 +564,7 @@ export default {
     padding-bottom:3px
 
 .trade_styleo
-    color:$primarycolor.green
+    color:$primarycolor.purple
     padding-left:5px
     font-size:16px
     text-align:right
@@ -582,8 +582,8 @@ export default {
 
 .itemtype_aidu
     font-size:16px
-    color:$primarycolor.green
-    padding-left:5px 
+    color:$primarycolor.purple
+    padding-left:5px
 .itemtime_aidu
     font-size:16px
     color:$secondarycolor.font
@@ -598,7 +598,7 @@ export default {
 
 .itemtype_ahdu
     font-size:16px
-    color:$primarycolor.green
+    color:$primarycolor.purple
     padding-left:5px
 .itemtime_ahdu
     font-size:16px

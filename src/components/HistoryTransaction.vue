@@ -107,7 +107,7 @@
             console.error(err)
             this.loadmore = false
           })
-          
+
       },300),
 
       toTranscation(item) {
@@ -129,7 +129,7 @@
 .infocard
   text-algin: center
   background: $secondarycolor.gray
-   
+
   .history-li
     padding-top: 5px
     padding-bottom: 5px
@@ -139,10 +139,10 @@
     text-align: right
 
   .history-amount.add
-    color: $primarycolor.green
+    color: $primarycolor.buy
 
   .history-amount.minus
-    color: $primarycolor.red
+    color: $primarycolor.sell
   .loadmore
     padding-top: .3rem
 </style>

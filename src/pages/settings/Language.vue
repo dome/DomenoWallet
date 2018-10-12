@@ -3,8 +3,8 @@
  */
 <template>
   <div class="page">
-    <toolbar :title="$t(title)" 
-      :showmenuicon="showmenuicon" 
+    <toolbar :title="$t(title)"
+      :showmenuicon="showmenuicon"
       :showbackicon="showbackicon"
       @goback="back"
       />
@@ -51,7 +51,7 @@ export default {
     locales(){
       return LANGUAGES
     }
-  
+
   },
   mounted(){
   },
@@ -80,7 +80,7 @@ export default {
           this.$toasted.error(this.$t('SaveFailed'))
         })
     }
-   
+
   },
   components: {
     Toolbar,
@@ -111,11 +111,11 @@ export default {
             .iconfont
               font-size: 20px
             .iconfont.icon-dot1
-              color: $primarycolor.green
+              color: $primarycolor.purple
 
 
 .iconfont_style_color
-    color:$primarycolor.green
+    color:$primarycolor.purple
     font-size:20px
 .iconfont_style
     font-size:20px

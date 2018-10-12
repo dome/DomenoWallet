@@ -4,7 +4,7 @@
 */
 <template>
   <div class="content">
-    
+
   <div class="search-wrapper pl-3">
     <date-range-picker :start="start" :end="end" @doSearch="doSearch" />
   </div>
@@ -55,7 +55,7 @@
              <i class="material-icons trade-icon" v-else>done</i>
             </div>
           </div>
-          
+
         </div>
       </card>
     </div>
@@ -86,8 +86,8 @@ import { isNativeAsset } from '@/api/assets'
         working: false,
         start: null,
         end: null,
-      
-      
+
+
       }
     },
     computed: {
@@ -130,7 +130,7 @@ import { isNativeAsset } from '@/api/assets'
         //let end_time = moment(this.end)
         //start_time = new Date(start_time.year(), start_time.month()+1, start_time.date()).getTime()
         //end_time = new Date(end_time.year(), end_time.month()+1, end_time.date()).getTime()
-       
+
         this.reload().then(response=>{}).catch(err=>{console.error(err)})
       },
       doSearch({start,end}){
@@ -138,7 +138,7 @@ import { isNativeAsset } from '@/api/assets'
         this.end = Number(moment(end + ' 23:59:59').format('x'))
         this.queryAllOffers()
       },
-      
+
     filterOffers(){
       if(this.alloffers){
         //过滤掉不是当前要显示的数据
@@ -157,7 +157,7 @@ import { isNativeAsset } from '@/api/assets'
           }else{
             return Object.assign({}, item)
           }
-          
+
         })
       }
       return []
@@ -203,7 +203,7 @@ import { isNativeAsset } from '@/api/assets'
     .b-row.depth
       text-align: right
       & > a
-        color: $primarycolor.green
+        color: $primarycolor.purple
 
   .working
     display: block
@@ -217,9 +217,9 @@ import { isNativeAsset } from '@/api/assets'
     margin: auto auto
 
   .up
-    color: $primarycolor.green
+    color: $primarycolor.buy
   .down
-    color: $primarycolor.red
+    color: $primarycolor.sell
 
   .pair-show
     display: flex
@@ -239,7 +239,7 @@ import { isNativeAsset } from '@/api/assets'
     .pair-icon
       flex: 1
       .material-icons
-        //color: $primarycolor.green
+        //color: $primarycolor.purple
         font-size: 20px
         padding-top: 8px
     .pair-to

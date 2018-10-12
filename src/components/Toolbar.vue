@@ -26,7 +26,7 @@
       <div class="sheet-content">
         <div class="sheet-title">
           <h4 class="title" v-if="!lockpass">
-            <slot name='switch_password'> 
+            <slot name='switch_password'>
           <!--if call for passowrd -->
               <span>{{$t('ChangeAccount')}}</span>
             </slot>
@@ -176,15 +176,15 @@ export default {
         this.changeAccount(index,item)
       }
     },
-    isPage(path){	
-      let url = this.$route.name	
-      if(url.indexOf(path.name)===0){	
-        return ' menuactive'	
-      }	
-      return ''	
+    isPage(path){
+      let url = this.$route.name
+      if(url.indexOf(path.name)===0){
+        return ' menuactive'
+      }
+      return ''
     },
-     showPasswordLogin(){	
-      this.showPwdSheet = true	
+     showPasswordLogin(){
+      this.showPwdSheet = true
     },
     //取消输入密码，则直接无密码跳转账户
     canclePwdInput(){
@@ -196,7 +196,7 @@ export default {
     okPwdInput(){
       if(this.checkPwd)return
       //无密码则报错
-      if(!this.password){ 
+      if(!this.password){
         this.$toasted.error(this.$t('Error.PasswordWrong')) //请输入密码
         return
       }
@@ -214,7 +214,7 @@ export default {
         this.checkPwd = false
         this.password = null
         this.showaccounts = false
-        
+
         return this.getAccountInfo(this.account.address)
 
       }).then(data => {
@@ -255,7 +255,7 @@ export default {
       // update home_domain and inflation_destination from horizon.
       console.log("updateFederationAndInflationInfo")
       console.log(this.accountData)
-      if (this.account.inflationAddress !== this.accountDetails.inflation_destination 
+      if (this.account.inflationAddress !== this.accountDetails.inflation_destination
         || this.account.federationAddress !== this.accountDetails.home_domain) {
         let data = defaultsDeep({}, this.account, {
           federationAddress: this.accountDetails.home_domain,
@@ -307,7 +307,7 @@ export default {
       line-height: 40px
       font-size: 32px
       text-align: center
-      color: $primarycolor.green
+      color: $primarycolor.purple
       padding: 10px 10px
     .label
       color: $secondarycolor.font
@@ -327,7 +327,7 @@ export default {
       line-height: 40px
       text-align: center
       font-size: 16px
-      color: $primarycolor.green
+      color: $primarycolor.purple
 
 
 </style>

@@ -22,7 +22,7 @@
             </swiper-slide>
         </swiper>
     <component v-bind:is="show.component"></component>
-     
+
   </div>
 </template>
 
@@ -80,7 +80,7 @@
         return routerParams==="offer"?0:1
       },
     },
-    mounted () {  
+    mounted () {
       console.log("2222-------------")
 	    this.swiperTop.on('slideChange', this.showinfo)
 	    this.swiperTop.slideTo(this.getParams,0,true)
@@ -119,7 +119,7 @@
         if(typeNumber==5){
           this.switchComponent('transactions')
         }
-      }, 
+      },
     },
     beforeDestroy() {
       this.changeCurrentHistoryComponent(this.show.name)
@@ -148,10 +148,10 @@
           text-align: center
           font-size: 16px
         .menu-li.active
-          border-bottom: 2px solid $primarycolor.green
-          color: $primarycolor.green
+          border-bottom: 2px solid $primarycolor.purple
+          color: $primarycolor.purple
 .swiper-container
-  background: $primarycolor.green
+  background: $primarycolor.purple
   height: 46px
   margin: 0 !important
   min-height:42px !important
@@ -160,7 +160,7 @@
   height: 100%;
   opacity: 0.6;
   margin-top:6px
-.swiper-slide-active 
+.swiper-slide-active
   opacity: 1;
-  font-weight 600 
+  font-weight 600
 </style>

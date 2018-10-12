@@ -103,7 +103,7 @@ export default {
   bottom: env(safe-area-inset-bottom)!important
   &.bottom-nav.bottom-nav--active.dark
     .btn.btn--flat.btn--active
-      color: $primarycolor.green
+      color: $primarycolor.purple
 
 .bottom-nav .btn
   opacity inherit!important
@@ -114,7 +114,7 @@ export default {
   width: 10px
   height: 10px
   border-radius: 5px
-  background: $primarycolor.red
+  background: $primarycolor.purple
   right: 20px
   top:5px
   position: absolute

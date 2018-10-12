@@ -5,7 +5,7 @@
     <div class="unfund-dlg pa-2 pb-4">
       <div class="flex-row pt-2">
         <div class="flex1 textright ud-title" @click="toAutoFundHelp">
-          <i class="material-icons close-icon">help_outline</i> 
+          <i class="material-icons close-icon">help_outline</i>
         </div>
         <div class="flex6 textcenter">{{$t('unfund')}}</div>
         <div class="flex1 textright ud-title" @click="close">
@@ -34,7 +34,7 @@ import { mapState, mapActions } from 'vuex'
 
 export default {
   data(){
-    return {  
+    return {
       working: false,
     }
   },
@@ -53,7 +53,7 @@ export default {
        // alert('--------load fun config--' + JSON.stringify(data))
       }).catch(err=>{
         console.error(err);
-       // alert('----error--' + err.message)  
+       // alert('----error--' + err.message)
       })
     }
   },
@@ -110,7 +110,7 @@ export default {
           }
           this.$toasted.error(this.$t('FederationName.NetworkError')+':'+ message)
         })
-     
+
     },
     toKYC(){
       this.$router.push({name: 'KYC'})
@@ -155,7 +155,7 @@ export default {
   z-index:10
 
 .close-icon
-  color: $primarycolor.green
+  color: $primarycolor.purple
   font-size: 24px
   padding-right: .2rem
 .ud-title
@@ -166,7 +166,7 @@ export default {
   color: $secondarycolor.font
 .ud-btns
   font-size: 14px
-  color: $primarycolor.green
+  color: $primarycolor.purple
 
 
 </style>

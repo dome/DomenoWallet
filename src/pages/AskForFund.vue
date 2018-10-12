@@ -1,8 +1,8 @@
 // 接收激活
 <template>
   <div class="page">
-    <toolbar :title="$t('fund_askfor')" 
-      :showmenuicon="false" 
+    <toolbar :title="$t('fund_askfor')"
+      :showmenuicon="false"
       :showbackicon="true"
       @goback="back"
       />
@@ -17,7 +17,7 @@
             <span class="scode">XLM</span>
             <span class="sissuer">stellar.org</span>
           </div>
-         
+
           <v-text-field
               name="amount"
               :label="$t('Amount')"
@@ -53,7 +53,7 @@ import { mapState, mapActions, mapGetters} from 'vuex'
 import { isNativeAsset } from '@/api/assets'
 
 export default {
-  
+
   data(){
     return {
       showmenuicon: false,
@@ -70,7 +70,7 @@ export default {
       asset: state => state.asset.selected,
       assethosts: state => state.asset.assethosts,
     }),
-    
+
     qrtext(){
       // use stargaze pattern
       //{"stellar":{"payment":{"destination":"GAD2....5UZ6","amount":1,"asset":{"code":"BTC","issuer":"GATEMH....MTCH"}}}}
@@ -86,7 +86,7 @@ export default {
        }
        return false
     }
-  
+
   },
   mounted(){
   },
@@ -126,13 +126,13 @@ export default {
         this.$toasted.error('not support share')
       }
     },
-   
+
   },
   components: {
     Toolbar,
     Card,
     qrcode: QRCode,
-    
+
   }
 
 
@@ -150,7 +150,7 @@ export default {
     padding-top: 5px
     padding-bottom: 5px
   .asset.label
-    color: $primarycolor.green
+    color: $primarycolor.purple
   .value
     display: block
     font-size: 14px
@@ -177,7 +177,7 @@ export default {
 //   line-height:56px
 //   font-size:16px
 //   text-align:center
-//   color:$primarycolor.green
+//   color:$primarycolor.purple
 .qrcode
   text-align: center
   padding-top:20px
@@ -185,7 +185,7 @@ export default {
 
 .receive_asset_msg
   text-align:center
-  color:$primarycolor.green
+  color:$primarycolor.purple
   padding-top:8px
 
 .receive_asset_msg_one

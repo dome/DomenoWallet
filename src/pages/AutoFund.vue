@@ -2,8 +2,8 @@
 // 打开第三方应用
 <template>
   <div>
-     <toolbar :title="$t('fund_free')" 
-        :showmenuicon="false" 
+     <toolbar :title="$t('fund_free')"
+        :showmenuicon="false"
         :showbackicon="false"
         ref="toolbar"
         >
@@ -49,7 +49,7 @@ export default {
       working: false,
       err: null,
       appInstance: null,
-      
+
       retry: 0,
       working: false,
 
@@ -148,7 +148,7 @@ export default {
               backButtonCanClose: false,
               // hidden: true
           })
-          
+
       }
 
       this.appInstance.addEventListener('loadstop',() => {
@@ -171,7 +171,7 @@ export default {
         //否则不关闭当前界面
       });
       this.appInstance.addEventListener('backPressed', ()=>{
-        
+
       });
 
       let that = this
@@ -205,7 +205,7 @@ export default {
           setTimeout(()=>{
             this.working = false
             // localStorage.setItem('allowBack',"1")
-            this.$router.push({name: 'MyAssets'})  
+            this.$router.push({name: 'MyAssets'})
           },1000)
         })
         .catch(err => {
@@ -233,7 +233,7 @@ export default {
           console.log('===============callback------event---')
           console.log(code)
           this.appInstance.executeScript({
-            code: code }, 
+            code: code },
             params=>{})
         }catch(err){
           console.error(err)
@@ -249,7 +249,7 @@ export default {
         this.$router.push({name: 'MyAssets'})
       }
     }
-    
+
 
 
   },
@@ -257,7 +257,7 @@ export default {
     Toolbar,
   }
 
-  
+
 }
 </script>
 
@@ -278,7 +278,7 @@ export default {
 .btns
   font-size: 16px
 .dlg-green
-  color: $primarycolor.green
+  color: $primarycolor.purple
 .dlg-content
   background: $secondarycolor.gray
   color: $primarycolor.red

@@ -51,7 +51,7 @@
     <preference name="SuppressesLongPressGesture" value="false" />
     <preference name="orientation" value="portrait" />
     <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="StatusBarBackgroundColor" value="#21ce90" />
+    <preference name="StatusBarBackgroundColor" value="#8c5fff" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="Fullscreen" value="false" />
     <preference name="SplashScreen" value="splash" />

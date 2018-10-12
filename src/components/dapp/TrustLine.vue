@@ -1,7 +1,7 @@
 // 授信添加资产
 <template>
   <div class="trust-line-wrapper">
-    
+
     <!-- 显示授信界面 -->
     <div class="confirm-wrapper">
       <div class="confirm-blank"></div>
@@ -20,7 +20,7 @@
             </div>
             <div style="clear:both"></div>
           </div>
-          
+
           <div class="confirm-content">
             <div class="dlg-title text-center">
               <span>{{$t('ManullayAddTrust')}}</span>
@@ -29,7 +29,7 @@
             <div class="confirm-memo">{{asset_code}}</div>
             <div class="confirm-title">{{$t('AssetIssuer')}}</div>
             <div class="confirm-memo">{{asset_issuer | shortaddress}}</div>
-            
+
           </div>
 
           <div class="confirm-btns flex-row textcenter">
@@ -69,10 +69,10 @@
       </div>
     </v-bottom-sheet>
 
-    <loading :show="working" :loading="sending" :success="sendsuccess" :fail='sendfail' 
+    <loading :show="working" :loading="sending" :success="sendsuccess" :fail='sendfail'
       color="red" :title="loadingTitle" :msg="loadingError" :closeable="sendfail" @close="hiddenLoading"/>
 
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -103,7 +103,7 @@ export default {
       sendfail: false,
       loadingTitle: null,
       loadingError: null,
-      
+
     }
   },
   props: {
@@ -128,13 +128,13 @@ export default {
       notfunding: state => state.account.account_not_funding
     }),
     ...mapGetters(["balances", "reserve", "native", "base_fee",'base_reserve']),
-    
+
   },
   beforeMount () {
-    
+
   },
   mounted () {
-    
+
   },
   methods: {
     ...mapActions({
@@ -196,7 +196,7 @@ export default {
         this.$toasted.error('no enough lumens to continue')
         this.working = false
         this.sending = false
-        return 
+        return
       }
       this.loadingTitle = null
       this.loadingMsg = null
@@ -210,7 +210,7 @@ export default {
           this.sendSuccess()
         })
         .catch(err=>{
-          this.sendFail(err) 
+          this.sendFail(err)
         })
 
     },
@@ -294,7 +294,7 @@ export default {
   left: 0
   opacity: 1
 .dlg-title
-  color: $primarycolor.green
+  color: $primarycolor.purple
   text-align: center
   font-size: 16px
 .confirm-title
@@ -304,7 +304,7 @@ export default {
   padding-left: .4rem
   color: $primarycolor.font
 .confirm-amount
-  color: $primarycolor.green
+  color: $primarycolor.purple
   text-align: center
   font-size: .5rem
 .confirm-memo
@@ -318,9 +318,9 @@ export default {
       color: $secondarycolor.font
     .value
       padding-left: 12px
-      color: $primarycolor.green
+      color: $primarycolor.purple
 .confirm-btns
-  color: $primarycolor.green
+  color: $primarycolor.purple
   text-align: center
   font-size: 16px
   height: 42px
@@ -356,11 +356,11 @@ export default {
       overflow: hidden
       text-overflow:ellipsis
       white-space: nowrap
-      color: $primarycolor.green
+      color: $primarycolor.purple
     .address
       font-size: 12px
       color: $secondarycolor.font
-  
+
 
 
 .sheet-content
@@ -376,7 +376,7 @@ export default {
       line-height: 40px
       font-size: 32px
       text-align: center
-      color: $primarycolor.green
+      color: $primarycolor.purple
       padding: 10px 10px
     .label
       color: $secondarycolor.font
@@ -393,7 +393,7 @@ export default {
       line-height: 40px
       text-align: center
       font-size: 16px
-      color: $primarycolor.green
+      color: $primarycolor.purple
 .confirm-assets
   padding: .2rem .2rem
   .asset-card
@@ -406,9 +406,9 @@ export default {
     .asset-icon
       .iconfont
         font-size: 1rem
-        color: $primarycolor.green
+        color: $primarycolor.purple
     .asset-code
-      color: $primarycolor.green
+      color: $primarycolor.purple
     .asset-issuer
       font-size: .2rem
       color: $secondarycolor.font
@@ -416,6 +416,6 @@ export default {
       white-space: nowrap
       word-break: normal
     &.active
-      border: 1px solid $primarycolor.green
+      border: 1px solid $primarycolor.purple
 </style>
 

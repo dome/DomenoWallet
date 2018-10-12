@@ -628,12 +628,12 @@ export default {
     justify-content: center
     align-items: center
     background-color: $primarycolor.gray
-    color: $primarycolor.green
+    color: $primarycolor.buy
     padding: 0 12px
   .del
     //background-color: $secondarycolor.red
     //border-right: 1px solid $secondarycolor.gray
-    color: $primarycolor.red
+    color: $primarycolor.sell
     text-align:center
     vertical-align: middle
     .refreshimg
@@ -668,13 +668,13 @@ export default {
     height: 48px
     line-height: 48px
     font-size: 16px
-    color: $primarycolor.green
+    color: $primarycolor.buy
 .selected
   -webkit-transform: translate(-50%, 0)
   -webkit-transition: 0.3s
   transform: translate(-50%, 0)
   transition: 0.3s
 .filter-tag.active
-  color: $primarycolor.green
+  color: $primarycolor.buy
 </style>
 

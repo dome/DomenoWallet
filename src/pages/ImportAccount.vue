@@ -15,10 +15,10 @@
       </div>
     </toolbar>
 
-    <q-r-scan 
-      @finish="qrfinish" 
-      @close="qrclose" 
-      :validator="qrvalidator" 
+    <q-r-scan
+      @finish="qrfinish"
+      @close="qrclose"
+      :validator="qrvalidator"
       v-if="showScanner"></q-r-scan>
 
     <div class="content" v-if="!showScanner">
@@ -60,7 +60,7 @@
         <v-flex xs6 @click="nextStep">
           <span :class="nextStepClass">{{$t('NextStep')}}</span>
         </v-flex>
-       </v-layout>  
+       </v-layout>
     </div>
 </div>
 </template>
@@ -70,7 +70,7 @@ import Toolbar from '@/components/Toolbar'
 import QRScan from '@/components/QRScan'
 import SecretKeyInput from '@/components/SecretKeyInput'
 import {importAccount,isValidSeed,fromMnemonic, validateMnemonic} from '@/api/account'
-import { getMnemonicFromData } from '@/api/qr' 
+import { getMnemonicFromData } from '@/api/qr'
 import { mapState, mapActions} from 'vuex'
 import { EN, ZH_CN,ZH_HK } from '@/locales/index'
 import { isEnglishMnemonic, isChineseMnemonic } from '../api/account';
@@ -218,7 +218,7 @@ export default {
         this.setNewSeed({seed})
         this.$router.push({name: 'CreateAccount'})
       }
- 
+
     },
     setSeedToInput(){
       this.$refs.secretkeyRef.inputText(this.scanSeed)
@@ -281,23 +281,23 @@ export default {
   line-height: 42px
   font-size: 16px
   text-align: center
-  color: $primarycolor.green
+  color: $primarycolor.purple
 .btn-available
-  color: $primarycolor.green
+  color: $primarycolor.purple
 .btn-unavailable
-  color: $secondarycolor.green
+  color: $secondarycolor.purple
 .hidebackground
   background:none
   background-color: transparent
 .tabs
   color: $primarycolor.font
   .tab.active
-    color: $primarycolor.green
+    color: $primarycolor.purple
 .lang-tabs
   color: $primarycolor.font
   font-size: 14px
   .tab.active
-    color: $primarycolor.green
+    color: $primarycolor.purple
 .seed-span
   word-wrap:break-word
   color: $secondarycolor.font

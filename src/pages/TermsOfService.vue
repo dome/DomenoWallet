@@ -20,8 +20,8 @@
         <v-flex xs6 @click="wallet">
           <span>{{$t('Agree')}}</span>
         </v-flex>
-       </v-layout>  
-    </div>  
+       </v-layout>
+    </div>
   </div>
 </template>
 
@@ -106,5 +106,5 @@ export default {
   line-height: 42px
   font-size: 16px
   text-align: center
-  color: $primarycolor.green
+  color: $primarycolor.purple
 </style>

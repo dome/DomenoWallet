@@ -3,8 +3,8 @@
  */
 <template>
   <div class="page">
-    <toolbar :title="$t(title)" 
-      :showmenuicon="showmenuicon" 
+    <toolbar :title="$t(title)"
+      :showmenuicon="showmenuicon"
       :showbackicon="showbackicon"
       @goback="back"
       >
@@ -19,14 +19,14 @@
     <div class="content">
       <card class="mycard">
         <div class="card-content" slot="card-content">
-          <div class="account-row"  v-for="(item,index) in accounts" :key="index" 
-            @click.stop="info(item)" 
+          <div class="account-row"  v-for="(item,index) in accounts" :key="index"
+            @click.stop="info(item)"
                 v-touch="{
                   left: () => selectedItem = index,
                   right: () => selectedItem = null
                 }"
             >
-            
+
             <div class="flex-row account-wrapper"  v-swiper=2.5>
               <div class="flex1">
                 <div class="avatar">
@@ -49,12 +49,12 @@
               <div class="modify" @click.stop="modify(item.address)">{{$t('Modify')}}</div>
               <div class="change" @click.stop="changeaccount(index,item)">{{$t('Change')}}</div>
             </div>
-            
+
           </div>
         </div>
       </card>
     </div>
-    <loading :show="showLoading"  :loading="working" :success="delok" :fail='delerror' 
+    <loading :show="showLoading"  :loading="working" :success="delok" :fail='delerror'
       :title="loadingTitle" :msg="loadingMsg" :closeable="delerror" @close="hideLoadingView"/>
 
      <div class="pwdSheetWrapper" v-if="showPwdSheet">
@@ -124,10 +124,10 @@ export default {
       app: state => state.app,
       selectedAccountIndex: state => state.accounts.selected,
     }),
-   
+
   },
   mounted(){
-    
+
   },
   methods: {
     ...mapActions({
@@ -253,7 +253,7 @@ export default {
             this.delerror = true
           })
 
-      } 
+      }
       // if('change' === this.worktype){
       else{
       // if(this.checkPwd)return
@@ -317,9 +317,9 @@ export default {
               this.showLoading = false
               if(this.accounts.length === 0){
                 this.$router.push({name: 'Wallet'})
-              }      
+              }
             },1000)
-        
+
       })
     }
     },
@@ -328,7 +328,7 @@ export default {
       this.working = false
       this.showLoading = false
     },
-      
+
   },
   components: {
     Toolbar,
@@ -351,14 +351,14 @@ export default {
 .card-content
   overflow: hidden
   background: $primarycolor.gray
-  
+
 .account-row
   overflow: hidden
   position: relative
   border-bottom: 1px solid $secondarycolor.font
   border-radius:5px
-  
-  
+
+
 .account-row:last-child
   border-bottom: 0px
 .account-wrapper
@@ -375,7 +375,7 @@ export default {
     height: 40px
     background: $primarycolor.gray
     .iconfont
-      color: $primarycolor.green
+      color: $primarycolor.purple
       font-size: 20px
   .name
     font-size: 16px
@@ -397,11 +397,11 @@ export default {
       padding-left: 5px
   .icons
     text-align: right
-    color: $primarycolor.green
+    color: $primarycolor.purple
     font-size: 24px
     padding-top: 5px
     padding-right: 5px
-.operate-box 
+.operate-box
   position: absolute
   z-index: 1
   height: 100%
@@ -416,11 +416,11 @@ export default {
     align-items: center
     background-color: $primarycolor.gray
     // background-color: $secondarycolor.green
-    color: $primarycolor.green
+    color: $primarycolor.purple
     padding: 0 12px
   .modify
     // border-left: 1px solid $secondarycolor.gray
-    color:$primarycolor.green
+    color:$primarycolor.purple
   .del
     background-color: $primarycolor.gray
     color:$primarycolor.red
@@ -446,7 +446,7 @@ export default {
   padding: 10px 10px
 .sheet-btns
   display: flex
-  color: $primarycolor.green
+  color: $primarycolor.purple
   height: 50px
   line-height: 50px
   .sheet-btn

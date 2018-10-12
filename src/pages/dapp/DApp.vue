@@ -1,24 +1,24 @@
 // 第三方应用列表界面
 <template>
   <div class="page" dark  v-bind:class="{hidebackground: showScanner}">
-    <toolbar :title="$t('Title.ThirdApp')" :showbackicon="false"  @goback="back" 
+    <toolbar :title="$t('Title.ThirdApp')" :showbackicon="false"  @goback="back"
       :shadow="false" lockpass  ref="toolbar" v-if="!showScanner">
       <!--右侧打开设置界面-->
       <v-btn icon slot='right-tool' @click="toSetting">
         <i class="material-icons font28">extension</i>
       </v-btn>
     </toolbar>
-    <toolbar :title="$t('Title.Scan')" 
-      :showmenuicon="false" 
+    <toolbar :title="$t('Title.Scan')"
+      :showmenuicon="false"
       :showbackicon="false"
       ref="toolbar"
       v-else
       :shadow=false
       >
-      <i class="material-icons font28" slot="right-tool" 
+      <i class="material-icons font28" slot="right-tool"
         @click="closeQRScanner">&#xE5CD;</i>
-   </toolbar> 
-    
+   </toolbar>
+
     <v-container fluid v-bind="{ [`grid-list-md`]: true }" v-if="!showScanner">
       <div class="dapp-subtitle subheading pl-2" @click="fetchApps">{{$t('hot_dapp')}}</div>
       <card padding="8px 0" margin="0 0" v-if="working">
@@ -66,7 +66,7 @@
           <v-card dark flat tile class="pa-2 textcenter app-card" >
             <div class="pa-3">
               <v-avatar class="grey darken-4 app-avatar" :size="`62px`">
-               <span class="white--text headline">{{app.title.substring(0,1)}}</span> 
+               <span class="white--text headline">{{app.title.substring(0,1)}}</span>
              </v-avatar>
             </div>
              <v-card-title primary-title class="app-title">
@@ -112,7 +112,7 @@
         <v-card-text>
           <v-container grid-list-md>
             <v-layout wrap>
-              
+
               <v-flex xs12 sm6 md4>
                 <v-text-field :label="$t('ContactAdd.name')" clearable required v-model="apptitle"></v-text-field>
               </v-flex>
@@ -133,7 +133,7 @@
 
     </v-container>
 
-    <send-asset v-if="showSendAsset" 
+    <send-asset v-if="showSendAsset"
       :destination="sendTarget.destination"
       :appname="choosed.title"
       :asset_code="sendTarget.code"
@@ -145,28 +145,28 @@
       @exit="exitSendAsset"
       @sendsuccess="sendAssetSuccess"
        ></send-asset>
-    <back-up-data v-if="appEventType === 'backup' && appEventData" 
-      :appname="choosed.title" 
+    <back-up-data v-if="appEventType === 'backup' && appEventData"
+      :appname="choosed.title"
       @exit="exitBackUpEvent" @success="successBackUpEvent" />
 
-    <recovery-data v-if="appEventType === 'recovery' && appEventData" 
+    <recovery-data v-if="appEventType === 'recovery' && appEventData"
       :appname="choosed.title" :encryptData="appEventData.data"
       @exit="exitRecoveryEvent" @success="successRecoveryEvent" />
 
-    <trust-line v-if="appEventType === 'trust' && appEventData" 
-      :appname="choosed.title" 
+    <trust-line v-if="appEventType === 'trust' && appEventData"
+      :appname="choosed.title"
       :asset_code="appEventData.code"
       :asset_issuer="appEventData.issuer"
       @exit="exitTrustEvent" @success="successTrustEvent" />
 
-    <sign-x-d-r v-if="appEventType === 'signXDR' && appEventData" 
+    <sign-x-d-r v-if="appEventType === 'signXDR' && appEventData"
       :appname="choosed.title"
       :message="appEventData.message"
       :xdr="appEventData.data"
       @exit="exitSignXDREvent"
       @success="successSignXDREvent"
       />
-    
+
    <q-r-scan
       @finish="qrfinish"
       @close="qrclose"
@@ -325,7 +325,7 @@ export default {
               title: {
                   color: '#FFFFFF',
                   showPageTitle: true,
-                  staticText: this.choosed.title 
+                  staticText: this.choosed.title
               },
               closeButton: {
                   image: 'close',
@@ -336,7 +336,7 @@ export default {
               backButtonCanClose: true,
               // hidden: true
           })
-          
+
       }
       this.appInstance.addEventListener('reloadPressed', e => {
         this.appInstance.reload()
@@ -407,13 +407,13 @@ export default {
       //强制授信相应的资产
       // let source = config.account
       // if(!source)return
-      
+
       trustAll(this.accountData.seed, assets)
         .then(resp => {
           this.hideDapp()
           this.$toasted.show(this.$t('fund_success'))
           setTimeout(()=>{
-            this.$router.push({name: 'MyAssets'})  
+            this.$router.push({name: 'MyAssets'})
           },1000)
         })
         .catch(err=>{
@@ -481,7 +481,7 @@ export default {
           console.log('===============callback------event---')
           console.log(code)
           this.appInstance.executeScript({
-            code: code }, 
+            code: code },
             params=>{})
         }catch(err){
           console.error(err)
@@ -525,7 +525,7 @@ export default {
         this.doCallbackEvent(this.callbackData('fail',msg))
         this.$nextTick(()=>{
           this.appEventType = null
-          this.appEventData = null   
+          this.appEventData = null
         })
       })
     },
@@ -536,7 +536,7 @@ export default {
         this.doCallbackEvent(this.callbackData('success',msg, data))
         this.$nextTick(()=>{
           this.appEventType = null
-          this.appEventData = null   
+          this.appEventData = null
         })
       })
     },
@@ -673,7 +673,7 @@ export default {
 .btns
   font-size: 16px
 .dlg-green
-  color: $primarycolor.green
+  color: $primarycolor.purple
 .dlg-content
   background: $secondarycolor.gray
   color: $primarycolor.red

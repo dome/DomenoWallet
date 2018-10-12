@@ -1,8 +1,8 @@
 //激活帮助说明
 <template>
   <div>
-     <toolbar :title="$t('fund_free_title')" 
-          :showmenuicon="false" 
+     <toolbar :title="$t('fund_free_title')"
+          :showmenuicon="false"
           :showbackicon="true"
           ref="toolbar"
         >
@@ -50,7 +50,7 @@
           1.TG群：<span @click="toHref('https://t.me/fchain_io')">https://t.me/fchain_io</span><br/>
           2.网址：<span @click="toHref('https://fchain.io/')">https://fchain.io/</span><br/>
         </p>
-        
+
 
 
       </div>
@@ -88,7 +88,7 @@ export default {
     Card,
   }
 
-  
+
 }
 </script>
 
@@ -100,7 +100,7 @@ export default {
   .help-t
     font-size: 16px
     font-weight: bold
-    color: $primarycolor.green
+    color: $primarycolor.purple
   .help-c
     font-size: 14px
 </style>

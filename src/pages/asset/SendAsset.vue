@@ -130,7 +130,7 @@
        </div>
 
       </card>
-      
+
     <div style="flex: 1;"></div>
      <div class="btn-group" v-if="!showContacts">
         <!-- <v-btn class="error btn-send" @click.stop="send">{{$t('Send')}}</v-btn> -->
@@ -498,7 +498,7 @@ export default {
           }catch(err){
             console.error(err)
           }
-          
+
         })
         .catch(err=>{
           console.log(err)
@@ -589,7 +589,7 @@ export default {
       this.realDestination = null
       this.federationUrlResult = null
       this.is_sendconfim = false
-    
+
     }
   },
   components: {
@@ -697,7 +697,7 @@ export default {
   font-size:18px
   text-align:center
   padding-left:30%
-  
+
 
 .content
   //top: 48px
@@ -725,7 +725,7 @@ export default {
     padding-top: 5px
     padding-bottom: 5px
   .asset.label
-    color: $primarycolor.green
+    color: $primarycolor.purple
   .value
     display: block
     font-size: 16px
@@ -765,7 +765,7 @@ export default {
       display: inline-block
       .name
         font-size: 20px
-        color: $primarycolor.green
+        color: $primarycolor.purple
         padding-left: 5px
         display: block
         float: left

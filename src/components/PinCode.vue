@@ -51,7 +51,7 @@ export default {
     },
   },
   mounted(){
-   
+
   },
   components: {
     NumberKeyboard
@@ -104,7 +104,7 @@ $dot-size = 16px
       text-align: center
       justify-content: center
       .dot
-        border: 2px solid $primarycolor.green
+        border: 2px solid $primarycolor.purple
         height: $dot-size
         line-height: $dot-size
         width: $dot-size
@@ -117,12 +117,12 @@ $dot-size = 16px
       text-align: center
       justify-content: center
       .dot
-        border: 2px solid $primarycolor.green
+        border: 2px solid $primarycolor.purple
         height: $dot-size
         line-height: $dot-size
         width: $dot-size
         border-radius: $dot-size
         display: block
-        background: $primarycolor.green
+        background: $primarycolor.purple
 
 </style>

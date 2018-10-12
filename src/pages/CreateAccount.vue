@@ -18,7 +18,7 @@
               required
               append-icon='cached'
               :append-icon-cb="this.chooseName"
-            ></v-text-field>  
+            ></v-text-field>
       <v-text-field
               dark
               name="password"
@@ -48,7 +48,7 @@
         <v-flex xs6 @click="nextStep">
           <span :class="nextStepClass">{{$t('NextStep')}}</span>
         </v-flex>
-       </v-layout>  
+       </v-layout>
     </div>
   </div>
 </div>
@@ -151,14 +151,14 @@ export default {
   line-height:42px
   font-size:16px
   text-align:center
-  color:$primarycolor.green
+  color:$primarycolor.purple
 .btn-available
-  color:$primarycolor.green
+  color:$primarycolor.purple
 .btn-unavailable
   color:$secondarycolor.green
 .hint
-  color:$primarycolor.green
+  color:$primarycolor.purple
   font-size: 14px
-  
+
 </style>
 
