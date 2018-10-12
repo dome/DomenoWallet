@@ -1,8 +1,8 @@
-//新建联系人 
+//新建联系人
 <template>
   <div class="page" v-bind:class="{hidebackground: showScanner}">
-    <toolbar :title="$t(title)" 
-      :showmenuicon="showmenuicon" 
+    <toolbar :title="$t(title)"
+      :showmenuicon="showmenuicon"
       :showbackicon="showbackicon"
       @goback="back"
     >
@@ -13,10 +13,10 @@
         </span>
       </div>
     </toolbar>
-    <q-r-scan 
-      @finish="qrfinish" 
-      @close="qrclose" 
-      :validator="qrvalidator" 
+    <q-r-scan
+      @finish="qrfinish"
+      @close="qrclose"
+      :validator="qrvalidator"
       v-if="showScanner"
     ></q-r-scan>
     <div class="content" v-if="!showScanner">
@@ -43,33 +43,33 @@
             </v-layout>
             <div v-if="memoswitch">
               <v-select v-bind:items="memotypes" v-model="memotype"
-                        :label="$t('MemoType')" dark 
+                        :label="$t('MemoType')" dark
                         v-on:input='onMemoTypeInput()'
-              /> 
+              />
               <v-text-field
                 name="memo"
                 :label="$t('MemoContent')"
                 v-model="memo"
-                dark 
+                dark
                 type="text"
-                :hint="$t('required')" 
+                :hint="$t('required')"
                 required
                 :disabled="this.memotype === null || this.memotype === 'None'"
               ></v-text-field>
             </div>
             <!-- <li class="settings-li">
               <v-select v-bind:items="items" v-model="memotype"
-                        :label="$t(memotypelabel)" dark 
+                        :label="$t(memotypelabel)" dark
                        append-icon=""
                        v-on:input='onMemoTypeInput()'
               ></v-select>
             </li>
             <li class="settings-li">
               <v-text-field name="input-memo" :label="$t(memolabel)"
-                            v-model='memo'    
-                            dark   
-                            :hint="$t('required')" 
-                            :required='this.memorequired' 
+                            v-model='memo'
+                            dark
+                            :hint="$t('required')"
+                            :required='this.memorequired'
                             :persistent-hint='this.memorequired'
                             :disabled="memotype === 'None' || memotype === ''"
               ></v-text-field>
@@ -78,12 +78,12 @@
         </div>
       </card>
       <div style="flex: 1;"></div>
-      <v-footer v-if="!showScanner">        
+      <v-footer v-if="!showScanner">
         <v-layout row  wrap>
           <v-flex xs12>
             <v-btn class='add'  block dark large @click="addContact">{{$t(buttonlabel)}}</v-btn>
           </v-flex>
-        </v-layout>  
+        </v-layout>
       </v-footer>
     </div>
 
@@ -132,7 +132,7 @@ export default {
       name: '',
       address: '',
 
-      memoswitch: false, //show memo 
+      memoswitch: false, //show memo
       memotypes: ['None','Text', 'ID', 'Hash','Return'],
       memotype: null,
       memo: null,
@@ -148,7 +148,7 @@ export default {
     }),
     ...mapGetters([
     ]),
-  
+
   },
   mounted(){
     //this.address = this.$route.query.address
@@ -188,9 +188,9 @@ export default {
         }
       }
 
-      var contact_temp = {name:     this.name, 
-                          address:  this.address, 
-                          memotype: this.memoswitch ? this.memotype : null, 
+      var contact_temp = {name:     this.name,
+                          address:  this.address,
+                          memotype: this.memoswitch ? this.memotype : null,
                           memo:     this.memoswitch ? this.memo : null
                           }
       var hash_temp = loseCode(contact_temp.address + contact_temp.memotype + contact_temp.memo)
@@ -220,7 +220,7 @@ export default {
         this.title = 'Title.Scan'
       }
     },
-    qrvalidator(text){   
+    qrvalidator(text){
       console.log(`validate ---- qrscanner --- text -- ${text}`)
       return true
 
@@ -269,7 +269,7 @@ export default {
   width: 100%;
   background: transparent;
 .add
-  background-color #21ce90  !important
+  background-color: $primarycolor.purple !important
 .hidebackground
   background none
   background-color: transparent

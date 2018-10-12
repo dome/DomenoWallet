@@ -163,7 +163,7 @@ export default {
         padding-top: 5px
         padding-bottom: 5px
       .amount.add
-        color: $primarycolor.green
+        color: $primarycolor.purple
       .amount.minus
         color: $primarycolor.red
       .address

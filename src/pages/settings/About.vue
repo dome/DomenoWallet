@@ -25,7 +25,7 @@
           <div class="textcenter appversion" v-if="currentWebVersion">
             {{currentWebVersion}}
           </div>
-          
+
         </div>
       </card>
       <card class="detail-card" padding="10px 10px" margin="10px 0 10px 0">
@@ -42,7 +42,7 @@
                 <div class="label">
                     {{$t('OfficialSite')}}
                 </div>
-                <div class="value"> 
+                <div class="value">
                     {{officialSite}}
                     <i class="material-icons vcenter f-right">keyboard_arrow_right</i>
                 </div>
@@ -121,7 +121,7 @@ export default {
     }
   },
   mounted() {
-   
+
    document.addEventListener('chcp_nothingToUpdate',()=>{
      this.$toasted.show(this.$t('NothingToInstall'))
    }, false)
@@ -222,7 +222,7 @@ export default {
 
 .appname {
   font-size: 24px;
-  color: $primarycolor.green;
+  color: $primarycolor.purple;
 }
 
 .appversion {

@@ -3,8 +3,8 @@
   <div class="page" >
     <loading color="red" :show="showloading" :loading="working" :success="trustsuccess" :fail='trustfail'
             :title="loadingTitle" :msg="loadingMsg" :closeable="trustfail" @close="hiddenLoadingView" />
-    <toolbar :title="$t(title)" 
-      :showmenuicon="showmenuicon" 
+    <toolbar :title="$t(title)"
+      :showmenuicon="showmenuicon"
       :showbackicon="showbackicon"
       @goback="back"
       ref="toolbar"
@@ -162,9 +162,9 @@ export default {
         }
       }
       return notTrustedcurrenciesarray
-    
+
     }*/
-  
+
   },
   mounted(){
     this.url = 'fchain.io'
@@ -245,13 +245,13 @@ export default {
         console.log('enough native asset to continue')
       }else{
         this.$toasted.error('no enough lumens to continue')
-        return 
+        return
       }
       if(this.working) return
       this.trustsuccess = false
       this.trustfail = false
       this.showloading = true
-      this.working = true 
+      this.working = true
       this.loadingTitle = null
       this.loadingMsg = null
       let params = {
@@ -283,7 +283,7 @@ export default {
           this.loadingTitle = this.$t('AddAssetFail')
           if(msg){
            this.loadingMsg = this.$t(msg)
-          }     
+          }
         })
         .finally(
           //this.working = false
@@ -295,7 +295,7 @@ export default {
       this.trustsuccess = false
       this.trustfail = false
       // this.showloading = true
-      this.working = true 
+      this.working = true
       this.loadingTitle = null
       this.loadingMsg = null
       let params = {
@@ -327,14 +327,14 @@ export default {
           this.loadingTitle = this.$t('AddAsset')+this.$t('SaveFailed')
           if(msg){
            this.loadingMsg = this.$t(msg)
-          }     
+          }
         })
         .finally(
           //this.working = false
         )
     },
 */
-    
+
     activeFedAddType(){
       this.addtype = ADD_TRUST_FED
     },
@@ -378,7 +378,7 @@ export default {
         console.log('enough native asset to continue')
       }else{
         this.$toasted.error('no enough lumens to continue')
-        return 
+        return
       }
       if(this.working) return
       this.showloading = true
@@ -406,7 +406,7 @@ export default {
           this.loadingTitle = this.$t('AddAsset')+this.$t('SaveFailed')
           if(msg){
            this.loadingMsg = this.$t(msg)
-          }  
+          }
       })
 
 /*
@@ -426,21 +426,21 @@ export default {
           // Promise.all(this.addTrust(currencies[i]))
           // var a = new Promise(function  (resolve,reject) {
           //    this.addTrust(currencies[i])
-          // }); 
+          // });
           this.addAllTrust(currencies[i])
           console.log("code work-----------------")
-        
+
       }
       }
     */
     }
-   
+
   },
   components: {
     Toolbar,
     Card,
     Loading,
-    
+
   }
 
 
@@ -476,7 +476,7 @@ export default {
     .address
       font-size: 14px
       color: $secondarycolor.font
-        
+
   .currency-right
     text-align: right
     width: 20%
@@ -485,26 +485,26 @@ export default {
     .material-icons
       font-size: 24px
     .add
-      color: $primarycolor.green
+      color: $primarycolor.purple
     .done
-      color: $primarycolor.green
+      color: $primarycolor.purple
 
-.application 
-  .theme--dark.btn.btn--disabled 
+.application
+  .theme--dark.btn.btn--disabled
     .icon
-      color: $primarycolor.green !important
+      color: $primarycolor.purple !important
 .menurow
   margin-bottom: 5px
 .menu
   padding-left: 5px
   padding-right: 5px
   &.active
-    border-bottom: 2px solid $primarycolor.green
+    border-bottom: 2px solid $primarycolor.purple
 .btn_trust
-  background-color: $primarycolor.green  !important
+  background-color: $primarycolor.purple !important
 
 .addallasset
-  color:$primarycolor.green
+  color:$primarycolor.purple
   float:right
   padding-right:5px
 </style>

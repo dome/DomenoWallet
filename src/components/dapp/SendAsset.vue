@@ -1,7 +1,7 @@
 // 发送资产界面
 <template>
   <div class="send-asset-wrapper">
-    
+
     <!-- 显示支付界面 -->
     <div class="confirm-wrapper" v-show="step === 0">
       <div class="confirm-blank"></div>
@@ -20,7 +20,7 @@
             </div>
             <div style="clear:both"></div>
           </div>
-          
+
           <div class="confirm-content">
             <div class="confirm-title">
               <!-- <span v-if="appname">{{$t('Third.SendTo',[appname])}}</span> -->
@@ -53,7 +53,7 @@
               <div class="loading-wrapper textcenter" v-if="nodata">
                 {{$t('Error.NoData')}}
               </div>
-              
+
             </div>
           </div>
 
@@ -94,10 +94,10 @@
       </div>
     </v-bottom-sheet>
 
-    <loading :show="working" :loading="sending" :success="sendsuccess" :fail='sendfail' 
+    <loading :show="working" :loading="sending" :success="sendsuccess" :fail='sendfail'
       color="red" :title="loadingTitle" :msg="loadingError" :closeable="sendfail" @close="hiddenLoading"/>
 
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -134,7 +134,7 @@ export default {
         //slidesPerView: 'auto',
         touchRatio: 0.2,
         slideToClickedSlide: true
-        
+
       },
 
       working: false,
@@ -143,7 +143,7 @@ export default {
       sendfail: false,
       loadingTitle: null,
       loadingError: null,
-      
+
     }
   },
   props: {
@@ -405,8 +405,8 @@ export default {
               if(isNativeAsset(asset)){
                 if(canSend(this.native.balance, this.reserve, amount, this.base_fee, 1)){
                   this.assets.push({
-                    id: 'XLM',code: 'XLM', issuer: 'stellar.org', 
-                    destId: origin.destination_asset_type === 'native' ? 
+                    id: 'XLM',code: 'XLM', issuer: 'stellar.org',
+                    destId: origin.destination_asset_type === 'native' ?
                       'XLM': origin.destination_asset_code + '-' + origin.destination_asset_issuer,
                     amount: Number(origin.source_amount), destination_amount: origin.destination_amount,
                     path:origin.path,
@@ -414,14 +414,14 @@ export default {
                   })
                 }
               }else{
-                if( (asset.balance - amount >= 0) && 
+                if( (asset.balance - amount >= 0) &&
                       canSend(this.native.balance, this.reserve, 0, this.base_fee, 1)){
-                  this.assets.push({code: origin.source_asset_code, 
-                    issuer: origin.source_asset_issuer, 
-                    amount: Number(origin.source_amount), 
+                  this.assets.push({code: origin.source_asset_code,
+                    issuer: origin.source_asset_issuer,
+                    amount: Number(origin.source_amount),
                     destination_amount: origin.destination_amount,
                     id: origin.source_asset_code + '-' + origin.source_asset_issuer,
-                    destId: origin.destination_asset_type === 'native' ? 
+                    destId: origin.destination_asset_type === 'native' ?
                       'XLM': origin.destination_asset_code + '-' + origin.destination_asset_issuer,
                     path:origin.path,
                     origin
@@ -441,7 +441,7 @@ export default {
           this.$nextTick(()=>{
             this.loading = false
           })
-          
+
         })
         .catch(err => {
           this.loading = false
@@ -510,7 +510,7 @@ export default {
   padding-left: .4rem
   color: $primarycolor.font
 .confirm-amount
-  color: $primarycolor.green
+  color: $primarycolor.purple
   text-align: center
   font-size: .5rem
 .confirm-memo
@@ -524,9 +524,9 @@ export default {
       color: $secondarycolor.font
     .value
       padding-left: 12px
-      color: $primarycolor.green
+      color: $primarycolor.purple
 .confirm-btns
-  color: $primarycolor.green
+  color: $primarycolor.purple
   text-align: center
   font-size: 16px
   height: 42px
@@ -562,11 +562,11 @@ export default {
       overflow: hidden
       text-overflow:ellipsis
       white-space: nowrap
-      color: $primarycolor.green
+      color: $primarycolor.purple
     .address
       font-size: 12px
       color: $secondarycolor.font
-  
+
 
 
 .sheet-content
@@ -582,7 +582,7 @@ export default {
       line-height: 40px
       font-size: 32px
       text-align: center
-      color: $primarycolor.green
+      color: $primarycolor.purple
       padding: 10px 10px
     .label
       color: $secondarycolor.font
@@ -599,7 +599,7 @@ export default {
       line-height: 40px
       text-align: center
       font-size: 16px
-      color: $primarycolor.green
+      color: $primarycolor.purple
 .confirm-assets
   padding: .2rem .2rem
   .asset-card
@@ -612,9 +612,9 @@ export default {
     .asset-icon
       .iconfont
         font-size: 1rem
-        color: $primarycolor.green
+        color: $primarycolor.purple
     .asset-code
-      color: $primarycolor.green
+      color: $primarycolor.purple
     .asset-issuer
       font-size: .2rem
       color: $secondarycolor.font
@@ -622,7 +622,7 @@ export default {
       white-space: nowrap
       word-break: normal
     &.active
-      border: 1px solid $primarycolor.green
+      border: 1px solid $primarycolor.purple
 .loading-wrapper
   text-align: center
   margin: 1.5rem auto

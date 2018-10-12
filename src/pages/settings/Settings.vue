@@ -8,7 +8,7 @@
       <card padding="10px 10px" class="mycard">
         <div class="card-content" slot="card-content">
           <ul class="settings-ul">
-            
+
             <li class="settings-li">
               <span>{{$t('redUpGreenDown') }}</span>
               <v-switch class="pincodeswitch f-right"
@@ -41,10 +41,10 @@
               <span>{{$t('FederationName')}}</span>
               <i class="material-icons vcenter f-right s-right">keyboard_arrow_right</i>
             </li>
-            <li class="settings-li" @click="toAbout">
-              <span>{{$t('About.Title')}}</span> 
+            <!--<li class="settings-li" @click="toAbout">
+              <span>{{$t('About.Title')}}</span>
               <i class="material-icons vcenter f-right s-right">keyboard_arrow_right</i>
-            </li>
+            </li>-->
           </ul>
         </div>
       </card>

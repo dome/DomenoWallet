@@ -10,7 +10,7 @@
           <div class="label flex1">{{$t('Title.ThirdApp')}}</div>
           <div class="value flex2 textleft pl-1">{{appname}}</div>
         </div>
-       
+
         <div class="sheet-input">
           <v-text-field
               name="password"
@@ -29,10 +29,10 @@
       </div>
     </v-bottom-sheet>
 
-    <loading :show="working" :loading="sending" :success="sendsuccess" :fail='sendfail' 
+    <loading :show="working" :loading="sending" :success="sendsuccess" :fail='sendfail'
       color="red" :title="loadingTitle" :msg="loadingError" :closeable="sendfail" @close="hiddenLoading"/>
 
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -49,7 +49,7 @@ import { encrypt,decrypt,encryptToBase64,decryptByBase64 } from '@/api/crypt'
 export default {
   data(){
     return {
-     
+
       working: false,
       sending: false,
       sendsuccess: false,
@@ -61,7 +61,7 @@ export default {
       pwdvisible: false,
 
       showPwdSheet: true,
-      
+
     }
   },
   props: {
@@ -82,13 +82,13 @@ export default {
       notfunding: state => state.account.account_not_funding
     }),
     ...mapGetters(["balances", "reserve", "native", "base_fee",'base_reserve']),
-    
+
   },
   beforeMount () {
-    
+
   },
   mounted () {
-    
+
   },
   methods: {
     ...mapActions({
@@ -181,7 +181,7 @@ export default {
       line-height: 40px
       font-size: 32px
       text-align: center
-      color: $primarycolor.green
+      color: $primarycolor.purple
       padding: 10px 10px
     .label
       color: $secondarycolor.font
@@ -198,7 +198,7 @@ export default {
       line-height: 40px
       text-align: center
       font-size: 16px
-      color: $primarycolor.green
+      color: $primarycolor.purple
 
 </style>
 

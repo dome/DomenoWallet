@@ -1,14 +1,14 @@
 // 打开第三方应用
 <template>
   <div>
-     <toolbar :title="choosed.title" 
-        :showmenuicon="false" 
+     <toolbar :title="choosed.title"
+        :showmenuicon="false"
         :showbackicon="false"
         ref="toolbar"
         >
     </toolbar>
 
-    <send-asset v-if="showSendAsset" 
+    <send-asset v-if="showSendAsset"
       :destination="sendTarget.destination"
       :appname="choosed.title"
       :asset_code="sendTarget.code"
@@ -20,21 +20,21 @@
       @exit="exitSendAsset"
       @sendsuccess="sendAssetSuccess"
        ></send-asset>
-    <back-up-data v-if="appEventType === 'backup' && appEventData" 
-      :appname="choosed.title" 
+    <back-up-data v-if="appEventType === 'backup' && appEventData"
+      :appname="choosed.title"
       @exit="exitBackUpEvent" @success="successBackUpEvent" />
 
-    <recovery-data v-if="appEventType === 'recovery' && appEventData" 
+    <recovery-data v-if="appEventType === 'recovery' && appEventData"
       :appname="choosed.title" :encryptData="appEventData.data"
       @exit="exitRecoveryEvent" @success="successRecoveryEvent" />
 
-    <trust-line v-if="appEventType === 'trust' && appEventData" 
-      :appname="choosed.title" 
+    <trust-line v-if="appEventType === 'trust' && appEventData"
+      :appname="choosed.title"
       :asset_code="appEventData.code"
       :asset_issuer="appEventData.issuer"
       @exit="exitTrustEvent" @success="successTrustEvent" />
 
-    <sign-x-d-r v-if="appEventType === 'signXDR' && appEventData" 
+    <sign-x-d-r v-if="appEventType === 'signXDR' && appEventData"
       :appname="choosed.title"
       :message="appEventData.message"
       :xdr="appEventData.data"
@@ -151,7 +151,7 @@ export default {
               title: {
                   color: '#FFFFFF',
                   showPageTitle: true,
-                  staticText: this.choosed.title 
+                  staticText: this.choosed.title
               },
               closeButton: {
                   image: 'close',
@@ -162,7 +162,7 @@ export default {
               backButtonCanClose: false,
               // hidden: true
           })
-          
+
       }
       this.appInstance.addEventListener('reloadPressed', e => {
         this.appInstance.reload()
@@ -281,7 +281,7 @@ export default {
           console.log('===============callback------event---')
           console.log(code)
           this.appInstance.executeScript({
-            code: code }, 
+            code: code },
             params=>{})
         }catch(err){
           console.error(err)
@@ -388,7 +388,7 @@ export default {
 
 
     }
-    
+
 
 
   },
@@ -422,7 +422,7 @@ export default {
 .btns
   font-size: 16px
 .dlg-green
-  color: $primarycolor.green
+  color: $primarycolor.purple
 .dlg-content
   background: $secondarycolor.gray
   color: $primarycolor.red

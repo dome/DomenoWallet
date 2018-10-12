@@ -1,8 +1,8 @@
 // 接收资产
 <template>
   <div class="page">
-    <toolbar :title="$t(title)" 
-      :showmenuicon="showmenuicon" 
+    <toolbar :title="$t(title)"
+      :showmenuicon="showmenuicon"
       :showbackicon="showbackicon"
       @goback="back"
       />
@@ -45,12 +45,12 @@
               :suffix="selectedasset.code"
               type="Number"
 
-              
-              
+
+
               ></v-text-field>
             <div class="receive_asset_msg_one">
-                <span>{{$t("Available")}}</span> 
-                <span>{{selectedasset.code}}:</span>               
+                <span>{{$t("Available")}}</span>
+                <span>{{selectedasset.code}}:</span>
                 <span>{{selectedasset.balance}}</span>
 
             </div>
@@ -58,7 +58,7 @@
               <span>{{$t("ReceiveAssetMsg")}}</span><br/>
               <span>{{num}}&nbsp;</span>
               <span v-if="showassetcode" >{{selectedasset.code}}</span>
-              
+
             </div>
             <div class="qrcode">
               <qrcode :text="qrtext" :callback="qrcodecallback"/>
@@ -75,7 +75,7 @@
         <v-flex xs6 @click="share">
           <span>{{$t('Share')}}</span>
         </v-flex>
-       </v-layout>  
+       </v-layout>
     </div> -->
 
 
@@ -90,7 +90,7 @@ import { mapState, mapActions, mapGetters} from 'vuex'
 import { isNativeAsset } from '@/api/assets'
 
 export default {
-  
+
   data(){
     return {
       title: 'Receive',
@@ -101,7 +101,7 @@ export default {
       qrcodebase64:null,
       assetChoseReturnObject: true,
       showassetcode:false,
-  
+
 
 
     }
@@ -112,20 +112,20 @@ export default {
       this.showassetcode=false;
     }else {
         this.showassetcode=true;
-    } 
-  
+    }
+
     },
     amount:function(){
     let sendnum = Number(this.amount);
     if(sendnum<0){
       this.num=0
     }
-  
+
     if(sendnum>this.selectedasset.balance){
       this.num=this.selectedasset.balance
       }
     }
-  
+
   },
    computed:{
     ...mapState({
@@ -163,7 +163,7 @@ export default {
       console.log(JSON.stringify(data))
       return JSON.stringify(data)
     }
-  
+
   },
   mounted(){
     this.selectedasset = this.asset
@@ -178,7 +178,7 @@ export default {
       this.qrcodebase64 = img
     },
     updateAmount(val){
-      this.num = val      
+      this.num = val
     },
     back(){
       this.$router.back()
@@ -199,10 +199,10 @@ export default {
     },
     save(){
       let params = {
-          data: this.qrcodebase64, 
-          prefix: this.account.name+"_receive", 
-          format: 'png', 
-          quality: 100, 
+          data: this.qrcodebase64,
+          prefix: this.account.name+"_receive",
+          format: 'png',
+          quality: 100,
           mediaScanner: true
       };
       if(window.imageSaver){
@@ -235,13 +235,13 @@ export default {
         this.$toasted.error('not support share')
       }
     },
-   
+
   },
   components: {
     Toolbar,
     Card,
     qrcode: QRCode,
-    
+
   }
 
 
@@ -259,7 +259,7 @@ export default {
     padding-top: 5px
     padding-bottom: 5px
   .asset.label
-    color: $primarycolor.green
+    color: $primarycolor.purple
   .value
     display: block
     font-size: 14px
@@ -286,7 +286,7 @@ export default {
 //   line-height:56px
 //   font-size:16px
 //   text-align:center
-//   color:$primarycolor.green
+//   color:$primarycolor.purple
 .qrcode
   text-align: center
   padding-top:20px
@@ -294,7 +294,7 @@ export default {
 
 .receive_asset_msg
   text-align:center
-  color:$primarycolor.green
+  color:$primarycolor.purple
   padding-top:8px
 
 .receive_asset_msg_one

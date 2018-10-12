@@ -23,7 +23,7 @@
         {{$t('Return')}}
       </div>
     </div>
-    
+
   </v-dialog>
 
 </template>
@@ -108,9 +108,9 @@ export default {
     height: 200px
 .load-title
   font-size: 20px
-  text-align: center 
+  text-align: center
   &.green-color
-    color: $primarycolor.green
+    color: $primarycolor.purple
   &.red-color
     color: $primarycolor.red
 .load-msg
@@ -122,7 +122,7 @@ export default {
   padding-top: 15vh
   font-size: 16px
   &.green-color
-    color: $primarycolor.green
+    color: $primarycolor.purple
   &.red-color
     color: $primarycolor.red
 

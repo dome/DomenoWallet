@@ -9,7 +9,7 @@
  */
 <template>
 <div class="withdraw_wrapper" v-bind:class="{hidebackground: showScanner}">
-  <loading :show="onsend" :loading="sending" :success="sendsuccess" :fail='sendfail' 
+  <loading :show="onsend" :loading="sending" :success="sendsuccess" :fail='sendfail'
     :title="loadingTitle" :msg="loadingMsg" :closeable="sendfail" @close="hiddenLoadingView"
     />
 
@@ -19,7 +19,7 @@
         <div class="label">{{$t('DW.Withdraw.ForwardType')}}</div>
        <v-select
             v-bind:items="forwardTypes"
-            name="forward_type"      
+            name="forward_type"
             class="field_select"
             v-model="forward_type"
             @change="changeForwardType($event)"
@@ -33,11 +33,11 @@
             </template>
           </v-select>
       </div>
-     
+
       <div class="field_select" >
         <div class="label" @click="switchScanner">{{$t('DestinationAddress')}}
           <span class="ml-2 title2">({{$t('Title.Scan')}})</span></div>
-        <v-text-field class="field_input"  name="dest" 
+        <v-text-field class="field_input"  name="dest"
           v-model="dest"
           dark
           append-icon="bookmark"
@@ -47,7 +47,7 @@
 
       <div class="field_select" >
         <div class="label">{{$t('Memo')}}</div>
-        <v-text-field class="field_input"  name="dest" 
+        <v-text-field class="field_input"  name="dest"
           v-model="dest_extra"
           dark
           ></v-text-field>
@@ -58,7 +58,7 @@
   </div>
 
   <!--第2步的界面-->
-    <div class="wcard-content" v-if="step === 2 && step2data  && !showScanner">    
+    <div class="wcard-content" v-if="step === 2 && step2data  && !showScanner">
       <div class="field_select" v-if="step2data.eta!= null && typeof step2data.eta!='undefined'">
         <div class="hint">{{$t('DW.Withdraw.eta',[step2data.eta])}}</div>
       </div>
@@ -80,14 +80,14 @@
 
       <div class="field_select" >
         <div class="label">{{$t('Amount')}}</div>
-        <v-text-field  name="amount" 
+        <v-text-field  name="amount"
           v-model="amount"
           @input="chgAmount"
           type="number"
           dark
           :suffix="asset.code"
           ></v-text-field>
-        <v-slider v-model="num"  hide-details 
+        <v-slider v-model="num"  hide-details
           class="amount-slider"
           dark
           max=100 step=10 ticks
@@ -99,7 +99,7 @@
 
       <div class="field_select" >
         <div class="label">{{$t('DW.Fee')}}</div>
-        <v-text-field class="field_input input-group--focused"  name="fee" 
+        <v-text-field class="field_input input-group--focused"  name="fee"
           :value="fee"
           :disabled="true"
           :suffix="asset.code"
@@ -108,7 +108,7 @@
       </div>
       <div class="field_select" >
         <div class="label">{{$t('DW.Receive')}}</div>
-        <v-text-field class="field_input input-group--focused"  name="receive" 
+        <v-text-field class="field_input input-group--focused"  name="receive"
           :value="receive"
           :disabled="true"
           :suffix="asset.code"
@@ -134,20 +134,20 @@
 
           <div class="confirm-row flex-row">
             <span class="label flex1">{{$t('Send')}}</span>
-            <div class="flex4"> 
+            <div class="flex4">
               <span class="value">{{amount === null ? 0: amount}}</span><span class="code pl-1">{{asset.code}}</span>
             </div>
-            
+
           </div>
           <div class="confirm-row flex-row">
             <span class="label flex1">{{$t('DW.Fee')}}</span>
-            <div class="flex4"> 
+            <div class="flex4">
                <span class="value">{{fee||0}}</span><span class="code pl-1">{{asset.code}}</span>
             </div>
           </div>
           <div class="confirm-row flex-row">
             <span class="label flex1">{{$t('DW.Receive')}}</span>
-            <div class="flex4"> 
+            <div class="flex4">
                <span class="value">{{receive||0}}</span><span class="code pl-1">{{asset.code}}</span>
             </div>
           </div>
@@ -163,9 +163,9 @@
       </div>
     </div>
 
-  
+
   <contact-book v-if="showbook  && !showScanner" :data="bookdata" :close="()=>{showbook=false}" :ok="afterBookChose"/>
-  
+
    <q-r-scan
       @finish="qrfinish"
       @close="qrclose"
@@ -199,7 +199,7 @@ export default {
       dest: null,
       dest_extra: null,
 
-      //第2步的参数 
+      //第2步的参数
       step2data: null,
       num:null,//数量百分比
       amount: null,//提交的数量
@@ -215,7 +215,7 @@ export default {
       sendfail: false,//发送失败
       loadingTitle: null,
       loadingMsg: null,
-      
+
       bookdata: ['myaddress'],
 
       confirmSheetView: false,
@@ -378,7 +378,7 @@ export default {
           }
 
         })
-      
+
     },
 
     hideLoading(){
@@ -503,14 +503,14 @@ export default {
     }
 
   },
-  
+
   components:{
     Loading,
     ContactBook,
     Card,
     QRScan,
   }
-  
+
 
 
 }
@@ -599,6 +599,6 @@ export default {
   padding-left: 0
   padding-right: 0
 .title2
-  color: $primarycolor.green
+  color: $primarycolor.purple
   font-size: 13px
 </style>

@@ -203,7 +203,7 @@ export default {
       // update home_domain and inflation_destination from horizon.
       console.log("updateFederationAndInflationInfo")
       console.log(this.accountData)
-      if (this.account.inflationAddress !== this.accountDetails.inflation_destination 
+      if (this.account.inflationAddress !== this.accountDetails.inflation_destination
         || this.account.federationAddress !== this.accountDetails.home_domain) {
         let data = defaultsDeep({}, this.account, {
           federationAddress: this.accountDetails.home_domain,
@@ -298,7 +298,7 @@ export default {
       height: 40px
       line-height: 30px
       padding: 5px 5px
-      color: $primarycolor.green
+      color: $primarycolor.purple
       text-align: center
       vertical-align: middle
       border-radius: 40px
@@ -335,9 +335,9 @@ export default {
           .iconfont
             font-size: 21px
           .iconfont.icon-dot1
-            color: $primarycolor.green
+            color: $primarycolor.purple
     .manage
-      color: $primarycolor.green
+      color: $primarycolor.purple
       display: inline-block
       width: 100%
       text-align: center
@@ -388,7 +388,7 @@ export default {
       line-height: 40px
       font-size: 32px
       text-align: center
-      color: $primarycolor.green
+      color: $primarycolor.purple
       padding: 10px 10px
     .label
       color: $secondarycolor.font
@@ -405,6 +405,6 @@ export default {
       line-height: 40px
       text-align: center
       font-size: 16px
-      color: $primarycolor.green
+      color: $primarycolor.purple
 </style>
 

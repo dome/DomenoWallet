@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 <template>
   <div class="page">
@@ -15,7 +15,7 @@
             {{$t('Error.NoContactYet')}}
           </div>
           <div class='contacts' v-else>
-            <v-text-field append-icon="search" v-model="search" dark 
+            <v-text-field append-icon="search" v-model="search" dark
                           class="search"  hide-details single-line >
             </v-text-field>
             <div class="contracts-list">
@@ -76,7 +76,7 @@ export default {
       account: state => state.accounts.selectedAccount,
       accountData: state => state.accounts.accountData,
       allcontacts: state => state.app.contacts,
-          
+
     }),
     filteredContacts() {
       return this.allcontacts.filter(contact => {
@@ -160,8 +160,8 @@ export default {
     padding 15px 15px 15px 15px
     background-color:$secondarycolor.gray
     border-radius:5px
-    
-   
+
+
   .contacts-row
     overflow: hidden
     position: relative
@@ -201,18 +201,18 @@ export default {
           text-align: right
           color: $secondarycolor.font
           .balance
-            color: $primarycolor.green
+            color: $primarycolor.purple
             font-size: 20px
             padding-right: 10px
         .myassets-reserve
-          text-align: right  
+          text-align: right
           color: $secondarycolor.font
           .balance
             padding-right: 10px
 
 .assets-row:last-child
   border-bottom: 0px
-.operate-box 
+.operate-box
   position: absolute
   z-index: 1
   height: 100%
@@ -227,11 +227,11 @@ export default {
     align-items: center
     background-color: $primarycolor.gray
     // background-color: $secondarycolor.green
-    color: $primarycolor.green
+    color: $primarycolor.purple
     padding: 0 12px
   .receive
     // border-left: 1px solid $secondarycolor.gray
-    color:$primarycolor.green
+    color:$primarycolor.purple
   .del
     background-color: $primarycolor.gray
     color:$primarycolor.red

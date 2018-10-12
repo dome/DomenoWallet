@@ -22,7 +22,7 @@
               v-model="federation"
               dark
             ></v-text-field>
-          <p v-else-if="currentState=='received' && existFederation">{{$t('FederationName.Address')}} 
+          <p v-else-if="currentState=='received' && existFederation">{{$t('FederationName.Address')}}
             <span class="fed">{{existFederation}}</span>
             <span class="cancel_fed pa-1" @click="()=> confirmDlg = true">{{$t('unlink')}}</span>
             </p>
@@ -202,7 +202,7 @@ export default {
         width: 100%
         height: 36px
 .fed
-  color: $primarycolor.green
+  color: $primarycolor.purple
 .cancel_fed
   background: $primarycolor.red
   color: $primarycolor.font
@@ -219,7 +219,7 @@ export default {
 .btns
   font-size: 16px
 .dlg-green
-  color: $primarycolor.green
+  color: $primarycolor.purple
 .dlg-content
   background: $secondarycolor.gray
 </style>

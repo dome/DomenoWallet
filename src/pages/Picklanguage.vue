@@ -3,8 +3,8 @@
  */
 <template>
     <div class="page">
-    <toolbar :title="$t(title)" 
-      :showmenuicon="showmenuicon" 
+    <toolbar :title="$t(title)"
+      :showmenuicon="showmenuicon"
       :showbackicon="showbackicon"
       @goback="back"
       />
@@ -21,23 +21,23 @@
                 <div class="card-content" slot="card-content">
                     <div class="lang" v-for="(item,index) in locales" :key="index" @click.stop="chose(item)">
                         <span class="label" v-text="item.label"></span>
-                        <span class="icons">                       
+                        <span class="icons">
                             <!-- <i class="iconfont icon-dot1" v-if="isChosed(item)">✔</i>
                             <i class="iconfont icon-dot" v-else>✔</i> -->
                             <i class="iconfont_style_color  iconfont icon-duigou" v-if="isChosed(item)"></i>
                             <i class="iconfont_style  iconfont icon-duigou" v-else></i>
                         </span>
                     </div>
-            
+
                 </div>
             </card>
         </div>
         <div class="bottom_start" @click="to_guidepage">
             {{$t("Start")}}
         </div>
-        
+
     </div>
-  
+
 </template>
 
 <script>
@@ -49,11 +49,11 @@ import { mapState, mapActions} from 'vuex'
 export default {
     data () {
         return {
-                
+
                     title:'Language',
                     showbackicon: false,
                     showmenuicon: false,
-                 
+
                 }
             },
     computed:{
@@ -89,7 +89,7 @@ export default {
                 .then(()=>{
                 this.$toasted.show(this.$t('SaveSuccess'))
                 this.$i18n.locale = item.key
-                
+
                 })
                 .catch(err=>{
                 this.$toasted.error(this.$t('SaveFailed'))
@@ -101,7 +101,7 @@ export default {
         Toolbar,
         Card,
   }
-   
+
 }
 </script>
 
@@ -118,7 +118,7 @@ export default {
     height:82vh
     .mycard
         background:$secondarycolor.gray
-        height:100% 
+        height:100%
       .card-content
         .lang
           padding-top: 10px
@@ -130,7 +130,7 @@ export default {
             .iconfont
               font-size: 20px
             .iconfont.icon-dot1
-              color: $primarycolor.green
+              color: $primarycolor.purple
 
 .bottom_start
     position:fixed
@@ -140,14 +140,14 @@ export default {
     text-align:center
     background: $primarycolor.gray
     z-index: 9
-    color: $primarycolor.green
+    color: $primarycolor.purple
     // top: calc(100vh - 100px)
     padding-bottom: 8px
     padding-bottom: calc(8px + constant(safe-area-inset-bottom))
     padding-bottom: calc(8px + env(safe-area-inset-bottom))
 
 .iconfont_style_color
-    color:$primarycolor.green
+    color:$primarycolor.purple
     font-size:20px
 .iconfont_style
     font-size:20px

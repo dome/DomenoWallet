@@ -1,20 +1,27 @@
 <template>
   <!-- <vue-qr
-        :value="text" 
+        :value="text"
         :callback="qrcallback"
         :options="{ size }"></vue-qr> -->
     <div :style="{textAlign:'center',background:'#FFFFFF',
       width:size+20+'px', height: size+20+'px', margin: '0 auto', padding:'10px 10px'}">
-       <vue-qr
-        :text="text" 
-        :autoColor='true'  
-        dotScale='1' 
-        :size="size" 
-        :logoSrc="logo" 
+       <!-- <vue-qr
+        :text="text"
+        :autoColor='true'
+        dotScale='1'
+        :size="size"
+        :logoSrc="logo"
+        :callback="qrcallback"
+        margin="0"></vue-qr> -->
+      <vue-qr
+        :text="text"
+        :autoColor='true'
+        dotScale='1'
+        :size="size"
         :callback="qrcallback"
         margin="0"></vue-qr>
     </div>
-  
+
 </template>
 
 <script>

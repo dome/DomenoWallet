@@ -2,7 +2,7 @@
 //显示所有自定义引用的第三方dapp
 <template>
   <div class="page" dark>
-    <toolbar :title="$t('CustomDApp')" :showbackicon="true"  
+    <toolbar :title="$t('CustomDApp')" :showbackicon="true"
       @goback="back" :shadow="false" lockpass  ref="toolbar">
       <v-btn icon slot='right-tool' @click="toAdd">
         <i class="material-icons font28">&#xE145;</i>
@@ -14,7 +14,7 @@
         <v-layout class="app-row-li third-li" row wrap v-swiper=2 @click.stop="modify(index,app)">
           <v-flex xs2 class="app-wrapper">
             <v-avatar :tile=false class="grey darken-4 app-avatar">
-              <span class="white--text headline">{{app.title.substring(0,1)}}</span>  
+              <span class="white--text headline">{{app.title.substring(0,1)}}</span>
             </v-avatar>
           </v-flex>
           <v-flex xs8 class="app-wrapper">
@@ -35,7 +35,7 @@
         <v-card-text>
           <v-container grid-list-md>
             <v-layout wrap>
-              
+
               <v-flex xs12 sm6 md4>
                 <v-text-field :label="$t('ContactAdd.name')" clearable required v-model="selected.title"></v-text-field>
               </v-flex>
@@ -255,7 +255,7 @@ export default {
         .app-link
           color: $secondarycolor.font!important
 
-.operate-box 
+.operate-box
   position: absolute
   z-index: 1
   height: 100%
@@ -269,11 +269,11 @@ export default {
     align-items: center
     background-color: $primarycolor.gray
     // background-color: $secondarycolor.green
-    color: $primarycolor.green
+    color: $primarycolor.purple
     padding: 0 12px
   .receive
     // border-left: 1px solid $secondarycolor.gray
-    color:$primarycolor.green
+    color:$primarycolor.purple
   .del
     background-color: $primarycolor.gray
     color:$primarycolor.red

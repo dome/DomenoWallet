@@ -162,7 +162,7 @@
             this.wheels[i].wheelTo(this.pickerSelectedIndex[i])
           }
         }
-        
+
         // console.log(this.wheels)
         // // if(!this.wheels){
         // //     this.refresh()
@@ -180,7 +180,7 @@
         }
       },
       setData(data) {
-        this.pickerData = [data, data] 
+        this.pickerData = [data, data]
         this.dirty = true
       },
       setSelectedIndex(index) {
@@ -240,7 +240,7 @@
         }, 200)
       },
       _createWheel(wheelWrapper, i) {
-        
+
         if (!this.wheels[i]) {
         //   this.wheels[i] = new BScroll(wheelWrapper.children[i], {
           this.wheels[i] = new BScroll(wheelWrapper.querySelectorAll(".wheel")[i], {
@@ -347,12 +347,12 @@
           position: absolute
           top: 0
           background: linear-gradient(to top, rgba(33, 33, 34, 0.4), rgba(33, 33, 33, 0.8))
-          border-bottom: solid 1px $primarycolor.green;
+          border-bottom: solid 1px $primarycolor.purple;
         .mask-bottom
           position: absolute
           bottom: 1px
           background: linear-gradient(to bottom, rgba(33, 33, 34, 0.4), rgba(33, 33, 33, 0.8))
-          border-top: solid 1px $primarycolor.green;
+          border-top: solid 1px $primarycolor.purple;
       .wheel-wrapper
         display: flex
         padding: 0 16px
@@ -376,7 +376,7 @@
               white-space: nowrap
               font-size 16px
               color: $primarycolor.font
-              & > small 
+              & > small
                   margin-left: 0.5em
                   overflow: hidden;
                   display: flex;

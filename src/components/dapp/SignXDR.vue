@@ -1,7 +1,7 @@
 // XDR签名信息确认
 <template>
   <div class="sign-xdr-wrapper">
-    
+
     <!-- 显示确认签名界面 -->
     <div class="confirm-wrapper">
       <div class="confirm-blank"></div>
@@ -15,7 +15,7 @@
             </div>
             <div style="clear:both"></div>
           </div>
-          
+
           <div class="confirm-content">
             <div class="dlg-title text-center">
               <span>{{$t('Sign')}}({{appname}})</span>
@@ -27,7 +27,7 @@
 
             <!---解析operation-->
             <div class="tx-opt-content" v-if="tx">
-             
+
 
               <div class="tx-opts ml-2 mr-2 pl-1 pr-1">
                 <div class="flex-row tx-opt-item pt-1 pb-1" v-for="(opt,index) in tx.operations" :key="index">
@@ -48,7 +48,7 @@
             <div class="tx-opt-content" v-if="err">
               {{$t(err)}}
             </div>
-            
+
           </div>
 
           <div class="confirm-btns flex-row textcenter">
@@ -60,7 +60,7 @@
       </div>
     </div>
 
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -160,16 +160,16 @@ export default {
       }else if(opt.type === 'createAccount'){
         result += this.$t('payment') + ' ' + opt.amount + opt.asset.code + ' ' + this.$t('create_account') +':'+ miniAddress(opt.destination)
       }else if(opt.type === 'pathPayment'){
-        result += this.$t('path_payment')+ ' [' + opt.sendMax + opt.sendAsset.code 
-          + '-' + opt.destAmount + opt.destAsset.code + '],' 
+        result += this.$t('path_payment')+ ' [' + opt.sendMax + opt.sendAsset.code
+          + '-' + opt.destAmount + opt.destAsset.code + '],'
           + this.$t('DestinationAddress') + ':' + miniAddress(opt.destination)
       }else if(opt.type === 'manageOffer'){
-        result += this.$t('manageOffer') + ' ' 
-          + this.$t('Trade.Sell') + opt.amount +  opt.selling.code + ',' 
+        result += this.$t('manageOffer') + ' '
+          + this.$t('Trade.Sell') + opt.amount +  opt.selling.code + ','
           + this.$t('Trade.Price') + opt.price + opt.buying.code
       }else if(opt.type === 'createPassiveOffer'){
         result += this.$t('createPassiveOffer')
-            + this.$t('Trade.Sell') + opt.amount +  opt.selling.code + ',' 
+            + this.$t('Trade.Sell') + opt.amount +  opt.selling.code + ','
             + this.$t('Trade.Price') + opt.price + opt.buying.code
       }else if(opt.type === 'setOptions'){
         result += 'setOptions:'
@@ -231,7 +231,7 @@ export default {
   background: $secondarycolor.gray
   opacity: 1
 .dlg-title
-  color: $primarycolor.green
+  color: $primarycolor.purple
   text-align: center
   font-size: 16px
 .confirm-title
@@ -241,7 +241,7 @@ export default {
   padding-left: .4rem
   color: $primarycolor.font
 .confirm-amount
-  color: $primarycolor.green
+  color: $primarycolor.purple
   text-align: center
   font-size: .5rem
 .confirm-memo
@@ -255,9 +255,9 @@ export default {
       color: $secondarycolor.font
     .value
       padding-left: 12px
-      color: $primarycolor.green
+      color: $primarycolor.purple
 .confirm-btns
-  color: $primarycolor.green
+  color: $primarycolor.purple
   text-align: center
   font-size: 16px
   height: 42px
@@ -293,11 +293,11 @@ export default {
       overflow: hidden
       text-overflow:ellipsis
       white-space: nowrap
-      color: $primarycolor.green
+      color: $primarycolor.purple
     .address
       font-size: 12px
       color: $secondarycolor.font
-  
+
 
 
 .sheet-content
@@ -311,7 +311,7 @@ export default {
       line-height: 40px
       font-size: 32px
       text-align: center
-      color: $primarycolor.green
+      color: $primarycolor.purple
       padding: 10px 10px
     .label
       color: $secondarycolor.font
@@ -328,7 +328,7 @@ export default {
       line-height: 40px
       text-align: center
       font-size: 16px
-      color: $primarycolor.green
+      color: $primarycolor.purple
 .confirm-assets
   padding: .2rem .2rem
   .asset-card
@@ -341,9 +341,9 @@ export default {
     .asset-icon
       .iconfont
         font-size: 1rem
-        color: $primarycolor.green
+        color: $primarycolor.purple
     .asset-code
-      color: $primarycolor.green
+      color: $primarycolor.purple
     .asset-issuer
       font-size: .2rem
       color: $secondarycolor.font
@@ -351,7 +351,7 @@ export default {
       white-space: nowrap
       word-break: normal
     &.active
-      border: 1px solid $primarycolor.green
+      border: 1px solid $primarycolor.purple
 
 .tx-opts
   height: 3rem

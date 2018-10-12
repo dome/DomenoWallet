@@ -6,7 +6,7 @@
    <!-- toolbar -->
     <trade-pair-tool-bar @choseTradePair="afterChoseTradePair" @switchTradePair="afterChoseTradePair"/>
 
-    <loading :show="working" :loading="sending" :success="sendsuccess" :fail='sendfail' 
+    <loading :show="working" :loading="sending" :success="sendsuccess" :fail='sendfail'
       :color="isSell?'red':'green'" :title="loadingTitle" :msg="loadingError" :closeable="sendfail" @close="hiddenLoading"/>
 
       <!--盘面
@@ -15,7 +15,7 @@
       <div class="maintent orderbook-content">
         <order-book-lite ref="orderbook"  @choose="choose"/>
       </div>
-      
+
     <div class="trade-content">
 
     <!--买卖切换-->
@@ -28,9 +28,9 @@
     <div class="content input-content" v-if="!showOffer">
       <card class="mytrade" padding="10px 10px">
         <div class="card-content" slot="card-content">
-          
+
           <v-text-field  dark required  clearable hide-details v-bind:style="'width: 100% !important'"
-            :prefix="$t('Trade.UnitPrice')" 
+            :prefix="$t('Trade.UnitPrice')"
             v-model='price'
             type="number"
             @input="inputPrice"
@@ -41,14 +41,14 @@
           <!--数量-->
           <v-text-field  dark required hide-details clearable  v-bind:style="'width: 100% !important'"
             :prefix="$t('Amount')"
-            v-model="amount"  
+            v-model="amount"
             @input="inputAmount"
-            type="number" name="amount" 
+            type="number" name="amount"
             :tabindex = '1'
             :suffix="BaseAsset.code"
             :color=" isBuy ? 'primary':'error'"
             ></v-text-field>
-          <v-slider hide-details 
+          <v-slider hide-details
             class="buy-amount-slider"
             dark
             max=100 step=10 ticks
@@ -68,7 +68,7 @@
             :tabindex = '2'
             :color="isBuy ? 'primary':'error'"
             ></v-text-field>
-           
+
           <!--按钮
           <v-btn class="primary btn-buy" :loading="working" @click.stop="doBuy">{{$t('Trade.Buy')}}{{BaseAsset.code}}</v-btn>
 -->
@@ -84,7 +84,7 @@
         </div>
       </card>
 
-    
+
 
        <!-- 买卖按钮 -->
       <div class="flex-row full-width footer-btns" v-if="needTrust.length ===0 ">
@@ -92,11 +92,11 @@
           <v-btn :class="'full-width btn-reset ' + ( isBuy ? 'btn-green' : 'btn-red' )"  @click="clean">{{$t('Reset')}}</v-btn>
         </div>
         <div class="flex2 btn-flex">
-          <v-btn class="full-width btn-buy" color="primary" 
-            :disabled="!(CounterBalance.balance>0 && total> 0 && CounterBalance.balance >= total)" 
+          <v-btn class="full-width btn-buy" color="primary"
+            :disabled="!(CounterBalance.balance>0 && total> 0 && CounterBalance.balance >= total)"
             v-if="isBuy" @click="showConfirmSheet = true">{{$t('Trade.Buy')}} {{BaseAsset.code}}</v-btn>
-          <v-btn class="full-width btn-sell" color="error" 
-            :disabled="!(BaseBalance.balance>0 && amount> 0 && BaseBalance.balance >= amount)" 
+          <v-btn class="full-width btn-sell" color="error"
+            :disabled="!(BaseBalance.balance>0 && amount> 0 && BaseBalance.balance >= amount)"
             v-if="isSell" @click="showConfirmSheet = true">{{$t('Trade.Sell')}} {{BaseAsset.code}}</v-btn>
         </div>
       </div>
@@ -120,7 +120,7 @@
           <div class="headcol">{{CounterAsset.code}}</div>
           <div class="headcol"></div>
         </div>
-        <div class="table-row font-13" 
+        <div class="table-row font-13"
           v-for="(item,index) in myoffers" :key="index" :class='item.type'>
           <div class="b-row price" >{{item.price}}</div>
           <div class="b-row" v-if="item.type==='buy'">+{{[locale.key,Number(item.base)] | I18NNumberFormat}}</div>
@@ -148,12 +148,12 @@
   </bottom-notice>  -->
 
   <un-fund-notice v-if="accountNotFundDlg" @close="closeAccountNotFoundDlg">></un-fund-notice>
-  
+
 
   <password-sheet
     v-if="needpwd" @cancel="cancelpwd" @ok="rightpwd"
     ></password-sheet>
-  
+
 
     <!-- 确认内容 -->
     <div class="confirm-wrapper"  v-if="showConfirmSheet">
@@ -349,7 +349,7 @@ export default {
         return this.CounterBalance.balance || 0
       }else if(this.isSell){
         console.log(this.BaseAsset,this.BaseBalance.balance)
-        return this.BaseBalance.balance  
+        return this.BaseBalance.balance
       }else{
         return null
       }
@@ -383,7 +383,7 @@ export default {
       return []
     },
 
-    
+
   },
 
   watch: {
@@ -415,7 +415,7 @@ export default {
     nativeBalance(){
       let d = defaultsDeep({}, this.balances.filter(item=>isNativeAsset(item))[0])
       let t = this.native.balance - this.reserve - this.base_reserve - 0.0001
-      if(t < 0 ) t = 0 
+      if(t < 0 ) t = 0
       d.balance = Number(t.toFixed(7))
       return d;
     },
@@ -444,10 +444,10 @@ export default {
         //this.num = this.num > 100 ? 100 : (this.num - this.num % 10)
         this.num = n.comparedTo(100) > 0 ? 100 : n.minus(n.modulo(10)).toNumber()
       }
-    }, 
+    },
     setAmount(){
       if(this.total === null || this.price === null)return
-      
+
       if(this.isBuy){
         // this.$nextTick(()=>{
           this.amount = Number(new Decimal(this.total||0).div(this.price).toFixed(7))
@@ -455,7 +455,7 @@ export default {
           if(isNaN(this.amount)) this.amount = 0
           console.log(this.amount +'----this.amount')
         // })
-        
+
       }else if(this.isSell){
         let amount = Number(new Decimal(this.total||0).div(this.price).toFixed(7))
         if(isNaN(amount)) amount = 0
@@ -515,10 +515,10 @@ export default {
       this.txResult = null
       let option = {type:this.flag, // sell or buy
         currency:this.BaseAsset.code,//base   buying:  base ++  counter --
-        issuer: this.BaseAsset.issuer, 
+        issuer: this.BaseAsset.issuer,
         base: this.CounterAsset.code,//counter  selling : base -- counter ++
-        base_issuer: this.CounterAsset.issuer, 
-        amount:  Number(this.amount), 
+        base_issuer: this.CounterAsset.issuer,
+        amount:  Number(this.amount),
         price: Number(this.price)
       }
       doOffer(this.accountData.seed, option)
@@ -526,10 +526,10 @@ export default {
           this.sending = false
           this.sendsuccess = true
           this.sendfail = false
-          
+
           //this.$toasted.show(this.$t('Trade.OfferSuccess'))
           this.loadingTitle = this.$t('Trade.OfferSuccess')
-          
+
           try{
             this.txResult = data
             this.loadingError = 'tx:'+data.hash
@@ -550,7 +550,7 @@ export default {
         .catch(err=>{
           console.log(err)
           //this.sending = false;
-         
+
           //this.clean();
           //this.hideLoading();
           //this.$toasted.error(this.$t('Error.OfferFailed'));
@@ -575,8 +575,8 @@ export default {
 
         })
 
-    }, 
-    
+    },
+
     hideLoading(){
       setTimeout(()=>{
           this.sending = false
@@ -584,7 +584,7 @@ export default {
           this.txResult = null
         },5000)
     },
-    
+
     clean(){
       this.num = 0
       this.amount = null
@@ -711,15 +711,15 @@ export default {
             }
           }else{
             this.setTotal()
-          }  
+          }
           this.$nextTick(()=>{
             this.justify = false
           })
         })
-         
+
       }
       // this.total = Number(new Decimal(this.price).times(this.amount || 0).toFixed(7))
-     
+
     },
     inputAmount(val){//数量变化，则num和total变化
       if(this.justify)return
@@ -733,7 +733,7 @@ export default {
             this.justify = false
           });
         })
-        return 
+        return
       }
       if(this.isBuy){
         // if(this.price ===null || this.price === 0)return
@@ -756,7 +756,7 @@ export default {
               this.justify = false
             })
           })
-        }else{//计算出的总值大于最大值 
+        }else{//计算出的总值大于最大值
           this.$nextTick(()=>{
             this.total = this.tradeBalance
             if(this.price === null || this.price === 0){
@@ -866,7 +866,7 @@ export default {
         this.$nextTick(()=>{
           this.justify = false
         })
-        return 
+        return
       }
       if(this.isBuy){
         this.$nextTick(()=>{
@@ -903,13 +903,13 @@ export default {
         });
       }
     },
-    
+
     doTrust(){
       if(!this.islogin){
         this.needpwd = true;
         return;
       }
-      //   <loading :show="working" :loading="sending" :success="sendsuccess" :fail='sendfail' 
+      //   <loading :show="working" :loading="sending" :success="sendsuccess" :fail='sendfail'
       // :color="isSell?'red':'green'" :title="loadingTitle" :msg="loadingError" :closeable="sendfail" @close="hiddenLoading"/>
       if(this.working)return
       // this.isSell = true
@@ -939,7 +939,7 @@ export default {
             this.loadingTitle = this.$t('AddAssetFail')
             if(msg){
             this.loadingError = this.$t(msg)
-            }     
+            }
           })//end of trustAll
       }catch(error){
         this.sending = false
@@ -948,10 +948,10 @@ export default {
         this.loadingTitle = this.$t('AddAssetFail')
         if(msg){
         this.loadingError = this.$t(msg)
-        }     
+        }
       }
     },
-    
+
     toHelp(){
       // let t = new Date().getTime()
       let site = 'https://wallet.fchain.io/manual/#1'
@@ -1066,8 +1066,8 @@ export default {
   padding-right: 10px
   padding-top: 20px
   .active
-    border-bottom: 1px solid $primarycolor.green
-    color: $primarycolor.green
+    border-bottom: 1px solid $primarycolor.purple
+    color: $primarycolor.purple
 
 //购买按钮
 .btn-buy
@@ -1083,7 +1083,7 @@ export default {
   &.btn-red
     color: $primarycolor.red
   &.btn-green
-    color: $primarycolor.green
+    color: $primarycolor.purple
 //可用余额
 .available
   padding-left: 2px
@@ -1135,7 +1135,7 @@ export default {
   height: 46px
   line-height: 46px
   font-size: 18px
-  color: $primarycolor.green
+  color: $primarycolor.purple
   text-align: center
 .confirm-content
   padding-top: 8px
@@ -1147,9 +1147,9 @@ export default {
       color: $secondarycolor.font
     .value
       padding-left: 12px
-      color: $primarycolor.green
+      color: $primarycolor.purple
 .confirm-btns
-  color: $primarycolor.green
+  color: $primarycolor.purple
   text-align: center
   font-size: 16px
   height: 42px
@@ -1210,8 +1210,8 @@ export default {
   .b-row.depth
     text-align: right
     &>a
-      color: $primarycolor.green
-    
+      color: $primarycolor.purple
+
 .offer-card
   height: 100%
   width: 100%

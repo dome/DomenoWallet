@@ -16,13 +16,13 @@
       </div>
     </div>
     <div class="book-content">
-      
+
         <div class="mt-2">
             <span @click="content_contact" v-bind:class="['content_menu_styleone', { content_menu_styletwo: isA }]">{{$t("Menu.Contacts")}}</span>
             <span @click="content_myaccount" v-bind:class="['content_menu_styleone', { content_menu_styletwo: isB }]">{{$t("MyAccount")}}</span>
             <span @click="content_myaddress" v-bind:class="['content_menu_styleone', { content_menu_styletwo: isC }]">{{$t("MemoBook.MyAddress")}}</span>
         </div>
-        
+
         <div v-if="isA && contacts.length>0" class="contracts-list mt-2">
                <div class="contacts-row" v-for="contact in contacts" :key="contact.id">
                 <v-layout class="mycontacts-li" row wrap  @click="chose('contact',contact)" >
@@ -68,8 +68,8 @@
                 </v-layout>
               </div>
         </div>
-        
-        
+
+
     </div>
   </div>
 </template>
@@ -185,7 +185,7 @@ export default {
 
   .bookbar {
     background: $primarycolor.red;
-    // background: $primarycolor.green
+    // background: $primarycolor.purple
     height: 48px;
     line-height: 48px;
     display: flex;
@@ -252,7 +252,7 @@ export default {
 .content_menu_styletwo {
   border-bottom: 3px solid $primarycolor.red;
   color: $primarycolor.red;
-  
+
 }
 
 .contacts-row {

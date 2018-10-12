@@ -4,7 +4,7 @@
 */
 <template>
   <div class="content">
-     
+
      <div class="select-wrapper">
        <v-select
           v-bind:items="assets"
@@ -32,7 +32,7 @@
         </template>
       </v-select>
      </div>
-    
+
   <scroll :refresh="reload">
     <!-- 菜单： 充值/提现  -->
     <div class="menu-wrapper" v-if="selectedasset.code">
@@ -90,8 +90,8 @@
         </div>
 
       </div>
-    </card>    
-   
+    </card>
+
   </scroll>
 
   </div>
@@ -126,7 +126,7 @@ const TYPE_WITHDRAW = 'withdraw'
         active: TYPE_DEPOSIT,
         error: null,
 
-      
+
       }
     },
     computed: {
@@ -150,7 +150,7 @@ const TYPE_WITHDRAW = 'withdraw'
       },
       deposits(){
         if(!this.records.deposit)return []
-        return this.records.deposit.map(item=>{ 
+        return this.records.deposit.map(item=>{
           return defaultsDeep({}, item, {datetime: moment(item.time*1000).format('L')})
           //return _.defaultsDeep({}, item, {datetime: new Date(item.time*1000).toLocaleString()})
         })
@@ -162,7 +162,7 @@ const TYPE_WITHDRAW = 'withdraw'
           //return _.defaultsDeep({}, item, {datetime: new Date(item.time*1000).toLocaleString()})
         })
       },
-     
+
     },
     methods: {
       reload(){
@@ -244,10 +244,10 @@ const TYPE_WITHDRAW = 'withdraw'
       text-align: center
       font-size: 16px
     .menu-li.active
-      color: $primarycolor.green
-      border-bottom: 1px solid $primarycolor.green
+      color: $primarycolor.purple
+      border-bottom: 1px solid $primarycolor.purple
 .selectasset
-  color: $primarycolor.green
+  color: $primarycolor.purple
 .asset-select-code
   font-size: 16px
 .asset-select-issuer

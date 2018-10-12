@@ -18,7 +18,7 @@
             {{$t('Error.NoData')}}
           </div>
           <div class='list' v-else>
-            <v-text-field append-icon="search" v-model="search" dark 
+            <v-text-field append-icon="search" v-model="search" dark
                           class="search"  hide-details single-line >
             </v-text-field>
             <div class="myaddress-row" v-for="(data,index) in filtered" :key="index"
@@ -69,7 +69,7 @@ export default {
       account: state => state.accounts.selectedAccount,
       accountData: state => state.accounts.accountData,
       myaddresses: state => state.app.myaddresses||[]
-          
+
     }),
     filtered() {
       let content = this.search.toLowerCase()
@@ -195,7 +195,7 @@ export default {
           font-size: 14px
 .assets-row:last-child
   border-bottom: 0px
-.operate-box 
+.operate-box
   position: absolute
   z-index: 1
   height: 100%
@@ -211,7 +211,7 @@ export default {
     align-items: center
     background-color: $primarycolor.gray
     // background-color: $secondarycolor.green
-    color: $primarycolor.green
+    color: $primarycolor.purple
     padding: 0 12px
   .receive
     border-left: 1px solid $primarycolor.gray

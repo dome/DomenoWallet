@@ -9,7 +9,7 @@
         <v-icon class="back-icon"/>
       </v-btn>
     </toolbar>
-    
+
     <div class="content">
       <div class="label">{{$t('Account.AccountName')}}</div>
       <div class="value" >{{name}}</div>
@@ -21,7 +21,7 @@
       <div class="value" @click="copy(seed)">{{seed}}</div> -->
       <div class="label" v-if="mnemonic">{{$t('mnemonic')}}</div>
       <div class="value" v-if="mnemonic" @click="copy(mnemonic)">{{mnemonic}}</div>
-      
+
       <div class="qrcode">
         <qrcode :text="qrtext" :size="200" color="red"/>
       </div>
@@ -56,13 +56,13 @@
           {{$t('Account.Skip')}}
         </div>
       </toolbar>
-      
+
       <div class="si-bg">
         <div class="si-card mnemonic-validat-card">
           <div class="headline textcenter">{{$t('validateMnemonic')}}</div>
           <v-layout wrap>
             <v-flex xs12 sm6 md4>
-               <v-text-field 
+               <v-text-field
                 required
                 :label="$t('mnemonicIndex',[randoms[0]+1])"
                 v-model="w0"
@@ -70,7 +70,7 @@
                 ></v-text-field>
             </v-flex>
             <v-flex xs12 sm6 md4>
-              <v-text-field 
+              <v-text-field
                 required
                 :label="$t('mnemonicIndex',[randoms[1]+1])"
                 v-model="w1"
@@ -78,7 +78,7 @@
                 ></v-text-field>
             </v-flex>
             <v-flex xs12 sm6 md4>
-               <v-text-field 
+               <v-text-field
                 required
                 :label="$t('mnemonicIndex',[randoms[2]+1])"
                 v-model="w2"
@@ -86,7 +86,7 @@
                 ></v-text-field>
             </v-flex>
             <v-flex xs12 sm6 md4>
-              <v-text-field 
+              <v-text-field
                 required
                 :label="$t('mnemonicIndex',[randoms[3]+1])"
                 v-model="w3"
@@ -103,7 +103,7 @@
       </div>
 
     </div>
-  
+
 
     <!-- 是否跳过验证窗口 -->
     <v-dialog v-model="showSkipDlg" max-width="95%" persistent>
@@ -160,7 +160,7 @@
       </div>
     </v-dialog>
 
-  <loading :show="showLoading" :loading="working" :success="dealok" :fail='dealfail' 
+  <loading :show="showLoading" :loading="working" :success="dealok" :fail='dealfail'
       :title="loadingTitle" :msg="loadingMsg" :closeable="dealfail" @close="hiddenLoadingView"/>
 
 </div>
@@ -196,7 +196,7 @@ export default {
       showLoading: false,
       loadingTitle: null,
       loadingMsg: null,
-      
+
       //新增账户的情况下，要求用户输入密钥
       seedInputDlgShow: false,
       seedInput: null,
@@ -212,7 +212,7 @@ export default {
       w2: null,
       w3: null,
 
-    
+
     }
   },
   computed:{
@@ -241,7 +241,7 @@ export default {
       return exportMnemonic(this.name,this.mnemonic)
       // return JSON.stringify(exportAccount(account,accountData))
     }
-  
+
   },
   beforeMount () {
     window.localStorage.setItem('login_flag','1')
@@ -258,7 +258,7 @@ export default {
   },
   mounted(){
     this.dialog = true;
-    
+
   },
   methods: {
     ...mapActions(['createAccount','createAccountByMnemonic','cleanGlobalState','coverAccount']),
@@ -295,7 +295,7 @@ export default {
            this.w3 && this.w3 === this.mnemonicItems[this.randoms[3]]
           ){
         this.seedInputDlgShow = false
-        this.doSave();            
+        this.doSave();
       }else{
 
         this.showSeedInValidDlg = true
@@ -318,7 +318,7 @@ export default {
       if(index>=0){
         this.$toasted.error(this.$t('MyAddress.DuplicateAddress'))
         this.coveringDlg = true
-        return 
+        return
       }
       let account = {
         name: this.name,
@@ -349,7 +349,7 @@ export default {
             this.showLoading = false
             this.showSeedInValidDlg = true
           },1000)
-          
+
 
         })
       },
@@ -390,9 +390,9 @@ export default {
       this.dealok = false
       this.dealfail = true
       this.working = false
-     
+
     },
-    
+
     hiddenLoadingView(){
       this.loadingTitle = null
       this.loadingMsg = null
@@ -415,7 +415,7 @@ export default {
     }
 
   },
-  
+
   components: {
     Toolbar,
     qrcode: QRCode,
@@ -446,7 +446,7 @@ export default {
   margin:7px 7px 50px 7px
   .label
     font-size: 14px
-    color: $primarycolor.green
+    color: $primarycolor.purple
     padding-top: 2px
     padding-bottom: 2px
   .value
@@ -473,17 +473,17 @@ export default {
   line-height:42px
   font-size:16px
   text-align:center
-  color:$primarycolor.green
+  color:$primarycolor.purple
 .btn-available
-  color:$primarycolor.green
+  color:$primarycolor.purple
 .btn-unavailable
-  color:$secondarycolor.green
+  color:$secondarycolor.purple
 .hint
   color:$primarycolor.red
   font-size: 15px
 .headline
-  color: $primarycolor.green
-  font-size: 16px !important 
+  color: $primarycolor.purple
+  font-size: 16px !important
   padding-bottom: 10px
 .notice
   font-size:14px
@@ -499,7 +499,7 @@ export default {
   width: 100%
 .guide-img
   height:150px
-  max-width:320px  
+  max-width:320px
   min-height: 150px
 .guide-header
   box-shadow 0 0 0 0
@@ -536,7 +536,7 @@ export default {
   .btn-cancel
   .btn-ok
     font-size: 16px
-    color: $primarycolor.green
+    color: $primarycolor.purple
 .card-content
   padding: 20px 10px
 .t1
@@ -550,7 +550,7 @@ export default {
 .btns
   font-size: 16px
 .dlg-green
-  color: $primarycolor.green
+  color: $primarycolor.purple
 .dlg-content
   background: $secondarycolor.gray
 
