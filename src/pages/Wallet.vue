@@ -61,6 +61,7 @@ export default {
 .create-account-page.page
   .footer
     background: $primarycolor.background !important
+    padding-bottom: 10px
 .create-account-page
   background: $primarycolor.background
   color: $primarycolor.font
@@ -71,8 +72,8 @@ export default {
     text-align: center
     vertical-align: center
     .logo-img
-      width: 160px
-      height:160px
+      width: 120px
+      height:120px
   .logo-title
     text-align: center
     height: 60px

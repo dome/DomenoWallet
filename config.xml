@@ -15,6 +15,7 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <splash src="res/screen/firefly/splash.png" />
+    <icon src="res/icon/firefly/logo.png" />
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="res/icon/firefly/logo.png" />

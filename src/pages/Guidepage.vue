@@ -197,10 +197,10 @@ export default {
   background: $primarycolor.gray
   color: $primarycolor.font
   font-size: 16px
-  height: 100vh
+  height: 80vh
   padding-top: 0
   padding-top: calc(4px + constant(safe-area-inset-top))
-  padding-top: calc(4px + env(safe-area-inset-top))
+  /*padding-top: calc(4px + env(safe-area-inset-top))*/
 
 .content
     height: 100%
@@ -217,9 +217,7 @@ export default {
 
 .guidepage_swiper_img
     padding-top:40%
-    padding-left:40px
-    padding-right:20px
-    width:300px
+    width:100%
     height: 220px
 
 
