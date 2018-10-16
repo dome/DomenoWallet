@@ -6,24 +6,24 @@
         <swiper :options="swiperOption" ref="mySwiper" class="">
 
             <swiper-slide class="guidepage_swiper_slide infocard">
-                        <div class="guidepage_swiper_title">{{$t("TransactionPassword")}}</div>
+                        <!--<div class="guidepage_swiper_title">{{$t("TransactionPassword")}}</div>
                         <div class="guidepage_swiper_content">{{$t("TransactionPassword_MsgOne")}}</div>
                         <div class="guidepage_swiper_content">{{$t("TransactionPassword_MsgTwo")}}</div>
-                        <div class="guidepage_swiper_content">{{$t("TransactionPassword_MsgThree")}}</div>
+                        <div class="guidepage_swiper_content">{{$t("TransactionPassword_MsgThree")}}</div>-->
                         <img :src='require("../assets/img/step1.svg")' class="guidepage_swiper_img">
             </swiper-slide>
             <swiper-slide class="guidepage_swiper_slide infocard">
-                <div class="guidepage_swiper_title">{{$t("Account_secretkey")}}</div>
+                <!--<div class="guidepage_swiper_title">{{$t("Account_secretkey")}}</div>
                 <div class="guidepage_swiper_content">{{$t("Account_secretkey_MsgOne")}}</div>
                 <div class="guidepage_swiper_content">{{$t("Account_secretkey_MsgTwo")}}</div>
-                <div class="guidepage_swiper_content">{{$t("Account_secretkey_MsgThree")}}</div>
+                <div class="guidepage_swiper_content">{{$t("Account_secretkey_MsgThree")}}</div>-->
                 <img :src='require("../assets/img/step2.svg")' class="guidepage_swiper_img">
             </swiper-slide>
             <swiper-slide class="guidepage_swiper_slide infocard">
-                <div class="guidepage_swiper_title">{{$t("TDO")}}</div>
+                <!--<div class="guidepage_swiper_title">{{$t("TDO")}}</div>
                 <div class="guidepage_swiper_content">{{$t("TDO_MsgOne")}}</div>
                 <div class="guidepage_swiper_content">{{$t("TDO_MsgTwo")}}</div>
-                <div class="guidepage_swiper_content">{{$t("TDO_MsgThree")}}</div>
+                <div class="guidepage_swiper_content">{{$t("TDO_MsgThree")}}</div>-->
                 <img :src='require("../assets/img/step3.svg")' class="guidepage_swiper_img">
             </swiper-slide>
             <div class="swiper-pagination"  slot="pagination"></div>
@@ -213,11 +213,11 @@ export default {
     height: 80%
 
 .guidepage_swiper_slide
-    background:$secondarycolor.gray
+    background:$primarycolor.background
 
 .guidepage_swiper_img
-    padding-top:20%
-    padding-left:20px
+    padding-top:40%
+    padding-left:40px
     padding-right:20px
     width:300px
     height: 220px
@@ -256,7 +256,7 @@ export default {
 .infocard
    min-height 10rem
    max-width: 100%
-   background-color: $secondarycolor.gray
+   background-color: $primarycolor.background
    height: 80vh
    padding-top: 1rem
    border-radius: 5px
