@@ -23,12 +23,12 @@ export default {
   left: 0
   right: 0
   height: 100%
-  background: $primarycolor.purple
+  background: $primarycolor.background
   text-align: center
   vertical-align:middle
   padding-top: 45%
   .logo
-    width: 120px
+    width: 156px
     height:156px
 
 

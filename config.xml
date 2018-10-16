@@ -54,15 +54,15 @@
     <preference name="StatusBarBackgroundColor" value="#8c5fff" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="Fullscreen" value="false" />
-    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreen" value="static/img/logo.png" />
     <preference name="SplashScreenDelay" value="10000" />
-    <preference name="SplashScreenBackgroundColor" value="#8c5fff" />
+    <preference name="SplashScreenBackgroundColor" value="#1e1236" />
     <preference name="SplashMaintainAspectRatio" value="true" />
-    <preference name="ShowSplashScreen" value="true" />
+    <preference name="ShowSplashScreen" value="false" />
     <chcp>
         <auto-download enabled="false" />
         <auto-install enabled="false" />
-        <config-file url="https://7f839f48.ngrok.io/chcp.json" />
+        <config-file url="https://ety001.gitee.io/idol/chcp.json" />
     </chcp>
     <engine name="browser" spec="^5.0.4" />
     <engine name="android" spec="^6.3.0" />

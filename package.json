@@ -1,17 +1,17 @@
 {
-  "name": "firefly",
+  "name": "idol",
   "version": "2.1.10",
   "description": "stellar mobile wallet",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stellarcn/firefly.git"
+    "url": "https://github.com/ety001/firefly.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stellarcn/firefly/issues"
+    "url": "https://github.com/ety001/firefly/issues"
   },
-  "github": "https://github.com/stellarcn/firefly",
-  "homepage": "https://wallet.fchain.io",
+  "github": "https://github.com/ety001/firefly",
+  "homepage": "https://idol.network",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
