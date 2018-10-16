@@ -14,7 +14,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <splash src="res/screen/firefly/splash.png" />
+    <splash src="res/screen/splash.png" />
     <icon src="res/icon/firefly/logo.png" />
     <platform name="android">
         <allow-intent href="market:*" />
@@ -23,7 +23,7 @@
         <icon density="hdpi" src="res/icon/firefly/logo.png" />
         <icon density="xhdpi" src="res/icon/firefly/logo.png" />
         <icon density="xxhdpi" src="res/icon/firefly/logo.png" />
-        <splash src="res/screen/firefly/splash.png" />
+        <splash src="res/screen/splash.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -34,7 +34,7 @@
         <icon height="80" src="res/icon/firefly/icon40x40@2x.png" width="80" />
         <icon height="57" src="res/icon/firefly/icon.png" width="57" />
         <icon height="20" src="res/icon/firefly/icon-20.png" width="20" />
-        <splash src="res/screen/firefly/splash.png" />
+        <splash src="res/screen/splash.png" />
     </platform>
     <platform name="browser">
     </platform>
@@ -59,7 +59,7 @@
     <preference name="SplashScreenDelay" value="10000" />
     <preference name="SplashScreenBackgroundColor" value="#1e1236" />
     <preference name="SplashMaintainAspectRatio" value="true" />
-    <preference name="ShowSplashScreen" value="false" />
+    <preference name="ShowSplashScreen" value="true" />
     <chcp>
         <auto-download enabled="false" />
         <auto-install enabled="false" />
