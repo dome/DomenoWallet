@@ -18,7 +18,7 @@
             {{$t('Error.NoData')}}
           </div>
           <div class='list' v-else>
-            <v-text-field append-icon="search" v-model="search" dark
+            <v-text-field append-icon="search" v-model="search" light
                           class="search"  hide-details single-line >
             </v-text-field>
             <div class="myaddress-row" v-for="(data,index) in filtered" :key="index"
@@ -32,7 +32,7 @@
                   <div class="myaddress-name grey--text text--lighten-1">{{data.name}}</div>
                 </v-flex>
                 <v-flex xs6 class="myaddress-wrapper">
-                  <div class="myaddress-address grey--text text--darken-1">{{data.address|shortaddress}}</div>
+                  <div class="myaddress-address grey--text text--lighten-1">{{data.address|shortaddress}}</div>
                 </v-flex>
               </v-layout>
               <div class="operate-box">
@@ -211,7 +211,7 @@ export default {
     align-items: center
     background-color: $primarycolor.gray
     // background-color: $secondarycolor.green
-    color: $primarycolor.purple
+    color: $primarycolor.green
     padding: 0 12px
   .receive
     border-left: 1px solid $primarycolor.gray

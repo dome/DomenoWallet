@@ -1,7 +1,7 @@
 //DAPP配置界面，用户可以自定义引用DAPP
 //显示所有自定义引用的第三方dapp
 <template>
-  <div class="page" dark>
+  <div class="page" light>
     <toolbar :title="$t('CustomDApp')" :showbackicon="true"
       @goback="back" :shadow="false" lockpass  ref="toolbar">
       <v-btn icon slot='right-tool' @click="toAdd">
@@ -13,7 +13,7 @@
       <div class="app-row" v-for="(app,index) in myapps" :key="index">
         <v-layout class="app-row-li third-li" row wrap v-swiper=2 @click.stop="modify(index,app)">
           <v-flex xs2 class="app-wrapper">
-            <v-avatar :tile=false class="grey darken-4 app-avatar">
+            <v-avatar :tile=false class="grey lighten-4 app-avatar">
               <span class="white--text headline">{{app.title.substring(0,1)}}</span>
             </v-avatar>
           </v-flex>
@@ -47,8 +47,8 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary darken-1" flat @click.stop="cancel">{{$t('Button.Cancel')}}</v-btn>
-          <v-btn color="error darken-1" flat @click.stop="save">{{$t('Save')}}</v-btn>
+          <v-btn color="primary lighten-1" flat @click.stop="cancel">{{$t('Button.Cancel')}}</v-btn>
+          <v-btn color="error lighten-1" flat @click.stop="save">{{$t('Save')}}</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -60,8 +60,8 @@
           <span class="error--text pl-1 pr-1">{{selected.title}}</span>  ?</v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary darken-1" flat @click.stop="cancelDelete">{{$t('Button.Cancel')}}</v-btn>
-          <v-btn color="error darken-1" flat @click.stop="doDelete">{{$t('Button.OK')}}</v-btn>
+          <v-btn color="primary lighten-1" flat @click.stop="cancelDelete">{{$t('Button.Cancel')}}</v-btn>
+          <v-btn color="error lighten-1" flat @click.stop="doDelete">{{$t('Button.OK')}}</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -269,11 +269,11 @@ export default {
     align-items: center
     background-color: $primarycolor.gray
     // background-color: $secondarycolor.green
-    color: $primarycolor.purple
+    color: $primarycolor.green
     padding: 0 12px
   .receive
     // border-left: 1px solid $secondarycolor.gray
-    color:$primarycolor.purple
+    color:$primarycolor.green
   .del
     background-color: $primarycolor.gray
     color:$primarycolor.red

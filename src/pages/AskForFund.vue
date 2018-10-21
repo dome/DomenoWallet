@@ -22,7 +22,7 @@
               name="amount"
               :label="$t('Amount')"
               v-model="amount"
-              dark
+              light
               suffix="XLM"
               type="Number"
               ></v-text-field>
@@ -150,7 +150,7 @@ export default {
     padding-top: 5px
     padding-bottom: 5px
   .asset.label
-    color: $primarycolor.purple
+    color: $primarycolor.green
   .value
     display: block
     font-size: 14px
@@ -177,7 +177,7 @@ export default {
 //   line-height:56px
 //   font-size:16px
 //   text-align:center
-//   color:$primarycolor.purple
+//   color:$primarycolor.green
 .qrcode
   text-align: center
   padding-top:20px
@@ -185,7 +185,7 @@ export default {
 
 .receive_asset_msg
   text-align:center
-  color:$primarycolor.purple
+  color:$primarycolor.green
   padding-top:8px
 
 .receive_asset_msg_one

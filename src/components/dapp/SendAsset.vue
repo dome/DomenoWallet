@@ -6,7 +6,7 @@
     <div class="confirm-wrapper" v-show="step === 0">
       <div class="confirm-blank"></div>
       <div  class="confirm-dlg">
-      <v-bottom-sheet v-model="showSendDlg" persistent dark>
+      <v-bottom-sheet v-model="showSendDlg" persistent light>
         <div class="send-dlg-content sheet-content">
           <div class="menu-head">
             <div class="menu-row">
@@ -67,7 +67,7 @@
     </div>
 
     <!--显示密码输入界面-->
-    <v-bottom-sheet persistent v-model="showPwdSheet" v-if="showPwdSheet" dark>
+    <v-bottom-sheet persistent v-model="showPwdSheet" v-if="showPwdSheet" light>
       <div class="sheet-content send-dlg-content">
         <div class="sheet-title textcenter">
           <div class="title">{{$t('payment')}} {{choosed.amount}}  {{choosed.code}}</div>
@@ -84,7 +84,7 @@
                 :append-icon="pwdvisible ? 'visibility' : 'visibility_off'"
                 :append-icon-cb="() => (pwdvisible = !pwdvisible)"
                 :type="pwdvisible ? 'text':'password'"
-                required dark
+                required light
               ></v-text-field>
         </div>
         <div  class="sheet-btns">
@@ -510,7 +510,7 @@ export default {
   padding-left: .4rem
   color: $primarycolor.font
 .confirm-amount
-  color: $primarycolor.purple
+  color: $primarycolor.green
   text-align: center
   font-size: .5rem
 .confirm-memo
@@ -524,9 +524,9 @@ export default {
       color: $secondarycolor.font
     .value
       padding-left: 12px
-      color: $primarycolor.purple
+      color: $primarycolor.green
 .confirm-btns
-  color: $primarycolor.purple
+  color: $primarycolor.green
   text-align: center
   font-size: 16px
   height: 42px
@@ -562,7 +562,7 @@ export default {
       overflow: hidden
       text-overflow:ellipsis
       white-space: nowrap
-      color: $primarycolor.purple
+      color: $primarycolor.green
     .address
       font-size: 12px
       color: $secondarycolor.font
@@ -582,7 +582,7 @@ export default {
       line-height: 40px
       font-size: 32px
       text-align: center
-      color: $primarycolor.purple
+      color: $primarycolor.green
       padding: 10px 10px
     .label
       color: $secondarycolor.font
@@ -599,7 +599,7 @@ export default {
       line-height: 40px
       text-align: center
       font-size: 16px
-      color: $primarycolor.purple
+      color: $primarycolor.green
 .confirm-assets
   padding: .2rem .2rem
   .asset-card
@@ -612,9 +612,9 @@ export default {
     .asset-icon
       .iconfont
         font-size: 1rem
-        color: $primarycolor.purple
+        color: $primarycolor.green
     .asset-code
-      color: $primarycolor.purple
+      color: $primarycolor.green
     .asset-issuer
       font-size: .2rem
       color: $secondarycolor.font
@@ -622,7 +622,7 @@ export default {
       white-space: nowrap
       word-break: normal
     &.active
-      border: 1px solid $primarycolor.purple
+      border: 1px solid $primarycolor.green
 .loading-wrapper
   text-align: center
   margin: 1.5rem auto

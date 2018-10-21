@@ -1,5 +1,5 @@
 <template>
-  <div class="page" dark v-bind:class="{hidebackground: scannerView}">
+  <div class="page" light v-bind:class="{hidebackground: scannerView}">
    <toolbar :title="$t(title)"
       :showmenuicon="showmenuicon"
       :showbackicon="showbackicon"
@@ -28,7 +28,7 @@
               class="selectasset"
               item-value="id"
               item-text="code"
-              dark
+              light
               :return-object="assetChoseReturnObject"
               @change="changeAsset"
                v-show="!scannerView"
@@ -442,7 +442,7 @@ export default {
     padding-bottom: 40px
 
   .mytoolbar
-    background: $primarycolor.purple
+    background: $primarycolor.green
     color: $primarycolor.font
     width: 100%
     height:56px
@@ -460,7 +460,7 @@ export default {
       text-align: center
       font-size: 20px
   .menu-wrapper
-    background: $primarycolor.purple
+    background: $primarycolor.green
     height: 56px!important
     line-height: 56px!important
     margin-top: -1px!important
@@ -481,7 +481,7 @@ export default {
       .menu-li.active
         border-bottom: 2px solid $primarycolor.font
 .selectasset
-  color: $primarycolor.purple
+  color: $primarycolor.green
 .asset-select-code
   font-size: 16px
 .asset-select-issuer
@@ -492,7 +492,7 @@ export default {
   .data
     .label
       font-size: 16px
-      color: $primarycolor.purple
+      color: $primarycolor.green
     .deposit_info
       font-size: 18px
       padding-top: 2px
@@ -504,7 +504,7 @@ export default {
       color: $secondarycolor.font
   .noservice
     font-size: 16px
-    color: $primarycolor.purple
+    color: $primarycolor.green
     padding-bottom: 2px
   .noservicedesc
     color: $secondarycolor.font

@@ -110,7 +110,7 @@ export default {
   font-size: 20px
   text-align: center
   &.green-color
-    color: $primarycolor.purple
+    color: $primarycolor.green
   &.red-color
     color: $primarycolor.red
 .load-msg
@@ -122,7 +122,7 @@ export default {
   padding-top: 15vh
   font-size: 16px
   &.green-color
-    color: $primarycolor.purple
+    color: $primarycolor.green
   &.red-color
     color: $primarycolor.red
 

@@ -43,9 +43,9 @@ export default {
 <style lang="stylus" scoped>
 @require '~@/stylus/color.styl'
 .bottom-notice
-  color: $primarycolor.purple
+  color: $primarycolor.green
 .btn
-    color: $primarycolor.purple
+    color: $primarycolor.green
 // .bn-snackbar
 //   padding-bottom: 8px
 //   padding-bottom: calc(8px + constant(safe-area-inset-bottom))!important

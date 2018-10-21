@@ -74,7 +74,7 @@
       :color = 'snackbarColor'
     >
       {{ snackbarText }}
-      <v-btn outline dark small @click.native="snackbar = false">{{$t('Close')}}</v-btn>
+      <v-btn outline light small @click.native="snackbar = false">{{$t('Close')}}</v-btn>
     </v-snackbar>
    </scroll>
    <bottom-notice :show.sync="notice" :text="noticeText">    </bottom-notice>
@@ -286,7 +286,7 @@ export default {
           border-radius: 70px
           .avatar
             font-size: 38px
-            color: $primarycolor.purple
+            color: $primarycolor.green
 .name
   margin-top: 15px
   font-size: 20px
@@ -318,7 +318,7 @@ export default {
   vertical-align: middle
   font-size: 18px
   padding-top: 5%
-  color: $primarycolor.purple
+  color: $primarycolor.green
 .myassets-total
   font-size: 14px
   color: $secondarycolor.font
@@ -343,7 +343,7 @@ export default {
 .history-amount
   text-align: right
 .history-amount.add
-  color: $primarycolor.purple
+  color: $primarycolor.green
 .history-amount.minus
   color: $primarycolor.red
 </style>

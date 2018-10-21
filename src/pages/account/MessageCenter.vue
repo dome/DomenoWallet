@@ -115,7 +115,7 @@
           position: absolute
           width .2rem
           height .2rem
-          background: $primarycolor.purple
+          background: $primarycolor.green
           border-radius .2rem
           right .1rem
           top .1rem

@@ -20,7 +20,7 @@
               name="federation"
               :label="$t('FederationName')"
               v-model="federation"
-              dark
+              light
             ></v-text-field>
           <p v-else-if="currentState=='received' && existFederation">{{$t('FederationName.Address')}}
             <span class="fed">{{existFederation}}</span>
@@ -202,7 +202,7 @@ export default {
         width: 100%
         height: 36px
 .fed
-  color: $primarycolor.purple
+  color: $primarycolor.green
 .cancel_fed
   background: $primarycolor.red
   color: $primarycolor.font
@@ -219,7 +219,7 @@ export default {
 .btns
   font-size: 16px
 .dlg-green
-  color: $primarycolor.purple
+  color: $primarycolor.green
 .dlg-content
   background: $secondarycolor.gray
 </style>

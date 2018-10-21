@@ -24,7 +24,7 @@
                     <!-- 地址 -->
                   <p class="contactdetails_addresslabelvalue">{{contact.address}}</p><!--地址value -->
                   <div v-if='contact.memo' class="contactdetails_memolabelposition">
-                    <v-subheader dark class="grey--text text--lighten-1 ">
+                    <v-subheader light class="grey--text text--lighten-1 ">
                     <span class="contactdetails_memolabel">{{$t(memoLabel)}}</span></v-subheader><!--备注 -->
                     <span class="contactdetails_momolabelvalue">{{contact.memo}}</span><!-- 备注value-->
                   </div>
@@ -38,12 +38,12 @@
             <v-footer class="contactdetails_vfooter">
               <!-- <v-layout row  wrap> -->
                   <v-flex xs4>
-                    <v-btn class='moddel' block flat dark :to="{name: 'ModifyContact', params:{id:contact.id}}" >
+                    <v-btn class='moddel' block flat light :to="{name: 'ModifyContact', params:{id:contact.id}}" >
                       {{$t('Modify')}}
                     </v-btn><!--修改按钮 -->
                   </v-flex>
                   <v-flex xs8 class="contactdetails_sendposition">
-                    <v-btn class='send'  block dark large @click="send">
+                    <v-btn class='send'  block light large @click="send">
                       {{$t(sendLabel)}}
                       </v-btn><!--发送按钮 -->
                   </v-flex>
@@ -225,12 +225,12 @@ export default {
 
 .contactdetails_addresslabel
   padding-left:5px
-  color:$primarycolor.purple
+  color:$primarycolor.green
   padding-top:0px
   height:10px
 .contactdetails_memolabel
   padding-left:5px
-  color:$primarycolor.purple
+  color:$primarycolor.green
   padding-top:0px
 
 .contactdetails_addresslabelvalue
@@ -246,7 +246,7 @@ export default {
   position:relative
   padding-left:13px
   padding-top:20px
-  color:$primarycolor.purple
+  color:$primarycolor.green
 .contactdetails_contactnamevalue
   position:absolute
   margin-left:12px
@@ -255,7 +255,7 @@ export default {
 
 .contactdetails_stellaraddressbarcode
   text-align:center
-  color:$primarycolor.purple
+  color:$primarycolor.green
   margin-top:40px
   padding-bottom:40px
 .contactdetails_stellaraddressbarcode_text

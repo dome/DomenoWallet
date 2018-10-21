@@ -130,7 +130,7 @@ export default {
             .iconfont
               font-size: 20px
             .iconfont.icon-dot1
-              color: $primarycolor.purple
+              color: $primarycolor.green
 
 .bottom_start
     position:fixed
@@ -140,14 +140,14 @@ export default {
     text-align:center
     background: $primarycolor.gray
     z-index: 9
-    color: $primarycolor.purple
+    color: $primarycolor.green
     // top: calc(100vh - 100px)
     padding-bottom: 8px
     padding-bottom: calc(8px + constant(safe-area-inset-bottom))
     padding-bottom: calc(8px + env(safe-area-inset-bottom))
 
 .iconfont_style_color
-    color:$primarycolor.purple
+    color:$primarycolor.green
     font-size:20px
 .iconfont_style
     font-size:20px

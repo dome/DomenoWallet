@@ -155,7 +155,7 @@ export default {
   z-index:10
 
 .close-icon
-  color: $primarycolor.purple
+  color: $primarycolor.green
   font-size: 24px
   padding-right: .2rem
 .ud-title
@@ -166,7 +166,7 @@ export default {
   color: $secondarycolor.font
 .ud-btns
   font-size: 14px
-  color: $primarycolor.purple
+  color: $primarycolor.green
 
 
 </style>

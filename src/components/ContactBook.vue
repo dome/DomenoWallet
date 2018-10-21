@@ -30,7 +30,7 @@
                     <div class="contact-name grey--text text--lighten-1">{{contact.name}}</div>
                   </v-flex>
                   <v-flex xs6 class="mycontacts-wrapper">
-                    <div class="contact-address grey--text text--darken-1">{{contact.address|miniaddress}}</div>
+                    <div class="contact-address grey--text text--lighten-1">{{contact.address|miniaddress}}</div>
                   </v-flex>
                 </v-layout>
                </div>
@@ -42,7 +42,7 @@
                     <div class="contact-name grey--text text--lighten-1">{{contact.name}}</div>
                   </v-flex>
                    <v-flex xs6 class="mycontacts-wrapper">
-                    <div class="contact-address grey--text text--darken-1">{{contact.address|miniaddress}}</div>
+                    <div class="contact-address grey--text text--lighten-1">{{contact.address|miniaddress}}</div>
                   </v-flex>
                 </v-layout>
                </div>
@@ -54,7 +54,7 @@
                     <div class="contact-name grey--text text--lighten-1">{{contact.name}}</div>
                   </v-flex>
                   <v-flex xs6 class="mycontacts-wrapper">
-                    <div class="contact-address grey--text text--darken-1">{{contact.address|miniaddress}}</div>
+                    <div class="contact-address grey--text text--lighten-1">{{contact.address|miniaddress}}</div>
                   </v-flex>
                 </v-layout>
                </div>
@@ -185,7 +185,7 @@ export default {
 
   .bookbar {
     background: $primarycolor.red;
-    // background: $primarycolor.purple
+    // background: $primarycolor.green
     height: 48px;
     line-height: 48px;
     display: flex;

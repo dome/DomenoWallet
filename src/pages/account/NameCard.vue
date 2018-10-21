@@ -141,7 +141,7 @@ export default {
   background: $primarycolor.gray
   .label
     font-size: 14px
-    color: $primarycolor.purple
+    color: $primarycolor.green
     padding-top: 2px
     padding-bottom: 2px
   .value
@@ -167,7 +167,7 @@ export default {
   line-height:56px
   font-size:20px
   text-align:center
-  color:$primarycolor.purple
+  color:$primarycolor.green
 .test_namecard_barcode
   text-align:center
 

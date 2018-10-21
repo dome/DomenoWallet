@@ -1,14 +1,14 @@
 // 资产界面的样式表
 @require '~@/stylus/app.styl'
 .assets
-  border-radius: 10px
+  border-radius: 10px    
 
 .assets-row
   overflow: hidden
   position: relative
-
+  
   background: $primarycolor.gray
-
+  
 
   .myassets-li
     position: relative
@@ -16,11 +16,11 @@
     padding: 5px 5px
     border-radius: 5px 5px 5px 5px
     background: $secondarycolor.gray
-
+    
     width: 100%
-
+    
     .myassets-wrapper
-
+      
       .myassets
         margin-top: 5px
         .myassets-name
@@ -32,11 +32,11 @@
         text-align: right
         color: $secondarycolor.font
         .balance
-          color: $primarycolor.purple
+          color: $primarycolor.green
           font-size: 16px
           padding-right: 10px
       .myassets-reserve
-        text-align: right
+        text-align: right  
         color: $secondarycolor.font
         .balance
           padding-right: 10px
@@ -47,7 +47,7 @@
   border-bottom: 1px solid $secondarycolor.font
 .assets-row:last-child
   border-bottom: 0px
-.operate-box
+.operate-box 
   position: absolute
   z-index: 1
   height: 100%
@@ -69,7 +69,7 @@
     background-color: $secondarycolor.red
     border-right: 1px solid $secondarycolor.gray
 
-.myassets-operate-box
+.myassets-operate-box 
   position: absolute
   z-index: 1
   height: 100%
@@ -87,26 +87,26 @@
     padding: 0 8px
   .receive
     // border-left: 1px solid $secondarycolor.gray
-    color:$primarycolor.purple
+    color:$primarycolor.green
   .del
     // background-color: $secondarycolor.red
     // border-right: 1px solid $secondarycolor.gray
     color:$primarycolor.red
   .send
-    color:$primarycolor.purple
+    color:$primarycolor.green
 
 //=== asset page==
 
 .assets-wrapper
-  background: $primarycolor.purple
+  background: $primarycolor.green
   height: 46px
   margin: 0 !important
   min-height:42px !important
-  .swiper-slide
+  .swiper-slide 
     width: 100px;
     height: 100%;
     opacity: 0.6;
-  .swiper-slide-active
+  .swiper-slide-active 
     opacity: 1;
     font-weight 600
 
@@ -116,7 +116,7 @@
 .assets-issuer
   text-align center
 
-.gallery-content
+.gallery-content 
    width: 100%;
 .infocard
    min-height 10em
@@ -124,7 +124,7 @@
 .asset_infocard
      background-color: $secondarycolor.gray
      overflow-y: auto
-
+   
 .myassets_infocard_thirdassets
   background-color:$primarycolor.gray
 
@@ -142,12 +142,12 @@
       padding-top:10px
     .label-reserve
       color: $secondarycolor.font
-      padding-top:10px
+      padding-top:10px      
     .amount
       font-size: 20px
       padding-left: 10px
       padding-right: 20px
-      color: $primarycolor.purple
+      color: $primarycolor.green
       padding-top:10px
     .available
       font-size: 18px
@@ -161,7 +161,7 @@
       padding-top:10px
     .label-reserve
       padding-left: 10px
-
+     
 .btns
   position:relative
   bottom: -120px
@@ -180,9 +180,9 @@
     .asset_label
       padding-top:10px
     .asset_label-reserve
-      padding-top:10px
+      padding-top:10px      
     .asset_amount
-      color: $primarycolor.purple
+      color: $primarycolor.green
       padding-top:10px
     .asset_available
       padding-top:10px
@@ -229,9 +229,9 @@
 .knowledge_of_assets
   margin-top:30px
   text-align: center
-  color:$primarycolor.purple
-
-
+  color:$primarycolor.green
+    
+    
 
 .subtitle
   padding-left: 10px
@@ -247,11 +247,11 @@
 .history-amount
   text-align: right
 .history-amount.add
-  color: $primarycolor.purple
+  color: $primarycolor.green
 .history-amount.minus
   color: $primarycolor.red
 .page
-
+  
   background-color:  $primarycolor.gray
 .accountandtotalasset
   display: block
@@ -263,32 +263,33 @@
     z-index: 2
     padding-left:0px
     padding-top:15px
+    padding-bottom:15px
     background: $secondarycolor.gray
     margin-left:5px
     margin-right:5px
     border:none
     //   border-radius:1px
-
-
+    
+    
   //这里是wdp改动的地方--------------------------------------------------------------------------
 .myassets_totalSum
   font-size: 20px
   padding-left: 20px
   left: 0px
-  color: $primarycolor.purple
+  color: $primarycolor.green
   background-color:  $secondarycolor.gray
   padding-top:0px
   padding-bottom:10px
   margin-left:5px
   margin-right:5px
   border:none
-
+ 
   .myassets_TotalSumWord
     font-size: 16px
     color:$secondarycolor.font
 
-
-.content
+  
+.content   
   padding-bottom:0px
 .asset_content
     background-color: $primarycolor.gray
@@ -302,14 +303,14 @@
 
 
   left:0px
-  color: $primarycolor.purple
+  color: $primarycolor.green 
   position: relative
-
-  background-color: $primarycolor.gray
-  position: absoluted
-
+  
+  background-color: $primarycolor.gray  
+  position: absoluted 
+  
 .myassets_sort_hidden
-
+  
 
 .myassets_sort_select
   position:relative
@@ -318,7 +319,7 @@
 .myassets_sort_byValue
   background-color: $primarycolor.gray
   font-size: 10px
-  font-family: simei
+  font-family: simei   
   width:30px
 
 .icon-wrapper
@@ -327,9 +328,10 @@
   padding-top: 2px
   .iconfont
     font-size: 36px
-    color: $primarycolor.purple
+    color: $primarycolor.green
 .selected
   -webkit-transform: translate(-50%, 0)
   -webkit-transition: 0.3s
   transform: translate(-50%, 0)
   transition: 0.3s
+  

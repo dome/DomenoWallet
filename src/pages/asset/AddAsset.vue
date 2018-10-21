@@ -22,7 +22,7 @@
       <card class="icard" padding="2px 8px" v-if="addTypeFed">
         <div class="card-content" slot="card-content">
          <v-text-field
-              dark
+              light
               name="url"
               v-model="url"
               append-icon="search"
@@ -45,7 +45,7 @@
                 </div>
               </div>
               <div class="currency-right">
-                <v-btn icon disabled dark v-if="isTrusted(currency)">
+                <v-btn icon disabled light v-if="isTrusted(currency)">
                   <v-icon color='primary'>done</v-icon>
                 </v-btn>
                 <v-btn icon flat color="primary" v-else @click.stop="addTrust(currency)" :loading="working">
@@ -63,7 +63,7 @@
        <card class="icard" padding="8px 8px" v-if="addTypeManully">
         <div class="card-content" slot="card-content">
            <v-text-field
-              dark
+              light
               :label="$t('AssetCode')"
               name="asset_code"
               v-model="asset_code"
@@ -71,7 +71,7 @@
               primary
             ></v-text-field>
              <v-text-field
-              dark
+              light
               :label="$t('AssetIssuer')"
               name="asset_issuer"
               v-model="asset_issuer"
@@ -79,7 +79,7 @@
               primary
             ></v-text-field>
             <div class="flex-row">
-              <v-btn class='btn_trust'  block dark large @click="doManuallyTrust">{{$t('Button.OK')}}</v-btn>
+              <v-btn class='btn_trust'  block light large @click="doManuallyTrust">{{$t('Button.OK')}}</v-btn>
             </div>
         </div>
        </card>
@@ -485,26 +485,26 @@ export default {
     .material-icons
       font-size: 24px
     .add
-      color: $primarycolor.purple
+      color: $primarycolor.green
     .done
-      color: $primarycolor.purple
+      color: $primarycolor.green
 
 .application
-  .theme--dark.btn.btn--disabled
+  .theme--light.btn.btn--disabled
     .icon
-      color: $primarycolor.purple !important
+      color: $primarycolor.green !important
 .menurow
   margin-bottom: 5px
 .menu
   padding-left: 5px
   padding-right: 5px
   &.active
-    border-bottom: 2px solid $primarycolor.purple
+    border-bottom: 2px solid $primarycolor.green
 .btn_trust
-  background-color: $primarycolor.purple !important
+  background-color: $primarycolor.green !important
 
 .addallasset
-  color:$primarycolor.purple
+  color:$primarycolor.green
   float:right
   padding-right:5px
 </style>

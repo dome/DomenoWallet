@@ -14,13 +14,13 @@
               {{myaddress.name}}
         </div>
       </card>
-      <v-subheader dark class="grey--text text--lighten-1">{{$t(detailLabel)}}</v-subheader>
+      <v-subheader light class="grey--text text--lighten-1">{{$t(detailLabel)}}</v-subheader>
       <card padding="10px" class="mycard">
         <div class="card-content myaddress-info grey--text text--lighten-1" slot="card-content">
-          <v-subheader dark class='grey--text text--lighten-1'>{{$t(addressLabel)}}</v-subheader>
+          <v-subheader light class='grey--text text--lighten-1'>{{$t(addressLabel)}}</v-subheader>
            <p @click="copy(myaddress.address)">   {{myaddress.address}}</p>
           <div v-if='myaddress.memo'>
-            <v-subheader dark class='grey--text text--lighten-1'>{{$t(memoLabel)}}</v-subheader>
+            <v-subheader light class='grey--text text--lighten-1'>{{$t(memoLabel)}}</v-subheader>
             <p>
               {{myaddress.memo}}
               </p>
@@ -30,7 +30,7 @@
       
 
       <div class="btn-footer">         
-        <v-btn class='btn-del error' :loading="working" block dark @click="del" >{{$t('Delete')}}</v-btn>
+        <v-btn class='btn-del error' :loading="working" block light @click="del" >{{$t('Delete')}}</v-btn>
       </div>
 
     </div>

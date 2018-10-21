@@ -16,7 +16,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="match"><v-icon dark color=primary>swap_horiz</v-icon></div>
+              <div class="match"><v-icon light color=primary>swap_horiz</v-icon></div>
               <div class="wheel">
                 <ul class="wheel-scroll">
                   <li v-for="item in data" :key='item.value' class="wheel-item">
@@ -319,7 +319,7 @@
           font-weight: normal
           text-align: center
           font-size: $fontsize-large-x
-          color: $color-dark-grey
+          color: $color-light-grey
         .confirm, .cancel
           position: absolute
           top: 6px
@@ -347,12 +347,12 @@
           position: absolute
           top: 0
           background: linear-gradient(to top, rgba(33, 33, 34, 0.4), rgba(33, 33, 33, 0.8))
-          border-bottom: solid 1px $primarycolor.purple;
+          border-bottom: solid 1px $primarycolor.green;
         .mask-bottom
           position: absolute
           bottom: 1px
           background: linear-gradient(to bottom, rgba(33, 33, 34, 0.4), rgba(33, 33, 33, 0.8))
-          border-top: solid 1px $primarycolor.purple;
+          border-top: solid 1px $primarycolor.green;
       .wheel-wrapper
         display: flex
         padding: 0 16px

@@ -1,7 +1,7 @@
 <template>
 <div>
 
-  <v-app :class="'app ' + (showFuzzyView?'fuzzy-app':'')  + (isios ? ' ios-app ':' ' )" dark>
+  <v-app :class="'app ' + (showFuzzyView?'fuzzy-app':'')  + (isios ? ' ios-app ':' ' )" light>
       <v-system-bar status :color="iosstatusbarcolor" v-if="isios && !isFull" app>
         <v-spacer></v-spacer>
       </v-system-bar>
@@ -140,7 +140,7 @@ export default {
       navigator.splashscreen.hide();
       if (StatusBar && !StatusBar.isVisible) {
         StatusBar.show();
-        StatusBar.backgroundColorByHexString("#8c5fff");
+        StatusBar.backgroundColorByHexString("#21ce90");
         this.$store.commit("CHANGE_IOSSTATUSBAR_COLOR", "primary");
       }
       //加载系统配置
@@ -322,7 +322,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: $primarycolor.purple;
+  background: $primarycolor.green;
   opacity: 0.8;
   z-index: 99;
   display: block;
@@ -356,7 +356,7 @@ export default {
     align-items: center;
     -webkit-justify-content: center;
     justify-content: center;
-    background: $primarycolor.purple;
+    background: $primarycolor.green;
 
     .pin-bar-icon {
       flex: 1;
@@ -437,10 +437,10 @@ export default {
   .application--light .input-group:not(.input-group--error) label:after{
     color:#f35530;
   }
-  .app.application.theme--dark{
-    background: #212122;
+  .app.application.theme--light{
+    background: #ffffff;
   }
-  .app.application.theme--dark.bg-hide{
+  .app.application.theme--light.bg-hide{
     background: none;
     background-color:transparent;
   }

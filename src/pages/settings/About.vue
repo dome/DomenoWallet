@@ -222,7 +222,7 @@ export default {
 
 .appname {
   font-size: 24px;
-  color: $primarycolor.purple;
+  color: $primarycolor.green;
 }
 
 .appversion {

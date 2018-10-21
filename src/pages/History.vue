@@ -1,5 +1,5 @@
 <template>
-  <div class="page" dark>
+  <div class="page" light>
     <toolbar :title="$t(title)" :showbackicon="true" style="z-index:999;" @goback="back"/>
     <swiper :options="swiperOptionTop" id="swiper1" class="swiper-container" ref="swiperTop">
             <swiper-slide  class="swiper-slide">
@@ -148,10 +148,10 @@
           text-align: center
           font-size: 16px
         .menu-li.active
-          border-bottom: 2px solid $primarycolor.purple
-          color: $primarycolor.purple
+          border-bottom: 2px solid $primarycolor.green
+          color: $primarycolor.green
 .swiper-container
-  background: $primarycolor.purple
+  background: $primarycolor.green
   height: 46px
   margin: 0 !important
   min-height:42px !important

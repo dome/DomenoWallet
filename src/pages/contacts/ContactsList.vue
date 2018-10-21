@@ -15,7 +15,7 @@
             {{$t('Error.NoContactYet')}}
           </div>
           <div class='contacts' v-else>
-            <v-text-field append-icon="search" v-model="search" dark
+            <v-text-field append-icon="search" v-model="search" light
                           class="search"  hide-details single-line >
             </v-text-field>
             <div class="contracts-list">
@@ -26,7 +26,7 @@
                   }">
                 <v-layout class="mycontacts-li third-li" row wrap v-swiper=2.5 @click.stop="toContactDetail(contact.id)">
                   <v-flex xs2 class="mycontacts-wrapper">
-                    <v-avatar :tile=false class="grey darken-4 contact-avatar">
+                    <v-avatar :tile=false class="grey lighten-4 contact-avatar">
                       <i class="avatar iconfont icon-erweima"></i>
                       </v-avatar>
                   </v-flex>
@@ -34,7 +34,7 @@
                     <div class="contact-name grey--text text--lighten-1">{{contact.name}}</div>
                   </v-flex>
                   <v-flex xs4 class="mycontacts-wrapper">
-                    <div class="contact-address grey--text text--darken-1">{{contact.address|miniaddress}}</div>
+                    <div class="contact-address grey--text text--lighten-1">{{contact.address|miniaddress}}</div>
                   </v-flex>
                 </v-layout>
                 <div class="operate-box" >
@@ -201,7 +201,7 @@ export default {
           text-align: right
           color: $secondarycolor.font
           .balance
-            color: $primarycolor.purple
+            color: $primarycolor.green
             font-size: 20px
             padding-right: 10px
         .myassets-reserve
@@ -227,11 +227,11 @@ export default {
     align-items: center
     background-color: $primarycolor.gray
     // background-color: $secondarycolor.green
-    color: $primarycolor.purple
+    color: $primarycolor.green
     padding: 0 12px
   .receive
     // border-left: 1px solid $secondarycolor.gray
-    color:$primarycolor.purple
+    color:$primarycolor.green
   .del
     background-color: $primarycolor.gray
     color:$primarycolor.red

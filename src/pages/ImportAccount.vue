@@ -30,7 +30,7 @@
         <secret-key-input :enablePaste="true" :seed="scanSeed" ref="secretkeyRef"></secret-key-input>
       </div>
       <div v-if="importFlag === 0">
-        <v-text-field dark
+        <v-text-field light
             :label="$t('mnemonic')"
             v-model="mnemonic"
             required
@@ -281,23 +281,23 @@ export default {
   line-height: 42px
   font-size: 16px
   text-align: center
-  color: $primarycolor.purple
+  color: $primarycolor.green
 .btn-available
-  color: $primarycolor.purple
+  color: $primarycolor.green
 .btn-unavailable
-  color: $secondarycolor.purple
+  color: $secondarycolor.green
 .hidebackground
   background:none
   background-color: transparent
 .tabs
   color: $primarycolor.font
   .tab.active
-    color: $primarycolor.purple
+    color: $primarycolor.green
 .lang-tabs
   color: $primarycolor.font
   font-size: 14px
   .tab.active
-    color: $primarycolor.purple
+    color: $primarycolor.green
 .seed-span
   word-wrap:break-word
   color: $secondarycolor.font

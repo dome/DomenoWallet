@@ -104,7 +104,7 @@ $dot-size = 16px
       text-align: center
       justify-content: center
       .dot
-        border: 2px solid $primarycolor.purple
+        border: 2px solid $primarycolor.green
         height: $dot-size
         line-height: $dot-size
         width: $dot-size
@@ -117,12 +117,12 @@ $dot-size = 16px
       text-align: center
       justify-content: center
       .dot
-        border: 2px solid $primarycolor.purple
+        border: 2px solid $primarycolor.green
         height: $dot-size
         line-height: $dot-size
         width: $dot-size
         border-radius: $dot-size
         display: block
-        background: $primarycolor.purple
+        background: $primarycolor.green
 
 </style>

@@ -2,7 +2,7 @@
  * pin码设置界面（从设置中打开时）
  */
 <template>
-  <div class="page" dark>
+  <div class="page" light>
     <Toolbar 
       :title="$t(title)"
       :showmenuicon="showmenuicon" 

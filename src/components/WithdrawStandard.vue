@@ -23,7 +23,7 @@
             class="field_select"
             v-model="forward_type"
             @change="changeForwardType($event)"
-            dark
+            light
             >
             <template slot="selection" slot-scope="data">
               <span class="field_select_code show">{{$t(data.item)}}</span>
@@ -39,7 +39,7 @@
           <span class="ml-2 title2">({{$t('Title.Scan')}})</span></div>
         <v-text-field class="field_input"  name="dest"
           v-model="dest"
-          dark
+          light
           append-icon="bookmark"
           :append-icon-cb="()=>{showbook=true}"
           ></v-text-field>
@@ -49,7 +49,7 @@
         <div class="label">{{$t('Memo')}}</div>
         <v-text-field class="field_input"  name="dest"
           v-model="dest_extra"
-          dark
+          light
           ></v-text-field>
       </div>
       <div class="field_btn">
@@ -84,12 +84,12 @@
           v-model="amount"
           @input="chgAmount"
           type="number"
-          dark
+          light
           :suffix="asset.code"
           ></v-text-field>
         <v-slider v-model="num"  hide-details
           class="amount-slider"
-          dark
+          light
           max=100 step=10 ticks
           append-icon='keyboard_tab'  v-bind:style="'width: 100% !important'"
           :append-icon-cb = 'toMax'
@@ -103,7 +103,7 @@
           :value="fee"
           :disabled="true"
           :suffix="asset.code"
-          dark
+          light
           ></v-text-field>
       </div>
       <div class="field_select" >
@@ -112,7 +112,7 @@
           :value="receive"
           :disabled="true"
           :suffix="asset.code"
-          dark
+          light
           ></v-text-field>
       </div>
       <div class="field_btn">
@@ -124,7 +124,7 @@
     <div class="confirm-wrapper"  v-if="step === 3  && !showScanner">
       <div class="confirm-blank"></div>
       <div  class="confirm-dlg">
-      <v-bottom-sheet v-model="confirmSheetView" persistent dark >
+      <v-bottom-sheet v-model="confirmSheetView" persistent light >
         <div class="confirm-title">{{$t('Trade.Confirm')}}{{$t('Send')}}</div>
         <div class="confirm-content">
           <div class="confirm-row flex-row">
@@ -599,6 +599,6 @@ export default {
   padding-left: 0
   padding-right: 0
 .title2
-  color: $primarycolor.purple
+  color: $primarycolor.green
   font-size: 13px
 </style>

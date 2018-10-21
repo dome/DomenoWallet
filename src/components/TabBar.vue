@@ -1,7 +1,7 @@
 <template>
 <!-- <v-card class="menu-card"> -->
   <div class="tabbar-wrapper">
-    <v-bottom-nav :value="true" :active.sync="active" color="dark" class="tb-menu" app fixed>
+    <v-bottom-nav :value="true" :active.sync="active" color="light" class="tb-menu" app fixed>
         <v-btn flat v-for="(item,index) in menus" :key="index" :value="index" @click="redirect(index,item.name)">
           <span>{{$t(item.title)}}</span>
           <v-icon>{{item.icon}}</v-icon>
@@ -101,9 +101,9 @@ export default {
   box-shadow: 0px -2px 2px $primarycolor.gray
   bottom: constant(safe-area-inset-bottom)!important
   bottom: env(safe-area-inset-bottom)!important
-  &.bottom-nav.bottom-nav--active.dark
+  &.bottom-nav.bottom-nav--active.light
     .btn.btn--flat.btn--active
-      color: $primarycolor.purple
+      color: $primarycolor.green
 
 .bottom-nav .btn
   opacity inherit!important
@@ -114,7 +114,7 @@ export default {
   width: 10px
   height: 10px
   border-radius: 5px
-  background: $primarycolor.purple
+  background: $primarycolor.green
   right: 20px
   top:5px
   position: absolute

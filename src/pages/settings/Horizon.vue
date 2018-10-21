@@ -15,7 +15,7 @@
               name="horizon"
               :label="$t('PublicNetUrl')"
               v-model="horizon"
-              dark
+              light
             ></v-text-field>
 
             <v-container fluid grid-list-md>
@@ -245,7 +245,7 @@ export default {
   display flex
   justify-content center
   align-items center
-  color: $primarycolor.purple
+  color: $primarycolor.green
   .iconfont
     font-size: .7rem
 .page
@@ -272,7 +272,7 @@ export default {
         height: 36px
 
 .horizon_pinstyle
-  background:$primarycolor.purple
+  background:$primarycolor.green
   border-radius:5px
   text-align:center
 .horizon_timeusestyle
@@ -307,14 +307,14 @@ export default {
   bottom:  calc(.2rem + env(safe-area-inset-bottom))
   padding: .1rem .2rem
 //颜色分类
-  // brand-primary: darken(#428bca, 6.5%); // #337ab7
+  // brand-primary: lighten(#428bca, 6.5%); // #337ab7
   // @brand-success: #5cb85c;
   // @brand-info:    #5bc0de;
   // @brand-warning: #f0ad4e;
   // @brand-danger:  #d9534f;
 
-//   @gray-darker:  lighten(#000, 13.5%); // #222
-// @gray-dark:    lighten(#000, 20%);   // #333
+//   @gray-lighter:  lighten(#000, 13.5%); // #222
+// @gray-light:    lighten(#000, 20%);   // #333
 // @gray:         lighten(#000, 33.5%); // #555
 // @gray-light:   lighten(#000, 46.7%); // #777
 // @gray-lighter: lighten(#000, 93.5%); // #eee

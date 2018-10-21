@@ -12,7 +12,7 @@
     <v-navigation-drawer
       absolute
       temporary
-      dark
+      light
       v-model="showview"
       class='aside'
      >
@@ -58,7 +58,7 @@
     </v-navigation-drawer>
       <!-- end 切换账户 -->
 
-    <v-bottom-sheet  v-model="showPwdSheet" v-if="showPwdSheet" dark>
+    <v-bottom-sheet  v-model="showPwdSheet" v-if="showPwdSheet" light>
       <div class="sheet-content">
         <div class="sheet-title">
           <h4 class="title">
@@ -80,7 +80,7 @@
                 :append-icon="pwdvisible ? 'visibility' : 'visibility_off'"
                 :append-icon-cb="() => (pwdvisible = !pwdvisible)"
                 :type="pwdvisible ? 'text':'password'"
-                required dark
+                required light
               ></v-text-field>
         </div>
         <div  class="sheet-btns">
@@ -298,7 +298,7 @@ export default {
       height: 40px
       line-height: 30px
       padding: 5px 5px
-      color: $primarycolor.purple
+      color: $primarycolor.green
       text-align: center
       vertical-align: middle
       border-radius: 40px
@@ -308,7 +308,7 @@ export default {
       background: $secondarycolor.gray
  .showaccounts
     background: $secondarycolor.gray
-    background: #29292b
+    background: #ffffff
     margin-top: -5px
     padding: 20px 20px
     color: $primarycolor.font
@@ -335,9 +335,9 @@ export default {
           .iconfont
             font-size: 21px
           .iconfont.icon-dot1
-            color: $primarycolor.purple
+            color: $primarycolor.green
     .manage
-      color: $primarycolor.purple
+      color: $primarycolor.green
       display: inline-block
       width: 100%
       text-align: center
@@ -388,7 +388,7 @@ export default {
       line-height: 40px
       font-size: 32px
       text-align: center
-      color: $primarycolor.purple
+      color: $primarycolor.green
       padding: 10px 10px
     .label
       color: $secondarycolor.font
@@ -405,6 +405,6 @@ export default {
       line-height: 40px
       text-align: center
       font-size: 16px
-      color: $primarycolor.purple
+      color: $primarycolor.green
 </style>
 

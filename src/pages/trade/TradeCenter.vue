@@ -31,7 +31,7 @@
         <div class="card-content trade-card-content" slot="card-content">
           <scroll :refresh="reloadTradePairs" :readLabelTxt="readLabelTxt">
 
-            <v-tabs  v-model="tagIndex" class="tabs-bg-dark" hide-slider grow color="transparent">
+            <v-tabs  v-model="tagIndex" class="tabs-bg-light" hide-slider grow color="transparent">
               <v-tab class="tab1" @click="doFilter(item)"
                 v-for="(item,index) in allTags" :key="index">
                   {{allTagsLabel[index]}}
@@ -101,7 +101,7 @@
       :color = 'snackbarColor'
       >
       {{ snackbarText }}
-        <v-btn flat  dark small @click.native="snackbar = false">{{$t('Close')}}</v-btn>
+        <v-btn flat  light small @click.native="snackbar = false">{{$t('Close')}}</v-btn>
       </v-snackbar>
       <!-- <tab-bar/> -->
   </div>

@@ -29,7 +29,7 @@
       <card class="mytrade" padding="10px 10px">
         <div class="card-content" slot="card-content">
 
-          <v-text-field  dark required  clearable hide-details v-bind:style="'width: 100% !important'"
+          <v-text-field  light required  clearable hide-details v-bind:style="'width: 100% !important'"
             :prefix="$t('Trade.UnitPrice')"
             v-model='price'
             type="number"
@@ -39,7 +39,7 @@
             :color="isBuy ? 'primary':'error'"
           ></v-text-field>
           <!--数量-->
-          <v-text-field  dark required hide-details clearable  v-bind:style="'width: 100% !important'"
+          <v-text-field  light required hide-details clearable  v-bind:style="'width: 100% !important'"
             :prefix="$t('Amount')"
             v-model="amount"
             @input="inputAmount"
@@ -50,7 +50,7 @@
             ></v-text-field>
           <v-slider hide-details
             class="buy-amount-slider"
-            dark
+            light
             max=100 step=10 ticks
             v-model="num"
             @input="inputNum"
@@ -59,7 +59,7 @@
             :color="isBuy ? 'primary':'error'"
             ></v-slider>
           <!--总额，自动计算-->
-          <v-text-field   name="total" dark
+          <v-text-field   name="total" light
             :prefix="$t('Trade.Total')"
             :suffix="CounterBalance.code"
             v-model="total"
@@ -159,7 +159,7 @@
     <div class="confirm-wrapper"  v-if="showConfirmSheet">
       <div class="confirm-blank"></div>
       <div  class="confirm-dlg">
-      <v-bottom-sheet v-model="showConfirmSheet"  dark>
+      <v-bottom-sheet v-model="showConfirmSheet"  light>
         <div class="confirm-title" v-if="flag === 'buy'">{{$t('Trade.Confirm')}}{{$t('Trade.Buy')}}</div>
         <div class="confirm-title" v-else>{{$t('Trade.Confirm')}}{{$t('Trade.Sell')}}</div>
         <div class="confirm-content">
@@ -1066,8 +1066,8 @@ export default {
   padding-right: 10px
   padding-top: 20px
   .active
-    border-bottom: 1px solid $primarycolor.purple
-    color: $primarycolor.purple
+    border-bottom: 1px solid $primarycolor.green
+    color: $primarycolor.green
 
 //购买按钮
 .btn-buy
@@ -1083,7 +1083,7 @@ export default {
   &.btn-red
     color: $primarycolor.red
   &.btn-green
-    color: $primarycolor.purple
+    color: $primarycolor.green
 //可用余额
 .available
   padding-left: 2px
@@ -1135,7 +1135,7 @@ export default {
   height: 46px
   line-height: 46px
   font-size: 18px
-  color: $primarycolor.purple
+  color: $primarycolor.green
   text-align: center
 .confirm-content
   padding-top: 8px
@@ -1147,9 +1147,9 @@ export default {
       color: $secondarycolor.font
     .value
       padding-left: 12px
-      color: $primarycolor.purple
+      color: $primarycolor.green
 .confirm-btns
-  color: $primarycolor.purple
+  color: $primarycolor.green
   text-align: center
   font-size: 16px
   height: 42px
@@ -1210,7 +1210,7 @@ export default {
   .b-row.depth
     text-align: right
     &>a
-      color: $primarycolor.purple
+      color: $primarycolor.green
 
 .offer-card
   height: 100%

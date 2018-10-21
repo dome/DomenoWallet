@@ -13,7 +13,7 @@
           class="selectasset"
           item-value="id"
           item-text="code"
-          dark
+          light
           :return-object="assetChoseReturnObject"
           @change="changeAsset"
         >
@@ -244,10 +244,10 @@ const TYPE_WITHDRAW = 'withdraw'
       text-align: center
       font-size: 16px
     .menu-li.active
-      color: $primarycolor.purple
-      border-bottom: 1px solid $primarycolor.purple
+      color: $primarycolor.green
+      border-bottom: 1px solid $primarycolor.green
 .selectasset
-  color: $primarycolor.purple
+  color: $primarycolor.green
 .asset-select-code
   font-size: 16px
 .asset-select-issuer

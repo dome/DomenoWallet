@@ -35,7 +35,7 @@
       </card>
       <v-layout row  wrap>
         <v-flex xs12>
-          <v-btn class='primary' block dark large @click="addContact" v-if="!this.contactName">{{$t('AddContact')}}</v-btn>
+          <v-btn class='primary' block light large @click="addContact" v-if="!this.contactName">{{$t('AddContact')}}</v-btn>
         </v-flex>
       </v-layout>
     </div>
@@ -163,7 +163,7 @@ export default {
         padding-top: 5px
         padding-bottom: 5px
       .amount.add
-        color: $primarycolor.purple
+        color: $primarycolor.green
       .amount.minus
         color: $primarycolor.red
       .address

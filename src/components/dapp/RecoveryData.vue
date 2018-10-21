@@ -1,7 +1,7 @@
 // 恢复联系人和地址簿
 <template>
   <div class="trust-line-wrapper">
-    <v-bottom-sheet persistent v-model="showPwdSheet" v-if="showPwdSheet" dark>
+    <v-bottom-sheet persistent v-model="showPwdSheet" v-if="showPwdSheet" light>
       <div class="sheet-content">
         <div class="sheet-title textcenter">
           <div class="title">{{$t('Recovery')}}</div>
@@ -19,7 +19,7 @@
               :append-icon="pwdvisible ? 'visibility' : 'visibility_off'"
               :append-icon-cb="() => (pwdvisible = !pwdvisible)"
               :type="pwdvisible ? 'text':'password'"
-              required dark
+              required light
             ></v-text-field>
         </div>
         <div  class="sheet-btns">
@@ -181,7 +181,7 @@ export default {
       line-height: 40px
       font-size: 32px
       text-align: center
-      color: $primarycolor.purple
+      color: $primarycolor.green
       padding: 10px 10px
     .label
       color: $secondarycolor.font
@@ -198,7 +198,7 @@ export default {
       line-height: 40px
       text-align: center
       font-size: 16px
-      color: $primarycolor.purple
+      color: $primarycolor.green
 
 </style>
 

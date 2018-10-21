@@ -222,7 +222,7 @@ export default {
 
 
 .guidepage_swiper_title
-    color:$primarycolor.purple
+    color:$primarycolor.green
     font-size:20px
     text-align:center
 .guidepage_swiper_content
@@ -233,7 +233,7 @@ export default {
     padding-top:10px
 .bottom-nav
     text-align:center
-    color:$primarycolor.purple
+    color:$primarycolor.green
     position: fixed
     bottom: 0px
     bottom: constant(safe-area-inset-bottom)
@@ -259,5 +259,5 @@ export default {
    padding-top: 1rem
    border-radius: 5px
 .swiper-bullet
-    color: $primarycolor.purple
+    color: $primarycolor.green
 </style>

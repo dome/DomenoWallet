@@ -207,7 +207,7 @@ export default {
 .row100
   width: 100vw
   &.active
-    color: $primarycolor.purple
+    color: $primarycolor.green
 .tb-dlg
   position: fixed
   top: 0

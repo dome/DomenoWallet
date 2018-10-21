@@ -66,7 +66,7 @@ Vue.use(Vuetify, {
     ClickOutside,
   },
   theme: {
-    primary: '#8c5fff', // #21ce90
+    primary: '#21ce90', // #21ce90
     error: "#f35833",
     notice: "#303034",
   }

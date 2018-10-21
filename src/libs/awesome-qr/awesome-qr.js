@@ -906,8 +906,8 @@ import GIFE from './gif'
                 var y = row * cs;
                 for (var col = 0; col < this.modules[row].length; col++) {
                     var x = col * cs;
-                    var dark = this.modules[row][col];
-                    if (dark) {
+                    var light = this.modules[row][col];
+                    if (light) {
                         qr_mc.beginFill(0, 100);
                         qr_mc.moveTo(x, y);
                         qr_mc.lineTo(x + cs, y);
@@ -1000,15 +1000,15 @@ import GIFE from './gif'
                 while (!0) {
                     for (var c = 0; c < 2; c++) {
                         if (this.modules[row][col - c] == null) {
-                            var dark = !1;
+                            var light = !1;
                             if (byteIndex < data.length) {
-                                dark = (((data[byteIndex] >>> bitIndex) & 1) == 1)
+                                light = (((data[byteIndex] >>> bitIndex) & 1) == 1)
                             }
                             var mask = QRUtil.getMask(maskPattern, row, col - c);
                             if (mask) {
-                                dark = !dark
+                                light = !light
                             }
-                            this.modules[row][col - c] = dark;
+                            this.modules[row][col - c] = light;
                             bitIndex--;
                             if (bitIndex == -1) {
                                 byteIndex++;
@@ -1271,7 +1271,7 @@ import GIFE from './gif'
             for (var row = 0; row < moduleCount; row++) {
                 for (var col = 0; col < moduleCount; col++) {
                     var sameCount = 0;
-                    var dark = qrCode.isDark(row, col);
+                    var light = qrCode.isDark(row, col);
                     for (var r = -1; r <= 1; r++) {
                         if (row + r < 0 || moduleCount <= row + r) {
                             continue
@@ -1283,7 +1283,7 @@ import GIFE from './gif'
                             if (r == 0 && c == 0) {
                                 continue
                             }
-                            if (dark == qrCode.isDark(row + r, col + c)) {
+                            if (light == qrCode.isDark(row + r, col + c)) {
                                 sameCount++
                             }
                         }
@@ -1319,15 +1319,15 @@ import GIFE from './gif'
                     }
                 }
             }
-            var darkCount = 0;
+            var lightCount = 0;
             for (var col = 0; col < moduleCount; col++) {
                 for (var row = 0; row < moduleCount; row++) {
                     if (qrCode.isDark(row, col)) {
-                        darkCount++
+                        lightCount++
                     }
                 }
             }
-            var ratio = Math.abs(100 * darkCount / moduleCount / moduleCount - 50) / 5;
+            var ratio = Math.abs(100 * lightCount / moduleCount / moduleCount - 50) / 5;
             lostPoint += ratio * 10;
             return lostPoint
         }

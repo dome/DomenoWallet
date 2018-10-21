@@ -278,7 +278,7 @@ export default {
 .btns
   font-size: 16px
 .dlg-green
-  color: $primarycolor.purple
+  color: $primarycolor.green
 .dlg-content
   background: $secondarycolor.gray
   color: $primarycolor.red

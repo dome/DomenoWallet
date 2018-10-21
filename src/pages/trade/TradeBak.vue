@@ -73,9 +73,9 @@
               </div>
               <v-slide-y-transition>
               <v-flex xs12 v-if='tradeSwitch && (selectedTradeIndex === index)' class="tradebox swiper-no-swiping">
-                <v-card dark  color=''v-bind:style="'width: 100% !important'">
+                <v-card light  color=''v-bind:style="'width: 100% !important'">
                   <v-card-text flex>
-                    <v-text-field  dark required  clearable hide-details v-bind:style="'width: 90% !important'"
+                    <v-text-field  light required  clearable hide-details v-bind:style="'width: 90% !important'"
                       :prefix="$t('Trade.UnitPrice')" 
                       v-model='price'
                       type="number"
@@ -83,7 +83,7 @@
                       :color="tradeType ==='buy'? 'primary':'error'"
                     ></v-text-field>
                     <!--数量-->
-                    <v-text-field  dark required hide-details clearable  v-bind:style="'width: 90% !important'"
+                    <v-text-field  light required hide-details clearable  v-bind:style="'width: 90% !important'"
                       :prefix="$t('Amount')"
                       v-model="amount"  
                       type="number" name="amount" 
@@ -92,14 +92,14 @@
                       ></v-text-field>
                     <v-slider v-model="num"  hide-details 
                       class="buy-amount-slider"
-                      dark
+                      light
                       max=100 step=10 ticks
                       append-icon='keyboard_tab'  v-bind:style="'width: 90% !important'"
                       :append-icon-cb = 'toMax'
                       :color="tradeType ==='buy'? 'primary':'error'"
                       ></v-slider>
                     <!--总额，自动计算-->
-                    <v-text-field v-model="total"   name="total" dark
+                    <v-text-field v-model="total"   name="total" light
                       :prefix="$t('Trade.Total')"
                       :suffix="CounterBalance.code"
                       :value="total"

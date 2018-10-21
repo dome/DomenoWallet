@@ -9,7 +9,7 @@
  <template>
    <div  onTouchMove={this.preventTouchMove}>
 
-   <v-text-field dark
+   <v-text-field light
       :label="$t('SecretKey')"
       v-model="seedInput"
       required

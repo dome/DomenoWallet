@@ -1,6 +1,6 @@
 // 第三方应用列表界面
 <template>
-  <div class="page" dark  v-bind:class="{hidebackground: showScanner}">
+  <div class="page" light  v-bind:class="{hidebackground: showScanner}">
     <toolbar :title="$t('Title.ThirdApp')" :showbackicon="false"  @goback="back"
       :shadow="false" lockpass  ref="toolbar" v-if="!showScanner">
       <!--右侧打开设置界面-->
@@ -41,7 +41,7 @@
         >
           <v-card flat tile class="pa-2 textcenter app-card" >
              <div class="pa-3">
-                <v-avatar class="grey darken-4 app-avatar" :size="`100%`">
+                <v-avatar class="grey lighten-4 app-avatar" :size="`100%`">
                  <img :src="app.image">
                 </v-avatar>
              </div>
@@ -63,9 +63,9 @@
           @click="choose(app)"
           class="app-card-wrapper"
         >
-          <v-card dark flat tile class="pa-2 textcenter app-card" >
+          <v-card light flat tile class="pa-2 textcenter app-card" >
             <div class="pa-3">
-              <v-avatar class="grey darken-4 app-avatar" :size="`62px`">
+              <v-avatar class="grey lighten-4 app-avatar" :size="`62px`">
                <span class="white--text headline">{{app.title.substring(0,1)}}</span>
              </v-avatar>
             </div>
@@ -79,9 +79,9 @@
           @click="addDapp"
           class="app-card-wrapper"
         >
-          <v-card dark flat tile class="pa-2 textcenter app-card mt-3" >
+          <v-card light flat tile class="pa-2 textcenter app-card mt-3" >
             <div class="pa-3">
-              <v-avatar class="grey darken-4 app-avatar add-app-avatar" :size="`62px`">
+              <v-avatar class="grey lighten-4 app-avatar add-app-avatar" :size="`62px`">
                <v-icon :size="`38px`" color="primary">add</v-icon>
              </v-avatar>
             </div>
@@ -124,8 +124,8 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary darken-1" :loading="addingApp" flat @click.stop="cancelAddApp">{{$t('Button.Cancel')}}</v-btn>
-          <v-btn color="error darken-1" :loading="addingApp" flat @click.stop="doAddApp">{{$t('Save')}}</v-btn>
+          <v-btn color="primary lighten-1" :loading="addingApp" flat @click.stop="cancelAddApp">{{$t('Button.Cancel')}}</v-btn>
+          <v-btn color="error lighten-1" :loading="addingApp" flat @click.stop="doAddApp">{{$t('Save')}}</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -673,7 +673,7 @@ export default {
 .btns
   font-size: 16px
 .dlg-green
-  color: $primarycolor.purple
+  color: $primarycolor.green
 .dlg-content
   background: $secondarycolor.gray
   color: $primarycolor.red

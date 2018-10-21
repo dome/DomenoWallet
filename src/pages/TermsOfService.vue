@@ -3,7 +3,7 @@
  */
 <template>
   <div class="terms-service-page">
-    <v-toolbar class="tbar primary" dark  :flat="false" dense :clipped-left='true' app>
+    <v-toolbar class="tbar primary" light  :flat="false" dense :clipped-left='true' app>
       <v-btn icon v-show="showbackicon" @click="goback" class="white--text">
             <i class="material-icons font28">&#xE5CB;</i>
       </v-btn>
@@ -106,5 +106,5 @@ export default {
   line-height: 42px
   font-size: 16px
   text-align: center
-  color: $primarycolor.purple
+  color: $primarycolor.green
 </style>

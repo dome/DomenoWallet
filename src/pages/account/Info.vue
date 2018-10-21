@@ -59,7 +59,7 @@
 
 
       <div :class="'footer' + (canModify ? ' active':' unactive') ">
-        <v-tabs class="tabs-bg-dark" grow centered hide-slider color="primary">
+        <v-tabs class="tabs-bg-light" grow centered hide-slider color="primary">
           <v-tab class="tab2" @click.stop="modify">{{$t('Modify')}}</v-tab>
           <v-tab class="tab2" @click.stop="resetpwd">{{$t('ResetPassword')}}</v-tab>
           <v-tab class="tab2" @click.stop="toViewKey">{{$t('ViewKey')}}</v-tab>
@@ -69,7 +69,7 @@
 
 
       <div class="pwdSheetWrapper" v-if="showPwdSheet">
-        <v-bottom-sheet  v-model="showPwdSheet"  dark>
+        <v-bottom-sheet  v-model="showPwdSheet"  light>
           <div class="sheet-content">
             <div class="sheet-input">
               <v-text-field
@@ -79,7 +79,7 @@
                     :append-icon="pwdvisible ? 'visibility' : 'visibility_off'"
                     :append-icon-cb="() => (pwdvisible = !pwdvisible)"
                     :type="pwdvisible ? 'text':'password'"
-                    required dark
+                    required light
                   ></v-text-field>
             </div>
             <div  class="sheet-btns">
@@ -99,13 +99,13 @@
                     :append-icon="pwdvisible ? 'visibility' : 'visibility_off'"
                     :append-icon-cb="() => (pwdvisible = !pwdvisible)"
                     :type="pwdvisible ? 'text':'password'"
-                    required dark
+                    required light
                   ></v-text-field> -->
-              <!-- <v-text-field   required dark>账户密钥为重要信息，请做好备份并谨慎保存，切勿与他人分享</v-text-field> -->
+              <!-- <v-text-field   required light>账户密钥为重要信息，请做好备份并谨慎保存，切勿与他人分享</v-text-field> -->
         <!-- </v-bottom-sheet>
       </div> -->
       <div class="text-xs-center" v-if="showViewkeySheet">
-          <v-bottom-sheet v-model="showViewkeySheet" dark>
+          <v-bottom-sheet v-model="showViewkeySheet" light>
             <v-list >
               <v-subheader class="info_warning_msg_style">{{$t("Warning_msg")}}</v-subheader>
               <v-subheader class="info_account_miyao_style">{{$t("Account_secretkey")}}</v-subheader>
@@ -119,7 +119,7 @@
 
       <!-- 查看助记词 -->
        <div class="text-xs-center" v-if="showMnemonicSheet">
-          <v-bottom-sheet v-model="showMnemonicSheet" dark>
+          <v-bottom-sheet v-model="showMnemonicSheet" light>
             <v-list v-if="mnemonic">
               <v-subheader class="info_warning_msg_style">{{$t("Warning_mnemonic_msg")}}</v-subheader>
               <v-subheader class="info_account_miyao_style">{{$t("mnemonic")}}</v-subheader>
@@ -139,15 +139,15 @@
           <v-card-text class="dlg-content">{{$t(dlgtitle)}}</v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="green darken-1" flat @click="dlgBtnCancel">{{$t('Button.Cancel')}}</v-btn>
-            <v-btn color="green darken-1" flat @click="dlgBtnOK">{{$t('Button.OK')}}</v-btn>
+            <v-btn color="green lighten-1" flat @click="dlgBtnCancel">{{$t('Button.Cancel')}}</v-btn>
+            <v-btn color="green lighten-1" flat @click="dlgBtnOK">{{$t('Button.OK')}}</v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
 
       <!-- 修改密码 -->
        <div class="pwdSheetWrapper rePwdSheetWrapper" v-if="showResetPwdSheet">
-        <v-bottom-sheet  v-model="showResetPwdSheet" dark>
+        <v-bottom-sheet  v-model="showResetPwdSheet" light>
           <div class="bts-dlg">
             <div class="sheet-title">
               <div class="stitle">
@@ -164,7 +164,7 @@
                         :append-icon="pwd1visible ? 'visibility' : 'visibility_off'"
                         :append-icon-cb="() => (pwd1visible = !pwd1visible)"
                         :type="pwd1visible ? 'text':'password'"
-                        required dark
+                        required light
                       ></v-text-field>
                 </div>
                 <div class="sheet-input">
@@ -175,7 +175,7 @@
                         :append-icon="pwd2visible ? 'visibility' : 'visibility_off'"
                         :append-icon-cb="() => (pwd2visible = !pwd2visible)"
                         :type="pwd2visible ? 'text':'password'"
-                        required dark
+                        required light
                       ></v-text-field>
                 </div>
                 <v-text-field
@@ -185,7 +185,7 @@
                       :append-icon="pwd3visible ? 'visibility' : 'visibility_off'"
                       :append-icon-cb="() => (pwd3visible = !pwd3visible)"
                       :type="pwd3visible ? 'text':'password'"
-                      required dark
+                      required light
                     ></v-text-field>
               </div>
               <div  class="sheet-btns">
@@ -585,7 +585,7 @@ export default {
 .card-content
   .label
     font-size: 16px
-    color: $primarycolor.purple
+    color: $primarycolor.green
     padding-top: 2px
     padding-bottom: 2px
   .value
@@ -606,7 +606,7 @@ export default {
         text-align: right
         padding-right: 5px
         .secreticons
-          color: $primarycolor.purple
+          color: $primarycolor.green
   .qrcode
     text-align: center
 .footer
@@ -624,24 +624,24 @@ export default {
   right: 0
 
   &.active
-    color:$primarycolor.purple
+    color:$primarycolor.green
   &.unactive
     color: $secondarycolor.font
 .btn-available
-  color:$primarycolor.purple
+  color:$primarycolor.green
 .btn-unavailable
-  color:$secondarycolor.purple
+  color:$secondarycolor.green
 .avatar-wrapper
   display: block
   text-align: left
-  color:$primarycolor.purple
+  color:$primarycolor.green
   .avatar
     width: 56px
     height: 56px
     background: $primarycolor.gray
     border-radius: 56px
     .iconfont
-      color: $primarycolor.purple
+      color: $primarycolor.green
       font-size: 32px
 .name
   display: block
@@ -677,7 +677,7 @@ export default {
   background: $secondarycolor.gray
 .sheet-btns
   display: flex
-  color: $primarycolor.purple
+  color: $primarycolor.green
   height: 50px
   line-height: 50px
   .sheet-btn
@@ -701,12 +701,12 @@ export default {
   background-color:$secondarycolor.black
   opacity:0.3
 .Info_menu_color
-  color:$primarycolor.purple
+  color:$primarycolor.green
   font-size:18px
 .showViewkeySheetPosition
   height:5000px
   width:3750px
-  background-color:purple
+  background-color:green
 .viewkeySheetWrapper
   height:100px
   width:100px

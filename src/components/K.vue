@@ -56,7 +56,7 @@
           <div :class="'flex1 ' + (resolution_key === '1min' ? 'active' : '')" @click="chgResolution('1min')">1{{$t('minute')}}</div>
       </div> -->
 
-      <v-tabs class="tabs-bg-dark" v-model="resolutionIndex" grow hide-slider color="transparent" v-show="showKgraph">
+      <v-tabs class="tabs-bg-light" v-model="resolutionIndex" grow hide-slider color="transparent" v-show="showKgraph">
         <v-tab @click="chgResolution('week')">{{$t('week')}}</v-tab>
         <v-tab @click="chgResolution('day')">{{$t('day')}}</v-tab>
         <v-tab @click="chgResolution('hour')">{{$t('hour')}}</v-tab>
@@ -332,7 +332,7 @@ export default {
             return {
                 animation: true,
                 color: this.colors,
-                backgroundColor: "#212122",
+                //backgroundColor: "#ffffff",
               //  title: {left: 'center', text: this.base.code + '/' + this.counter.code },
                 legend: { show: false, top: 30,data: [this.$t('minute'), 'MA5', 'MA10']},
                 tooltip: {

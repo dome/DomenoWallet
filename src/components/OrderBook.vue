@@ -17,7 +17,7 @@
           @click.stop="active='myTradeHistory'">{{$t('History.Trade')}}</div>
     </div> -->
 
-    <v-tabs class="tabs-bg-dark" grow slider-color="primary" color="transparent">
+    <v-tabs class="tabs-bg-light" grow slider-color="primary" color="transparent">
         <v-tab @click.stop="active='buy'">{{$t('Trade.BuyOffer')}}</v-tab>
         <v-tab @click.stop="active='sell'">{{$t('Trade.SellOffer')}}</v-tab>
         <v-tab @click.stop="active='myoffer'">{{$t('Trade.MyOffer')}}({{myofferlen}})</v-tab>

@@ -12,19 +12,19 @@
         <div class="card-content" slot="card-content">
           <ul class="settings-ul">
             <li class="settings-li">
-              <v-text-field name="input-name" required dark
+              <v-text-field name="input-name" required light
                             :label="$t(namelabel)" v-model="name"
               ></v-text-field>
             </li>
             <li class="settings-li">
-              <v-text-field name="input-address" required dark
+              <v-text-field name="input-address" required light
                             :label="$t(addlabel)" v-model='address'
               ></v-text-field>
             </li>
             <li class="settings-li">
               <v-text-field name="input-memo" :label="$t(memolabel)"
                             v-model='memo'    
-                            dark  
+                            light  
               ></v-text-field>
             </li>
           </ul>
@@ -34,7 +34,7 @@
       <v-footer>        
       <v-layout row  wrap>
         <v-flex xs12>
-          <v-btn class='add primary' :loading="working" block dark large @click="add">{{$t(buttonlabel)}}</v-btn>
+          <v-btn class='add primary' :loading="working" block light large @click="add">{{$t(buttonlabel)}}</v-btn>
         </v-flex>
       </v-layout>  
     </v-footer>

@@ -24,18 +24,18 @@
         <div class="card-content" slot="card-content">
           <ul class="settings-ul">
             <li>
-               <v-text-field name="input-name" required dark
+               <v-text-field name="input-name" required light
                             :label="$t(namelabel)" v-model="name"
               ></v-text-field>
             </li>
             <li class="settings-li">
-              <v-text-field name="input-address" required dark 
+              <v-text-field name="input-address" required light 
                             :label="$t(addlabel)" v-model='address'
               ></v-text-field>
             </li>
             <li class="settings-li">
               <v-select name ='memotypeselect' v-bind:items="items" v-model="memotype"
-                        :label="$t(memotypelabel)"  dark cle
+                        :label="$t(memotypelabel)"  light cle
                         append-icon="" 
                         v-on:input='onMemoTypeInput()'
               ></v-select>
@@ -43,7 +43,7 @@
             <li class="settings-li">
               <v-text-field name="input-memo" :label="$t(memolabel)"
                             v-model='memo'    
-                            dark   
+                            light   
                             :hint="$t('required')" 
                             :required='this.memorequired' 
                             :persistent-hint='this.memorequired'
@@ -57,7 +57,7 @@
     <v-footer>        
       <v-layout row  wrap>
         <v-flex xs12>
-          <v-btn class='modify'  block dark large @click="modifyContact">{{$t('Modify')}}</v-btn>
+          <v-btn class='modify'  block light large @click="modifyContact">{{$t('Modify')}}</v-btn>
         </v-flex>
       </v-layout>  
     </v-footer>

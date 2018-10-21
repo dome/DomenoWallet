@@ -446,7 +446,7 @@ export default {
   margin:7px 7px 50px 7px
   .label
     font-size: 14px
-    color: $primarycolor.purple
+    color: $primarycolor.green
     padding-top: 2px
     padding-bottom: 2px
   .value
@@ -473,16 +473,16 @@ export default {
   line-height:42px
   font-size:16px
   text-align:center
-  color:$primarycolor.purple
+  color:$primarycolor.green
 .btn-available
-  color:$primarycolor.purple
+  color:$primarycolor.green
 .btn-unavailable
-  color:$secondarycolor.purple
+  color:$secondarycolor.green
 .hint
   color:$primarycolor.red
   font-size: 15px
 .headline
-  color: $primarycolor.purple
+  color: $primarycolor.green
   font-size: 16px !important
   padding-bottom: 10px
 .notice
@@ -536,7 +536,7 @@ export default {
   .btn-cancel
   .btn-ok
     font-size: 16px
-    color: $primarycolor.purple
+    color: $primarycolor.green
 .card-content
   padding: 20px 10px
 .t1
@@ -550,7 +550,7 @@ export default {
 .btns
   font-size: 16px
 .dlg-green
-  color: $primarycolor.purple
+  color: $primarycolor.green
 .dlg-content
   background: $secondarycolor.gray
 

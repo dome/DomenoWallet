@@ -26,7 +26,7 @@
             item-text="label"
             :required="field.required"
             @change="changeValue(field.name,$event)"
-            dark
+            light
             :return-object="selectReturnObject"
             >
             <template slot="selection" slot-scope="data">
@@ -47,7 +47,7 @@
               :id="field.name"
               v-model="values[field.name]"
               :required="field.required"
-              dark
+              light
               @input="textInput(field.name,$event)"
             ></v-text-field>
             <div class="floaticon" @click.stop="showbookView(field.name)">
@@ -65,13 +65,13 @@
             name="amount"
             v-model="amount"
             required
-            dark
+            light
             type="number"
           ></v-text-field>
       <!-- <v-slider v-model="num" 
                 class="amount-slider"
                 color="red"
-                dark
+                light
                 :max="balance"
               ></v-slider> -->
     </div>
