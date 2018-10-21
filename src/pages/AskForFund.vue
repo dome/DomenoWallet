@@ -14,8 +14,8 @@
 
           <div class="label">{{$t('Asset')}}</div>
           <div class="value">
-            <span class="scode">XLM</span>
-            <span class="sissuer">stellar.org</span>
+            <span class="scode">FEE</span>
+            <!-- <span class="sissuer">domeno</span> -->
           </div>
 
           <v-text-field

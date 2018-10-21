@@ -8,6 +8,7 @@
       :showbackicon="showbackicon"
       color="error"
       @goback="back"
+      ref="toolbar"
       >
        <div class="right" slot="right-tool" v-if="!showContacts">
         <span class="toolbar-ico" @click="scan">
@@ -16,7 +17,7 @@
         </span>
       </div>
     </toolbar>
-
+    <accounts-nav :show="showaccountsview" @close="closeView"/>
     <q-r-scan
       @finish="qrfinish"
       @close="qrclose"
@@ -137,6 +138,9 @@
         <!-- wdp改动的地方 -->
         <v-btn class="error btn-send" @click.stop="change_is_sendconfim">{{$t('Send')}}</v-btn>
      </div>
+     <div class="btn-group" v-if="!showContacts">
+        <v-btn class="error btn-send" @click.stop="scan">{{$t('Scan')}}</v-btn>
+     </div>
 
     </div>
 
@@ -207,6 +211,8 @@ import Loading from '@/components/Loading'
 import { mapState, mapActions, mapGetters} from 'vuex'
 import * as accountapi from '@/api/account'
 import  debounce  from 'lodash/debounce'
+import AccountsNav from '@/components/AccountsNav'
+import TabBar from '@/components/TabBar'
 import { resolveByFedAddress } from '@/api/federation'
 import ContactBook from '@/components/ContactBook'
 import { xdrMsg,getXdrResultCode } from '@/api/xdr'
@@ -221,7 +227,7 @@ export default {
       showmenuicon: false,
       showbackicon: true,
       showScanner: false,
-
+      showaccountsview: false,
       onsend: false,//是否显示发送
       sending: false,//发送中
       sendsuccess: false,//发送成功
@@ -270,6 +276,7 @@ export default {
       contacts: state => state.app.contacts,//accounts.accountData.contacts,
       asset: state => state.asset.selected,
       assethosts: state => state.asset.assethosts,
+      islogin: state => (state.accounts.accountData.seed ? true : false),
     }),
     ...mapGetters([
       'balances',
@@ -285,6 +292,10 @@ export default {
 
   },
   mounted(){
+    if(!this.islogin){
+        this.$refs.toolbar.showPasswordLogin()
+        return
+    }
     this.selectedasset = Object.assign({id: this.asset.code+'-'+ this.asset.issuer}, this.asset)
     if (this.$route.params.destination) {
       console.log('set destination')
@@ -435,6 +446,7 @@ export default {
       let seed = this.accountData.seed
       if(!seed){
         this.$toasted.error(this.$t('Error.NoPassword'))
+        this.$refs.toolbar.showPasswordLogin()
         return
       }
       if(!this.destination){
@@ -600,13 +612,22 @@ export default {
       this.federationUrlResult = null
       this.is_sendconfim = false
 
-    }
+    },
+    showAccounts(){
+        this.showaccountsview = true
+    },
+    closeView(){
+        this.showaccountsview = false
+    },
+    
   },
   components: {
     Toolbar,
     QRScan,
+    TabBar,
     Card,
     Loading,
+    AccountsNav,
     ContactBook,
   }
 

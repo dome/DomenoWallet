@@ -173,10 +173,8 @@
   "RemovePinCodeSuccess": "ลบรหัสลับส่วนตัวเรียบร้อยแล้ว",
   "Error.RemovePinCodeFailed":"มีข้อผิดพลาดในการลบรหัสลับส่วนตัว",
 
-
-
-  "Random.Planets":"ดาวพุธ|ดาวศุกร์|โลก|ดาวอังคาร|ดาวพฤหัสบดี|ดาวเสาร์|ดาวยูเรนัส|ดาวเนปจูน|ดาวพลูโต",
-  "Random.Colors":"แดง|ส้ม|เหลือง|เขียว|ฟ้า|น้ำเงิน|ม่วง|ดำ|ขาว",
+  "Random.Planets":"Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune|Pluto",
+  "Random.Colors":"Red|Orange|Yellow|Green|Cyan|Blue|Violet|Black|White",
 
   "payment":"การชำระเงิน",
   "path_payment":"เส้นทางการชำระเงิน",

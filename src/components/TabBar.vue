@@ -26,17 +26,29 @@ export default {
           icon: "account_balance_wallet"
         },
         {
-          title: "Menu.TradeCenter",
-          name: "TradeCenter",
-          path: "/trade",
-          icon: "trending_up"
+          title: "Title.ReceiveAsset",
+          name: "ReceiveAsset",
+          path: "/assets/receive",
+          icon: "call_received"
         },
-        {
-          title: "Menu.MessageCenter",
-          name: "MessageCenter",
-          path: "/account/message",
-          icon: "message"
-        },
+	{
+          title: "Title.SendAsset",
+          name: "SendAsset",
+          path: "/assets/send",
+          icon: "call_made"
+        },        
+//        {
+//          title: "Menu.TradeCenter",
+//          name: "TradeCenter",
+//          path: "/trade",
+//          icon: "trending_up"
+//        },
+//        {
+//          title: "Menu.MessageCenter",
+//          name: "MessageCenter",
+//          path: "/account/message",
+//          icon: "message"
+//        },
         // {
         //   title: "Menu.Funding",
         //   name: "Funding",

@@ -15,11 +15,13 @@
       <div class="flex-row ud-btns">
         <div class="flex1 textcenter" @click="askForFund">{{$t('fund_askfor')}}</div>
         <!-- <div class="flex1 textcenter" @click="freeFund">{{$t('fund_free')}}</div> -->
+    <!--
         <div class="flex1 textcenter" @click="freeFund" v-if="fund_config && fund_config.active">
           <v-progress-circular indeterminate :width="3" :size="16" color="primary" v-if="working"></v-progress-circular>
           <span v-else>{{$t('fund_free')}}</span>
         </div>
         <div class="flex1 textcenter" @click="toKYC" v-else>{{$t('kyc_active')}}</div>
+    -->    
       </div>
     </div>
   </div>
