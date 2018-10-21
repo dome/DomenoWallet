@@ -37,11 +37,6 @@
         </div>
       </div>
     </div>
-    <div id="TotalSum" class="myassets_totalSum" >
-      <span class="myassets_TotalSumWord" >{{$t('TotalAssets')}}≈</span>
-      <span>{{TotalSum.toFixed(7)}}</span><!-- 要改成资产数组数据的累加的和-->
-      <span>XCN</span>
-    </div>
   </scroll>
 </div>
 
@@ -85,18 +80,15 @@
               </v-flex>
             <v-flex xs3 class="myassets-wrapper">
               <div class="myassets">
-                <div class="myassets-name">{{item.code}}</div>
-                <div class="myassets-issuer" v-if="item.home_domain">{{item.home_domain}}</div>
-                <div class="myassets-issuer" v-else-if="assethosts[item.issuer]">{{assethosts[item.issuer] }}</div>
+                <div class="myassets-name">{{item.code==='XLM'?"FEE":item.code}}</div>
+                <div class="myassets-issuer" v-if="item.home_domain">{{item.home_domain==='stellar.org'?'domeno':item.home_domain}}</div>
+                <div class="myassets-issuer" v-else-if="assethosts[item.issuer]">{{assethosts[item.issuer]==='stellar.org'?'domeno':assethosts[item.issuer]}}</div>
                 <div class="myassets-issuer" v-else>{{item.issuer | miniaddress}}</div>
               </div>
             </v-flex>
             <v-flex xs7 class="myassets-wrapper">
               <div class="myassets-balance third">
                  <span class="balance">{{item.balanceStr}}</span>
-                 <span class="label">{{$t('Total')}}</span> 
-                 <br/>
-                  <span v-if="item.total >=0">≈{{item.total > 0 ? item.total : 0}}&nbsp;XCN</span>
               </div>
             </v-flex>
           </v-layout>

@@ -40,9 +40,10 @@ var webpackConfig = merge(baseWebpackConfig, {
       compress: {
         warnings: false,
         drop_console: true,
+        drop_debugger: true,
         pure_funcs: ['console.log']
       },
-      sourceMap: false
+      sourceMap: true
     }),
     // extract css into its own file
     new ExtractTextPlugin({

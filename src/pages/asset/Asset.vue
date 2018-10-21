@@ -18,9 +18,9 @@
         v-bind:index="index"
         v-bind:key="item.code +'_'+item.issuer"
       >
-        <div class="assets-code">{{item.code}}</div>
-        <div class="assets-issuer" v-if="assethosts[item.issuer]">{{assethosts[item.issuer]}}</div>
-        <div class="assets-issuer" v-else-if="assethosts[item.code]">{{assethosts[item.code]}}</div>
+        <div class="assets-code">{{item.code==='XLM'?"FEE":item.code}}</div>
+        <div class="assets-issuer" v-if="assethosts[item.issuer]">{{assethosts[item.issuer]==='stellar.org'?'domeno':assethosts[item.issuer]}}</div>
+        <div class="assets-issuer" v-else-if="assethosts[item.code]">{{assethosts[item.code]==='stellar.org'?'domeno':assethosts[item.code]}}</div>
         <div class="assets-issuer" v-else>{{item.issuer|miniaddress}}</div>
       </swiper-slide>
     </swiper>
@@ -173,8 +173,13 @@ export default {
         return data;
       }
       return this.paymentsRecords.filter(item=>{
-        return item.asset && ((isNativeAsset(this.selectedAsset) && isNativeAsset(item.asset)
-          || (item.asset.code === this.selectedAsset.code &&  item.asset.issuer === this.selectedAsset.issuer)))
+        if (this.selectedAsset.code == "XLM") {
+    	    this.selectedAsset.code = "FEE";
+        }
+        if (typeof item.asset.issuer == "undefined") {
+	    item.asset.issuer = "stellar.org"
+	}
+        return item.asset && (( (item.asset.code === this.selectedAsset.code &&  item.asset.issuer === this.selectedAsset.issuer)))
       }).map(item=>{
         let ele = Object.assign({}, item)
         if(ele.type==='payment' || ele.type==='path_payment'){

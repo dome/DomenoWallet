@@ -1,6 +1,6 @@
 
 // 官方地址
-export const OFFICIAL_HORIZON = 'https://horizon.stellar.org'
+export const OFFICIAL_HORIZON = 'https://gw-th.domeno.network'
 
 export const CHINA_HORIZON = 'https://api.chinastellar.com'
 //万云

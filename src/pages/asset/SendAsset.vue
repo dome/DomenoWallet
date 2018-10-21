@@ -38,16 +38,16 @@
               :return-object="assetChoseReturnObject"
             >
             <template slot="selection" slot-scope="data">
-              <span class="asset-select-code show">{{data.item.code}}</span>
-              <span class="asset-select-issuer show" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]}}</span>
-              <span class="asset-select-issuer show" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]}}</span>
-              <span class="asset-select-issuer show" v-else>{{data.item.issuer|miniaddress}}</span>
+              <span class="asset-select-code show">{{data.item.code==="XLM"?"FEE":data.item.code}}</span>
+              <span class="asset-select-issuer show" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]==="stellar.org"?"domeno":selectedAsset}}</span>
+              <span class="asset-select-issuer show" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]==="stellar.org"?"domeno":assethosts[data.item.code]}}</span>
+              <span class="asset-select-issuer show" v-else>{{data.item.issuer==="stellar.org"?"domeno":data.item.issuer |miniaddress}}</span>
             </template>
             <template slot="item" slot-scope="data">
-              <span class="asset-select-code">{{data.item.code}}</span>
-              <span class="asset-select-issuer show" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]}}</span>
-              <span class="asset-select-issuer show" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]}}</span>
-              <span class="asset-select-issuer show" v-else>{{data.item.issuer|miniaddress}}</span>
+              <span class="asset-select-code">{{data.item.code==="XLM"?"FEE":data.item.code}}</span>
+              <span class="asset-select-issuer show" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]==="stellar.org"?"domeno":selectedAsset}}</span>
+              <span class="asset-select-issuer show" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]==="stellar.org"?"domeno":assethosts[data.item.code]}}</span>
+              <span class="asset-select-issuer show" v-else>{{data.item.issuer==="stellar.org"?"domeno":data.item.issuer |miniaddress}}</span>
             </template>
           </v-select>
           <v-text-field
@@ -157,11 +157,11 @@
                   </v-flex>
                   <v-flex xs8>
                     <span class="sendconfimAmount">{{amount}}</span>
-                    <span class="sendconfimCode">{{selectedasset.code}}</span>
+                    <span class="sendconfimCode">{{selectedasset.code==="XLM"?"FEE":selectedasset.code}}</span>
                     <span class="sendconfim_asset_domain">
-                    <span v-if="assethosts[selectedasset.issuer]">({{assethosts[selectedasset.issuer]}})</span>
-                    <span v-else-if="assethosts[selectedasset.code]">({{assethosts[selectedasset.code]}})</span>
-                    <span class="asset-select-issuer show" v-else>({{selectedasset.issuer|miniaddress}})</span>
+                    <span v-if="assethosts[selectedasset.issuer]">({{assethosts[selectedasset.issuer]==="stellar.org"?"domeno":assethosts[selectedasset.issuer]}})</span>
+                    <span v-else-if="assethosts[selectedasset.code]">({{assethosts[selectedasset.code]==="stellar.org"?"domeno":assethosts[selectedasset.code]}})</span>
+                    <span class="asset-select-issuer show" v-else>({{selectedasset.issuer==="stellar.org"?"domeno":selectedasset.issuer |miniaddress}})</span>
                     </span>
                   </v-flex>
               </v-layout>
@@ -467,11 +467,21 @@ export default {
         return
       }
 
+      let xcode = this.selectedasset.code
+      if (this.selectedasset.code=="FEE") {
+         xcode = "XLM"
+      }
+      let xissuer = this.selectedasset.issuer 
+      if (this.selectedasset.issuer=="domeno") {
+         xissuer = "stellar.org"
+      }
+      
+      
       let params = {
         seed,
         address: this.account.address,
         target: dest,
-        asset: {code: this.selectedasset.code, issuer: this.selectedasset.issuer},
+        asset: {code: xcode, issuer: xissuer},
         amount: this.amount,
         memo_type:  this.memoswitch ? this.memotype : null,
         memo_value: this.memoswitch ? this.memo : null

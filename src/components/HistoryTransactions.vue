@@ -65,7 +65,7 @@
                           <v-flex xs12 class="assetcodestyle_payment">{{$t("AssetCode")}}</v-flex>
                         </v-layout>
                         <v-layout>
-                          <v-flex xs12 class="assetcodevaluestyle_payment">{{item.asset_type==='native'?"XLM":item.asset_type}}</v-flex>
+                          <v-flex xs12 class="assetcodevaluestyle_payment">{{item.asset_type==='native'?"FEE":item.asset_type}}</v-flex>
                         </v-layout>
                         <v-layout>
                           <v-flex xs12 class="txstyle_payment">TX</v-flex>
@@ -153,7 +153,7 @@
                             <v-flex xs12 class="manage_amountvalue">{{item.amount}}</v-flex>
                           </v-layout>
                           <v-layout>
-                              <v-flex xs12 class="manage_itemassetcode">{{item.selling_asset_type==='native'?"XLM":item.selling_asset_type}}→{{item.buying_asset_code}}</v-flex>
+                              <v-flex xs12 class="manage_itemassetcode">{{item.selling_asset_type==='native'?"FEE":item.selling_asset_type}}→{{item.buying_asset_code}}</v-flex>
                           </v-layout>
                           <v-layout>
                             <v-flex xs12 class="manage_totalbuy">+{{manage_totalbuy(item.amount,item.price)}}{{item.buying_asset_code}}</v-flex>
@@ -226,7 +226,7 @@
                       </v-layout>
                       <v-layout>
                         <v-flex xs6 class="createaccountbalance">+{{item.starting_balance}}</v-flex>
-                        <v-flex xs6 class="createaccountbalancemsg">XLM</v-flex>
+                        <v-flex xs6 class="createaccountbalancemsg">FEE</v-flex>
                       </v-layout>
                     </v-flex>
                   </v-layout>

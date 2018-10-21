@@ -22,6 +22,19 @@
               dark
             >
             <template slot="selection" slot-scope="data">
+              <span class="asset-select-code show">{{data.item.code==="XLM"?"FEE":data.item.code}}</span>
+              <span class="asset-select-issuer show" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]==="stellar.org"?"domeno":selectedAsset}}</span>
+              <span class="asset-select-issuer show" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]==="stellar.org"?"domeno":assethosts[data.item.code]}}</span>
+              <span class="asset-select-issuer show" v-else>{{data.item.issuer==="stellar.org"?"domeno":data.item.issuer |miniaddress}}</span>
+            </template>
+            <template slot="item" slot-scope="data">
+              <span class="asset-select-code">{{data.item.code==="XLM"?"FEE":data.item.code}}</span>
+              <span class="asset-select-issuer show" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]==="stellar.org"?"domeno":selectedAsset}}</span>
+              <span class="asset-select-issuer show" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]==="stellar.org"?"domeno":assethosts[data.item.code]}}</span>
+              <span class="asset-select-issuer show" v-else>{{data.item.issuer==="stellar.org"?"domeno":data.item.issuer |miniaddress}}</span>
+            </template>
+<!--    
+            <template slot="selection" slot-scope="data">
               <span class="asset-select-code">{{data.item.code}}</span>
               <span class="asset-select-issuer" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]}}</span>
               <span class="asset-select-issuer" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]}}</span>
@@ -35,6 +48,7 @@
               <span class="asset-select-issuer" v-else>{{data.item.issuer|miniaddress}}</span>
 
             </template>
+-->
           </v-select>
           <v-text-field
               name="amount"
@@ -50,14 +64,14 @@
               ></v-text-field>
             <div class="receive_asset_msg_one">
                 <span>{{$t("Available")}}</span>
-                <span>{{selectedasset.code}}:</span>
+                <span>{{selectedasset.code==="XLM"?"FEE":selectedasset.code}}:</span>
                 <span>{{selectedasset.balance}}</span>
 
             </div>
             <div class="receive_asset_msg">
               <span>{{$t("ReceiveAssetMsg")}}</span><br/>
               <span>{{num}}&nbsp;</span>
-              <span v-if="showassetcode" >{{selectedasset.code}}</span>
+              <span v-if="showassetcode" >{{selectedasset.code==="XLM"?"FEE":selectedasset.code}}</span>
 
             </div>
             <div class="qrcode">
@@ -121,9 +135,9 @@ export default {
       this.num=0
     }
 
-    if(sendnum>this.selectedasset.balance){
-      this.num=this.selectedasset.balance
-      }
+    //if(sendnum>this.selectedasset.balance){
+    //  this.num=this.selectedasset.balance
+    //  }
     }
 
   },

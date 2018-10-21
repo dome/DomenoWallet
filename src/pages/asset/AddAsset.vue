@@ -167,7 +167,7 @@ export default {
 
   },
   mounted(){
-    this.url = 'fchain.io'
+    this.url = 'domeno.network'
     this.search()
     this.url = ''
   },
