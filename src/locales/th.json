@@ -443,8 +443,8 @@
 
   "BackedUp":"สำรองข้อมูลแล้ว",
   "ReceiveAssetMsg":"สแกนคิวอาร์โค้ดเพื่อส่งถึงฉัน",
-  "Title.ReceiveAsset": "รับเหรียญ",
-  "Title.SendAsset": "ส่งเหรียญ",
+  "Title.ReceiveAsset": "รับ",
+  "Title.SendAsset": "จ่าย",
   "Change":"เปลี่ยน",
   "MyAccount":"บัญชีผู้ใช้ของฉัน",
   "MemoBook.MyAddress":"ที่อยู่ของฉัน",

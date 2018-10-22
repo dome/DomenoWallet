@@ -81,9 +81,9 @@
             <v-flex xs3 class="myassets-wrapper">
               <div class="myassets">
                 <div class="myassets-name">{{item.code==='XLM'?"FEE":item.code}}</div>
-                <div class="myassets-issuer" v-if="item.home_domain">{{item.home_domain==='stellar.org'?'domeno':item.home_domain}}</div>
-                <div class="myassets-issuer" v-else-if="assethosts[item.issuer]">{{assethosts[item.issuer]==='stellar.org'?'domeno':assethosts[item.issuer]}}</div>
-                <div class="myassets-issuer" v-else>{{item.issuer | miniaddress}}</div>
+                <div class="myassets-issuer" v-if="item.home_domain">{{item.home_domain==='stellar.org'?'':item.home_domain}}</div>
+                <div class="myassets-issuer" v-else-if="assethosts[item.issuer]">{{assethosts[item.issuer]==='stellar.org'?' ':assethosts[item.issuer]}}</div>
+                <div class="myassets-issuer" v-else>{{item.issuer==="stellar.org"?" ":item.issuer |miniaddress}}</div>
               </div>
             </v-flex>
             <v-flex xs7 class="myassets-wrapper">

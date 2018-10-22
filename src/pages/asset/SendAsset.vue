@@ -40,15 +40,15 @@
             >
             <template slot="selection" slot-scope="data">
               <span class="asset-select-code show">{{data.item.code==="XLM"?"FEE":data.item.code}}</span>
-              <span class="asset-select-issuer show" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]==="stellar.org"?"domeno":selectedAsset}}</span>
-              <span class="asset-select-issuer show" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]==="stellar.org"?"domeno":assethosts[data.item.code]}}</span>
-              <span class="asset-select-issuer show" v-else>{{data.item.issuer==="stellar.org"?"domeno":data.item.issuer |miniaddress}}</span>
+              <span class="asset-select-issuer show" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]==="stellar.org"?"":selectedAsset}}</span>
+              <span class="asset-select-issuer show" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]==="stellar.org"?"":assethosts[data.item.code]}}</span>
+              <span class="asset-select-issuer show" v-else>{{data.item.issuer==="stellar.org"?"":data.item.issuer |miniaddress}}</span>
             </template>
             <template slot="item" slot-scope="data">
               <span class="asset-select-code">{{data.item.code==="XLM"?"FEE":data.item.code}}</span>
-              <span class="asset-select-issuer show" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]==="stellar.org"?"domeno":selectedAsset}}</span>
-              <span class="asset-select-issuer show" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]==="stellar.org"?"domeno":assethosts[data.item.code]}}</span>
-              <span class="asset-select-issuer show" v-else>{{data.item.issuer==="stellar.org"?"domeno":data.item.issuer |miniaddress}}</span>
+              <span class="asset-select-issuer show" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]==="stellar.org"?"":selectedAsset}}</span>
+              <span class="asset-select-issuer show" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]==="stellar.org"?"":assethosts[data.item.code]}}</span>
+              <span class="asset-select-issuer show" v-else>{{data.item.issuer==="stellar.org"?"":data.item.issuer |miniaddress}}</span>
             </template>
           </v-select>
           <v-text-field
@@ -57,7 +57,6 @@
             v-model="amount"
             light
             :color="'error'"
-            :suffix="selectedasset.code"
             required
             type="text"
             :placeholder="( isNative(selectedasset) ? (''+(selectedasset.balance - reserve - 0.00001)): (''+selectedasset.balance) )|| '0'"
@@ -163,9 +162,9 @@
                     <span class="sendconfimAmount">{{amount}}</span>
                     <span class="sendconfimCode">{{selectedasset.code==="XLM"?"FEE":selectedasset.code}}</span>
                     <span class="sendconfim_asset_domain">
-                    <span v-if="assethosts[selectedasset.issuer]">({{assethosts[selectedasset.issuer]==="stellar.org"?"domeno":assethosts[selectedasset.issuer]}})</span>
-                    <span v-else-if="assethosts[selectedasset.code]">({{assethosts[selectedasset.code]==="stellar.org"?"domeno":assethosts[selectedasset.code]}})</span>
-                    <span class="asset-select-issuer show" v-else>({{selectedasset.issuer==="stellar.org"?"domeno":selectedasset.issuer |miniaddress}})</span>
+                    <span v-if="assethosts[selectedasset.issuer]">({{assethosts[selectedasset.issuer]==="stellar.org"?"":assethosts[selectedasset.issuer]}})</span>
+                    <span v-else-if="assethosts[selectedasset.code]">({{assethosts[selectedasset.code]==="stellar.org"?"":assethosts[selectedasset.code]}})</span>
+                    <span class="asset-select-issuer show" v-else>({{selectedasset.issuer==="stellar.org"?"":selectedasset.issuer |miniaddress}})</span>
                     </span>
                   </v-flex>
               </v-layout>
@@ -484,7 +483,7 @@ export default {
          xcode = "XLM"
       }
       let xissuer = this.selectedasset.issuer 
-      if (this.selectedasset.issuer=="domeno") {
+      if (this.selectedasset.issuer=="") {
          xissuer = "stellar.org"
       }
       

@@ -19,9 +19,10 @@
         v-bind:key="item.code +'_'+item.issuer"
       >
         <div class="assets-code">{{item.code==='XLM'?"FEE":item.code}}</div>
-        <div class="assets-issuer" v-if="assethosts[item.issuer]">{{assethosts[item.issuer]==='stellar.org'?'domeno':assethosts[item.issuer]}}</div>
-        <div class="assets-issuer" v-else-if="assethosts[item.code]">{{assethosts[item.code]==='stellar.org'?'domeno':assethosts[item.code]}}</div>
-        <div class="assets-issuer" v-else>{{item.issuer|miniaddress}}</div>
+        <div class="assets-issuer" v-if="assethosts[item.issuer]">{{assethosts[item.issuer]==='stellar.org'?'':assethosts[item.issuer]}}</div>
+        <div class="assets-issuer" v-else-if="assethosts[item.code]">{{assethosts[item.code]==='stellar.org'?'':assethosts[item.code]}}</div>
+        <div class="assets-issuer" v-else>{{item.issuer==="stellar.org"?" ":item.issuer |miniaddress}}</div>
+        
       </swiper-slide>
     </swiper>
 
@@ -47,7 +48,7 @@
                 <v-flex xs1 class="reserve asset_reserve">{{reserve}}</v-flex>
             </v-flex>
             <!-- <v-flex xs12 class="knowledge_of_assets" ><a href="https://fchain.io" target="_blank">了解{{item.code}}&nbsp;></a> -->
-            <v-flex xs12 class="knowledge_of_assets" ><a @click="toAssetKnowledge(item)" target="_blank">{{$t("Understand")}}{{item.code}}&nbsp;></a>
+            <!-- <v-flex xs12 class="knowledge_of_assets" ><a @click="toAssetKnowledge(item)" target="_blank">{{$t("Understand")}}{{item.code}}&nbsp;></a> -->
 
             </v-flex>
           </v-layout>

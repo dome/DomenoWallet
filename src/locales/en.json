@@ -49,6 +49,8 @@
   "Title.MyAssets":"My Assets",
   "CopySuccess":"Copy success",
 
+  "Title.ReceiveAsset": "Receive",
+  "Title.SendAsset": "Pay",
 
   "Error.ScannerPrepareFail": "QR scanner prepare fail",
   "Error.ScannerPermissionDenied": "QR scanner permisstion denied",

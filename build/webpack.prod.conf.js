@@ -32,19 +32,19 @@ var webpackConfig = merge(baseWebpackConfig, {
     //new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     //new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /zh-cn|en/),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /zh-cn|zh-hk/),
-//    new webpack.LoaderOptionsPlugin({
-//      minimize: true,
-//      debug: false
-//    }),
-//    new webpack.optimize.UglifyJsPlugin({
-//      compress: {
-//        warnings: false,
-//        drop_console: true,
-//        drop_debugger: true,
-//        pure_funcs: ['console.log']
-//      },
-//      sourceMap: true
-//    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log']
+      },
+      sourceMap: true
+    }),
     // extract css into its own file
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css')

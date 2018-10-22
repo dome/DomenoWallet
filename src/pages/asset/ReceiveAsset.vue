@@ -23,15 +23,15 @@
             >
             <template slot="selection" slot-scope="data">
               <span class="asset-select-code show">{{data.item.code==="XLM"?"FEE":data.item.code}}</span>
-              <span class="asset-select-issuer show" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]==="stellar.org"?"domeno":selectedAsset}}</span>
-              <span class="asset-select-issuer show" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]==="stellar.org"?"domeno":assethosts[data.item.code]}}</span>
-              <span class="asset-select-issuer show" v-else>{{data.item.issuer==="stellar.org"?"domeno":data.item.issuer |miniaddress}}</span>
+              <span class="asset-select-issuer show" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]==="stellar.org"?"":selectedAsset}}</span>
+              <span class="asset-select-issuer show" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]==="stellar.org"?"":assethosts[data.item.code]}}</span>
+              <span class="asset-select-issuer show" v-else>{{data.item.issuer==="stellar.org"?"":data.item.issuer |miniaddress}}</span>
             </template>
             <template slot="item" slot-scope="data">
               <span class="asset-select-code">{{data.item.code==="XLM"?"FEE":data.item.code}}</span>
-              <span class="asset-select-issuer show" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]==="stellar.org"?"domeno":selectedAsset}}</span>
-              <span class="asset-select-issuer show" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]==="stellar.org"?"domeno":assethosts[data.item.code]}}</span>
-              <span class="asset-select-issuer show" v-else>{{data.item.issuer==="stellar.org"?"domeno":data.item.issuer |miniaddress}}</span>
+              <span class="asset-select-issuer show" v-if="assethosts[data.item.issuer]">{{assethosts[data.item.issuer]==="stellar.org"?"":selectedAsset}}</span>
+              <span class="asset-select-issuer show" v-else-if="assethosts[data.item.code]">{{assethosts[data.item.code]==="stellar.org"?"":assethosts[data.item.code]}}</span>
+              <span class="asset-select-issuer show" v-else>{{data.item.issuer==="stellar.org"?"":data.item.issuer |miniaddress}}</span>
             </template>
 <!--    
             <template slot="selection" slot-scope="data">
@@ -56,7 +56,6 @@
               :value="amount"
               @input="updateAmount"
               light
-              :suffix="selectedasset.code"
               type="Number"
 
 
