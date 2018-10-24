@@ -4,7 +4,7 @@
 
 <template>
   <div class="page">
-    <img src="../assets/img/logo-blank.png" alt="firefly" class="logo"/>
+    <img src="../assets/img/logo-blank.png" alt="logo" class="logo"/>
   </div>
 </template>
 

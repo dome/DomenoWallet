@@ -23,21 +23,6 @@
               v-model="federation"
               class="white-input"
             ></v-text-field>
-          <v-text-field
-              name="inflation"
-              :label="$t('InflationAddress')"
-              v-model="inflation"
-              class="white-input"
-              multi-line
-              rows=2
-            ></v-text-field>
-          <div class="hintinfo">
-            <div class="inflation">{{$t('InflationDesc')}}</div>
-            <div class="inflation">
-              <span class="suggest" @click.stop="choseInflation('xlmpool.com')">xlmpool.com<i class="material-icons">link</i></span>
-              <span>{{$t('Account.SuggestInflationPool')}}</span>
-            </div>
-          </div>
         </div>
 
       </card>

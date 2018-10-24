@@ -2,7 +2,7 @@ import axios from 'axios'
 import pkg from '../../package'
 import { isNativeAsset } from './assets'
 
-export const APP_NAME = 'firefly'
+export const APP_NAME = 'wallet'
 
 export const DEBUG = false // 是否dbug模式
 

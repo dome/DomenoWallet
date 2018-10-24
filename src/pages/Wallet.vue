@@ -8,7 +8,7 @@
       </v-btn>
 
     <div class="logo">
-      <img src="../assets/img/logo-blank.png" alt="firefly" class="logo-img"/>
+      <img src="../assets/img/logo-blank.png" alt="logo" class="logo-img"/>
     </div>
     <div class="footer">
        <v-layout row wrap>
