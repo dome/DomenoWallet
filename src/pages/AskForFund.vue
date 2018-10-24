@@ -29,7 +29,7 @@
             <div class="receive_asset_msg">
               <span>{{$t("ReceiveAssetMsg")}}</span><br/>
               <span v-if="amount>0">{{amount}}&nbsp;</span>
-              <span v-if="amount>0">XLM</span>
+              <span v-if="amount>0">FEE</span>
             </div>
             <div class="qrcode">
               <qrcode :text="qrtext" :callback="qrcodecallback"/>
