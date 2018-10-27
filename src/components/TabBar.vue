@@ -37,6 +37,12 @@ export default {
           path: "/assets/send",
           icon: "call_made"
         },        
+        {
+          title: "Title.ThirdApp",
+          name: "Apps",
+          path: "/apps/all",
+          icon: "apps"
+        },
 //        {
 //          title: "Menu.TradeCenter",
 //          name: "TradeCenter",

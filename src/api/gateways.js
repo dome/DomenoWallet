@@ -358,7 +358,7 @@ export function fetchFundConfig(){
   })
 }
 
-export const DAPP_FETCH_URL = 'https://update.fchain.io/config/dapp.json'
+export const DAPP_FETCH_URL = 'https://domeno.network/afin/dapp.json'
 
 export function fetchSysDApps(){
   let url = DAPP_FETCH_URL + '?r=' + new Date().getTime()

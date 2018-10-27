@@ -4,9 +4,11 @@
     <toolbar :title="$t('Title.ThirdApp')" :showbackicon="false"  @goback="back"
       :shadow="false" lockpass  ref="toolbar" v-if="!showScanner">
       <!--右侧打开设置界面-->
+      <!--
       <v-btn icon slot='right-tool' @click="toSetting">
         <i class="material-icons font28">extension</i>
       </v-btn>
+      -->
     </toolbar>
     <toolbar :title="$t('Title.Scan')"
       :showmenuicon="false"
@@ -52,42 +54,6 @@
         </v-flex>
       </v-layout>
 
-
-      <div class="dapp-subtitle subheading  pl-2">{{$t('CustomDApp')}}</div>
-
-      <v-layout class="apps-layout" row wrap >
-        <v-flex
-          xs4
-          v-for="(app,index) in myapps"
-          :key="index"
-          @click="choose(app)"
-          class="app-card-wrapper"
-        >
-          <v-card light flat tile class="pa-2 textcenter app-card" >
-            <div class="pa-3">
-              <v-avatar class="grey lighten-4 app-avatar" :size="`62px`">
-               <span class="white--text headline">{{app.title.substring(0,1)}}</span>
-             </v-avatar>
-            </div>
-             <v-card-title primary-title class="app-title">
-               <div class="textcenter" style="width: 100%;">{{app.title}}</div>
-             </v-card-title>
-          </v-card>
-        </v-flex>
-        <v-flex
-          xs4
-          @click="addDapp"
-          class="app-card-wrapper"
-        >
-          <v-card light flat tile class="pa-2 textcenter app-card mt-3" >
-            <div class="pa-3">
-              <v-avatar class="grey lighten-4 app-avatar add-app-avatar" :size="`62px`">
-               <v-icon :size="`38px`" color="primary">add</v-icon>
-             </v-avatar>
-            </div>
-          </v-card>
-        </v-flex>
-      </v-layout>
 
     <v-dialog v-model="showConfirmDlg" max-width="95%" persistent>
       <div>

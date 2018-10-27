@@ -32,7 +32,7 @@
                 </div>
             </card>
         </div>
-        <div class="bottom_start" @click="to_guidepage">
+        <div class="bottom_start" @click="to_wallet">
             {{$t("Start")}}
         </div>
 
@@ -70,6 +70,10 @@ export default {
     methods :{
         to_guidepage(){
             this.$router.push({name: 'Guidepage'})
+        },
+        to_wallet(){
+
+                this.$router.push({name:'Wallet'})
         },
          ...mapActions({
                 setLocale: 'setLocale'

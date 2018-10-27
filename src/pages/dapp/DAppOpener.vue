@@ -3,7 +3,7 @@
   <div>
      <toolbar :title="choosed.title"
         :showmenuicon="false"
-        :showbackicon="false"
+        :showbackicon="true"
         ref="toolbar"
         >
     </toolbar>

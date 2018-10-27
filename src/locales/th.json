@@ -462,7 +462,7 @@
   "Pin":"รหัสลับส่วนตัว",
   "HorizonVersion":"เวอร์ชันฮอไรซอน",
   "LoadMore":"โหลดเพิ่มเติม",
-  "Title.ThirdApp":"ดีเซนทรัลไลซ์แอป",
+  "Title.ThirdApp":"App",
   "Error.AjaxTimeout":"การเชื่อมต่อเซิร์ฟเวอร์สิ้นสุด กรุณาลองอีกครั้งหนึ่ง",
   "Third.OpenAppHint":"ต้องการเปิดดีเซนทรัลไลซ์แอป {0}",
   "Third.SendTo":"ชำระแก่ {0}",
