@@ -148,10 +148,10 @@
           text-align: center
           font-size: 16px
         .menu-li.active
-          border-bottom: 2px solid $primarycolor.green
-          color: $primarycolor.green
+          border-bottom: 2px solid $primarycolor.blue
+          color: $primarycolor.blue
 .swiper-container
-  background: $primarycolor.green
+  background: $primarycolor.blue
   height: 46px
   margin: 0 !important
   min-height:42px !important

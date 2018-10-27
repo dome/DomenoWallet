@@ -308,7 +308,7 @@ export default {
     font-size:16px
     padding-top:3px
 .itemtype
-    color:$primarycolor.green
+    color:$primarycolor.blue
     // padding-left:5px
     font-size:16px
     text-align:center
@@ -337,7 +337,7 @@ export default {
 
 .itemtype_account_created
     font-size:16px
-    color:$primarycolor.green
+    color:$primarycolor.blue
     padding-left:5px
 .itemtime_account_created
     font-size:16px
@@ -354,7 +354,7 @@ export default {
     font-size:16px
     padding-top:3px
 .itemtype_trustline_c
-    color:$primarycolor.green
+    color:$primarycolor.blue
     padding-left:5px
     font-size:16px
     padding-top:3px
@@ -407,7 +407,7 @@ export default {
     text-align:left
 
 .itemtype_signer_created
-    color:$primarycolor.green
+    color:$primarycolor.blue
     font-size:16px
     padding-left:5px
 .itemtime_signer_created
@@ -467,7 +467,7 @@ export default {
     font-size:16px
     padding-top:3px
 .itemtype_account_credited
-    color:$primarycolor.green
+    color:$primarycolor.blue
     padding-left:5px
     font-size:16px
     padding-top:3px
@@ -508,7 +508,7 @@ export default {
     padding-top:3px
     // text-align:right
 .itemtype_trade
-    color:$primarycolor.green
+    color:$primarycolor.blue
     padding-left:5px
     font-size:16px
     padding-top:3px
@@ -564,7 +564,7 @@ export default {
     padding-bottom:3px
 
 .trade_styleo
-    color:$primarycolor.green
+    color:$primarycolor.blue
     padding-left:5px
     font-size:16px
     text-align:right
@@ -582,7 +582,7 @@ export default {
 
 .itemtype_aidu
     font-size:16px
-    color:$primarycolor.green
+    color:$primarycolor.blue
     padding-left:5px
 .itemtime_aidu
     font-size:16px
@@ -598,7 +598,7 @@ export default {
 
 .itemtype_ahdu
     font-size:16px
-    color:$primarycolor.green
+    color:$primarycolor.blue
     padding-left:5px
 .itemtime_ahdu
     font-size:16px

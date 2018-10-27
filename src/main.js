@@ -43,15 +43,6 @@ if (window.location.protocol === 'file:' || window.location.port === '3000') {
   document.body.appendChild(cordovaScript)
 }
 
-// Vue.use(Vuetify)
-// Vue.use(Vuetify, {
-//   theme: {
-//     primary: '#21ce90',
-//     error: "#f35833",
-//     notice: "#303034",
-//   }
-// })
-
 import '@/libs/pkgs/initVuetify'
 
 FastClick.prototype.focus = function(targetElement) {

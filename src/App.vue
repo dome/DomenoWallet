@@ -140,7 +140,7 @@ export default {
       navigator.splashscreen.hide();
       if (StatusBar && !StatusBar.isVisible) {
         StatusBar.show();
-        StatusBar.backgroundColorByHexString("#21ce90");
+        StatusBar.backgroundColorByHexString("#03A9F4");
         this.$store.commit("CHANGE_IOSSTATUSBAR_COLOR", "primary");
       }
       //加载系统配置
@@ -308,7 +308,7 @@ export default {
 @require './stylus/app.styl';
 
 .app {
-  background-color: $primarycolor.gray;
+  background-color: $primarycolor.blue;
 }
 
 .bg-hide {
@@ -322,7 +322,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: $primarycolor.green;
+  background: $primarycolor.blue;
   opacity: 0.8;
   z-index: 99;
   display: block;
@@ -356,7 +356,7 @@ export default {
     align-items: center;
     -webkit-justify-content: center;
     justify-content: center;
-    background: $primarycolor.green;
+    background: $primarycolor.blue;
 
     .pin-bar-icon {
       flex: 1;

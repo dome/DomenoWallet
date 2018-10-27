@@ -198,7 +198,7 @@ import isJson from '@/libs/is-json'
 import debounce from 'lodash/debounce'
 import { trustAll } from '@/api/operations'
 
-const COLOR_GREEN = '#21CE90'
+const COLOR_GREEN = '#03A9F4'
 
 // export const FFW_EVENT_TYPE_PAY = 'pay'
 // export const FFW_EVENT_TYPE_PATHPAYMENT = 'pathPayment'
@@ -307,7 +307,7 @@ export default {
         // this.$store.commit('CHANGE_IOSSTATUSBAR_COLOR', 'error');
       }
       if(cordova.platformId === 'browser'){
-        this.appInstance = cordova.InAppBrowser.open(this.choosed.site, '_blank', 'location=yes,toolbar=yes,toolbarcolor=#21ce90');
+        this.appInstance = cordova.InAppBrowser.open(this.choosed.site, '_blank', 'location=yes,toolbar=yes,toolbarcolor=#03A9F4');
       }else{
         this.appInstance = cordova.ThemeableBrowser.open(this.choosed.site, '_blank', {
               statusbar: {

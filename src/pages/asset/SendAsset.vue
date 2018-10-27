@@ -319,7 +319,7 @@ export default {
   },
   beforeDestroy(){
     if(StatusBar){
-      StatusBar.backgroundColorByHexString("#21ce90");
+      StatusBar.backgroundColorByHexString("#03A9F4");
       this.$store.commit('CHANGE_IOSSTATUSBAR_COLOR', 'primary');
     }
   },
@@ -755,7 +755,7 @@ export default {
     padding-top: 5px
     padding-bottom: 5px
   .asset.label
-    color: $primarycolor.green
+    color: $primarycolor.blue
   .value
     display: block
     font-size: 16px
@@ -795,7 +795,7 @@ export default {
       display: inline-block
       .name
         font-size: 20px
-        color: $primarycolor.green
+        color: $primarycolor.blue
         padding-left: 5px
         display: block
         float: left

@@ -70,15 +70,15 @@ export default {
     openApp(){
       
       if(cordova.platformId === 'browser'){
-        this.appInstance = cordova.InAppBrowser.open(this.site, '_blank', 'location=no,toolbar=yes,toolbarcolor=#21ce90');
+        this.appInstance = cordova.InAppBrowser.open(this.site, '_blank', 'location=no,toolbar=yes,toolbarcolor=#03A9F4');
       }else{
         this.appInstance = cordova.ThemeableBrowser.open(this.site, '_blank', {
               statusbar: {
-                  color: '#21ce90'
+                  color: '#03A9F4'
               },
               toolbar: {
                   height: 44,
-                  color: '#21ce90'
+                  color: '#03A9F4'
               },
               browserProgress: {
                 showProgress: true,

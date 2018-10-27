@@ -92,7 +92,7 @@ export default {
     left: 0
     right: 0
     z-index: 99
-    // background: $secondarycolor.green
+    // background: $secondarycolor.blue
     font-size: 16px
     text-align: center
     padding-top: 8px

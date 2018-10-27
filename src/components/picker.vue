@@ -347,12 +347,12 @@
           position: absolute
           top: 0
           background: linear-gradient(to top, rgba(33, 33, 34, 0.4), rgba(33, 33, 33, 0.8))
-          border-bottom: solid 1px $primarycolor.green;
+          border-bottom: solid 1px $primarycolor.blue;
         .mask-bottom
           position: absolute
           bottom: 1px
           background: linear-gradient(to bottom, rgba(33, 33, 34, 0.4), rgba(33, 33, 33, 0.8))
-          border-top: solid 1px $primarycolor.green;
+          border-top: solid 1px $primarycolor.blue;
       .wheel-wrapper
         display: flex
         padding: 0 16px

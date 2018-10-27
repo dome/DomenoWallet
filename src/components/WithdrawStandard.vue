@@ -599,6 +599,6 @@ export default {
   padding-left: 0
   padding-right: 0
 .title2
-  color: $primarycolor.green
+  color: $primarycolor.blue
   font-size: 13px
 </style>

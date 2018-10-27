@@ -442,7 +442,7 @@ export default {
     padding-bottom: 40px
 
   .mytoolbar
-    background: $primarycolor.green
+    background: $primarycolor.blue
     color: $primarycolor.font
     width: 100%
     height:56px
@@ -460,7 +460,7 @@ export default {
       text-align: center
       font-size: 20px
   .menu-wrapper
-    background: $primarycolor.green
+    background: $primarycolor.blue
     height: 56px!important
     line-height: 56px!important
     margin-top: -1px!important
@@ -481,7 +481,7 @@ export default {
       .menu-li.active
         border-bottom: 2px solid $primarycolor.font
 .selectasset
-  color: $primarycolor.green
+  color: $primarycolor.blue
 .asset-select-code
   font-size: 16px
 .asset-select-issuer
@@ -492,7 +492,7 @@ export default {
   .data
     .label
       font-size: 16px
-      color: $primarycolor.green
+      color: $primarycolor.blue
     .deposit_info
       font-size: 18px
       padding-top: 2px
@@ -504,7 +504,7 @@ export default {
       color: $secondarycolor.font
   .noservice
     font-size: 16px
-    color: $primarycolor.green
+    color: $primarycolor.blue
     padding-bottom: 2px
   .noservicedesc
     color: $secondarycolor.font

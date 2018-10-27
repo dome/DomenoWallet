@@ -43,7 +43,7 @@
         <v-card-title class="headline">{{$t('Account.WhetherCoverAccount')}}</v-card-title>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="green" flat @click.native="coveringDlg = false">{{$t('Button.Cancel')}}</v-btn>
+          <v-btn color="blue" flat @click.native="coveringDlg = false">{{$t('Button.Cancel')}}</v-btn>
           <v-btn color="red" flat @click.native="doCoverAccount">{{$t('Button.OK')}}</v-btn>
         </v-card-actions>
       </v-card>
@@ -133,9 +133,9 @@
               <img src="../assets/img/logo-green.png" />
             </v-avatar>
           </div>
-          <div class="t1 dlg-green textcenter">{{$t('Congratulations')}}!</div>
+          <div class="t1 dlg-blue textcenter">{{$t('Congratulations')}}!</div>
           <div class="t2 skip-white pt-2 pb-4">{{$t('Account.SecretKeyValidHint')}}</div>
-          <div class="btns dlg-green textcenter" @click="toNextPage">
+          <div class="btns dlg-blue textcenter" @click="toNextPage">
             {{$t('Account.Start')}}
           </div>
         </div>
@@ -446,7 +446,7 @@ export default {
   margin:7px 7px 50px 7px
   .label
     font-size: 14px
-    color: $primarycolor.green
+    color: $primarycolor.blue
     padding-top: 2px
     padding-bottom: 2px
   .value
@@ -473,16 +473,16 @@ export default {
   line-height:42px
   font-size:16px
   text-align:center
-  color:$primarycolor.green
+  color:$primarycolor.blue
 .btn-available
-  color:$primarycolor.green
+  color:$primarycolor.blue
 .btn-unavailable
-  color:$secondarycolor.green
+  color:$secondarycolor.blue
 .hint
   color:$primarycolor.red
   font-size: 15px
 .headline
-  color: $primarycolor.green
+  color: $primarycolor.blue
   font-size: 16px !important
   padding-bottom: 10px
 .notice
@@ -536,7 +536,7 @@ export default {
   .btn-cancel
   .btn-ok
     font-size: 16px
-    color: $primarycolor.green
+    color: $primarycolor.blue
 .card-content
   padding: 20px 10px
 .t1
@@ -549,8 +549,8 @@ export default {
   color: $primarycolor.red
 .btns
   font-size: 16px
-.dlg-green
-  color: $primarycolor.green
+.dlg-blue
+  color: $primarycolor.blue
 .dlg-content
   background: $secondarycolor.gray
 

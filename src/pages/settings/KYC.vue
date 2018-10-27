@@ -78,15 +78,15 @@ export default {
       // let site = 'https://fchain.io/kyc/accounts/login/?next=/portal/'+'?'+Math.random()
       let title = this.$t('kyc')
       if(cordova.platformId === 'browser'){
-        this.appInstance = cordova.InAppBrowser.open(site, '_blank', 'location=no,toolbar=yes,toolbarcolor=#21ce90');
+        this.appInstance = cordova.InAppBrowser.open(site, '_blank', 'location=no,toolbar=yes,toolbarcolor=#03A9F4');
       }else{
         this.appInstance = cordova.ThemeableBrowser.open(site, '_blank', {
               statusbar: {
-                  color: '#21ce90'
+                  color: '#03A9F4'
               },
               toolbar: {
                   height: 44,
-                  color: '#21ce90'
+                  color: '#03A9F4'
               },
               browserProgress: {
                 showProgress: true,

@@ -1066,8 +1066,8 @@ export default {
   padding-right: 10px
   padding-top: 20px
   .active
-    border-bottom: 1px solid $primarycolor.green
-    color: $primarycolor.green
+    border-bottom: 1px solid $primarycolor.blue
+    color: $primarycolor.blue
 
 //购买按钮
 .btn-buy
@@ -1083,7 +1083,7 @@ export default {
   &.btn-red
     color: $primarycolor.red
   &.btn-green
-    color: $primarycolor.green
+    color: $primarycolor.blue
 //可用余额
 .available
   padding-left: 2px
@@ -1135,7 +1135,7 @@ export default {
   height: 46px
   line-height: 46px
   font-size: 18px
-  color: $primarycolor.green
+  color: $primarycolor.blue
   text-align: center
 .confirm-content
   padding-top: 8px
@@ -1147,9 +1147,9 @@ export default {
       color: $secondarycolor.font
     .value
       padding-left: 12px
-      color: $primarycolor.green
+      color: $primarycolor.blue
 .confirm-btns
-  color: $primarycolor.green
+  color: $primarycolor.blue
   text-align: center
   font-size: 16px
   height: 42px
@@ -1210,7 +1210,7 @@ export default {
   .b-row.depth
     text-align: right
     &>a
-      color: $primarycolor.green
+      color: $primarycolor.blue
 
 .offer-card
   height: 100%

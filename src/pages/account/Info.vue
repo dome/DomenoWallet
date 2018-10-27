@@ -585,7 +585,7 @@ export default {
 .card-content
   .label
     font-size: 16px
-    color: $primarycolor.green
+    color: $primarycolor.blue
     padding-top: 2px
     padding-bottom: 2px
   .value
@@ -606,7 +606,7 @@ export default {
         text-align: right
         padding-right: 5px
         .secreticons
-          color: $primarycolor.green
+          color: $primarycolor.blue
   .qrcode
     text-align: center
 .footer
@@ -624,24 +624,24 @@ export default {
   right: 0
 
   &.active
-    color:$primarycolor.green
+    color:$primarycolor.blue
   &.unactive
     color: $secondarycolor.font
 .btn-available
-  color:$primarycolor.green
+  color:$primarycolor.blue
 .btn-unavailable
   color:$secondarycolor.green
 .avatar-wrapper
   display: block
   text-align: left
-  color:$primarycolor.green
+  color:$primarycolor.blue
   .avatar
     width: 56px
     height: 56px
     background: $primarycolor.gray
     border-radius: 56px
     .iconfont
-      color: $primarycolor.green
+      color: $primarycolor.blue
       font-size: 32px
 .name
   display: block
@@ -677,7 +677,7 @@ export default {
   background: $secondarycolor.gray
 .sheet-btns
   display: flex
-  color: $primarycolor.green
+  color: $primarycolor.blue
   height: 50px
   line-height: 50px
   .sheet-btn
@@ -701,7 +701,7 @@ export default {
   background-color:$secondarycolor.black
   opacity:0.3
 .Info_menu_color
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:18px
 .showViewkeySheetPosition
   height:5000px

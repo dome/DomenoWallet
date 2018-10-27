@@ -158,7 +158,7 @@ export default {
   margin:10px 10px
   height:100%
   border-radius:5px
-  color:$primarycolor.green
+  color:$primarycolor.blue
 .content_asset_image
   margin-top:5px
   margin-bottom:5px

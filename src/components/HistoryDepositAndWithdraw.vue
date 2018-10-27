@@ -244,10 +244,10 @@ const TYPE_WITHDRAW = 'withdraw'
       text-align: center
       font-size: 16px
     .menu-li.active
-      color: $primarycolor.green
-      border-bottom: 1px solid $primarycolor.green
+      color: $primarycolor.blue
+      border-bottom: 1px solid $primarycolor.blue
 .selectasset
-  color: $primarycolor.green
+  color: $primarycolor.blue
 .asset-select-code
   font-size: 16px
 .asset-select-issuer

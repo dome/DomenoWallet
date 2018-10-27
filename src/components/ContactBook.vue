@@ -185,7 +185,7 @@ export default {
 
   .bookbar {
     background: $primarycolor.red;
-    // background: $primarycolor.green
+    // background: $primarycolor.blue
     height: 48px;
     line-height: 48px;
     display: flex;

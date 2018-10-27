@@ -97,8 +97,8 @@
 }
 .picker-h-l,.picker-h-r{
   flex: 5;
-  border-top: 1px solid #21ce90;
-  border-bottom: 1px solid #21ce90;
+  border-top: 1px solid #03A9F4;
+  border-bottom: 1px solid #03A9F4;
 }
 .picker-h-m{
   flex: 2;
@@ -110,15 +110,15 @@
 }
 .picker-h-m .icons {
   font-size: 40px;
-  color:#21ce90;
+  color:#03A9F4;
 }
 /*
 .picker-helper:before {
   content: '';
   width: 45%;
   height: 38px;
-  border-top: 1px solid #21ce90;
-  border-bottom: 1px solid #21ce90;
+  border-top: 1px solid #03A9F4;
+  border-bottom: 1px solid #03A9F4;
   display: flex;
 }
 .picker-helper:after {
@@ -126,8 +126,8 @@
   margin-left: 55%;
   width: 45%;
   height: 38px;
-  border-top: 1px solid #21ce90;
-  border-bottom: 1px solid #21ce90;
+  border-top: 1px solid #03A9F4;
+  border-bottom: 1px solid #03A9F4;
   display: flex;
 }
 */

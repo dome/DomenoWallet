@@ -286,7 +286,7 @@ export default {
           border-radius: 70px
           .avatar
             font-size: 38px
-            color: $primarycolor.green
+            color: $primarycolor.blue
 .name
   margin-top: 15px
   font-size: 20px
@@ -318,7 +318,7 @@ export default {
   vertical-align: middle
   font-size: 18px
   padding-top: 5%
-  color: $primarycolor.green
+  color: $primarycolor.blue
 .myassets-total
   font-size: 14px
   color: $secondarycolor.font
@@ -343,7 +343,7 @@ export default {
 .history-amount
   text-align: right
 .history-amount.add
-  color: $primarycolor.green
+  color: $primarycolor.blue
 .history-amount.minus
   color: $primarycolor.red
 </style>

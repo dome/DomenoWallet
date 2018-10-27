@@ -375,7 +375,7 @@ export default {
     height: 40px
     background: $primarycolor.gray
     .iconfont
-      color: $primarycolor.green
+      color: $primarycolor.blue
       font-size: 20px
   .name
     font-size: 16px
@@ -397,7 +397,7 @@ export default {
       padding-left: 5px
   .icons
     text-align: right
-    color: $primarycolor.green
+    color: $primarycolor.blue
     font-size: 24px
     padding-top: 5px
     padding-right: 5px
@@ -416,11 +416,11 @@ export default {
     align-items: center
     background-color: $primarycolor.gray
     // background-color: $secondarycolor.green
-    color: $primarycolor.green
+    color: $primarycolor.blue
     padding: 0 12px
   .modify
     // border-left: 1px solid $secondarycolor.gray
-    color:$primarycolor.green
+    color:$primarycolor.blue
   .del
     background-color: $primarycolor.gray
     color:$primarycolor.red
@@ -446,7 +446,7 @@ export default {
   padding: 10px 10px
 .sheet-btns
   display: flex
-  color: $primarycolor.green
+  color: $primarycolor.blue
   height: 50px
   line-height: 50px
   .sheet-btn

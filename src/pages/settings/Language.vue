@@ -111,11 +111,11 @@ export default {
             .iconfont
               font-size: 20px
             .iconfont.icon-dot1
-              color: $primarycolor.green
+              color: $primarycolor.blue
 
 
 .iconfont_style_color
-    color:$primarycolor.green
+    color:$primarycolor.blue
     font-size:20px
 .iconfont_style
     font-size:20px

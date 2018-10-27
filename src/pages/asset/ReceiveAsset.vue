@@ -272,7 +272,7 @@ export default {
     padding-top: 5px
     padding-bottom: 5px
   .asset.label
-    color: $primarycolor.green
+    color: $primarycolor.blue
   .value
     display: block
     font-size: 14px
@@ -299,7 +299,7 @@ export default {
 //   line-height:56px
 //   font-size:16px
 //   text-align:center
-//   color:$primarycolor.green
+//   color:$primarycolor.blue
 .qrcode
   text-align: center
   padding-top:20px
@@ -307,7 +307,7 @@ export default {
 
 .receive_asset_msg
   text-align:center
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-top:8px
 
 .receive_asset_msg_one

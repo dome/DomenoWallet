@@ -281,23 +281,23 @@ export default {
   line-height: 42px
   font-size: 16px
   text-align: center
-  color: $primarycolor.green
+  color: $primarycolor.blue
 .btn-available
-  color: $primarycolor.green
+  color: $primarycolor.blue
 .btn-unavailable
-  color: $secondarycolor.green
+  color: $secondarycolor.blue
 .hidebackground
   background:none
   background-color: transparent
 .tabs
   color: $primarycolor.font
   .tab.active
-    color: $primarycolor.green
+    color: $primarycolor.blue
 .lang-tabs
   color: $primarycolor.font
   font-size: 14px
   .tab.active
-    color: $primarycolor.green
+    color: $primarycolor.blue
 .seed-span
   word-wrap:break-word
   color: $secondarycolor.font

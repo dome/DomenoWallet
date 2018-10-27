@@ -231,7 +231,7 @@ export default {
   background: $secondarycolor.gray
   opacity: 1
 .dlg-title
-  color: $primarycolor.green
+  color: $primarycolor.blue
   text-align: center
   font-size: 16px
 .confirm-title
@@ -241,7 +241,7 @@ export default {
   padding-left: .4rem
   color: $primarycolor.font
 .confirm-amount
-  color: $primarycolor.green
+  color: $primarycolor.blue
   text-align: center
   font-size: .5rem
 .confirm-memo
@@ -255,9 +255,9 @@ export default {
       color: $secondarycolor.font
     .value
       padding-left: 12px
-      color: $primarycolor.green
+      color: $primarycolor.blue
 .confirm-btns
-  color: $primarycolor.green
+  color: $primarycolor.blue
   text-align: center
   font-size: 16px
   height: 42px
@@ -293,7 +293,7 @@ export default {
       overflow: hidden
       text-overflow:ellipsis
       white-space: nowrap
-      color: $primarycolor.green
+      color: $primarycolor.blue
     .address
       font-size: 12px
       color: $secondarycolor.font
@@ -311,7 +311,7 @@ export default {
       line-height: 40px
       font-size: 32px
       text-align: center
-      color: $primarycolor.green
+      color: $primarycolor.blue
       padding: 10px 10px
     .label
       color: $secondarycolor.font
@@ -328,7 +328,7 @@ export default {
       line-height: 40px
       text-align: center
       font-size: 16px
-      color: $primarycolor.green
+      color: $primarycolor.blue
 .confirm-assets
   padding: .2rem .2rem
   .asset-card
@@ -341,9 +341,9 @@ export default {
     .asset-icon
       .iconfont
         font-size: 1rem
-        color: $primarycolor.green
+        color: $primarycolor.blue
     .asset-code
-      color: $primarycolor.green
+      color: $primarycolor.blue
     .asset-issuer
       font-size: .2rem
       color: $secondarycolor.font
@@ -351,7 +351,7 @@ export default {
       white-space: nowrap
       word-break: normal
     &.active
-      border: 1px solid $primarycolor.green
+      border: 1px solid $primarycolor.blue
 
 .tx-opts
   height: 3rem

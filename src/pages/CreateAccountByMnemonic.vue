@@ -175,13 +175,13 @@ export default {
   line-height:42px
   font-size:16px
   text-align:center
-  color:$primarycolor.green
+  color:$primarycolor.blue
 .btn-available
-  color:$primarycolor.green
+  color:$primarycolor.blue
 .btn-unavailable
-  color:$secondarycolor.green
+  color:$secondarycolor.blue
 .hint
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size: 14px
 
 </style>

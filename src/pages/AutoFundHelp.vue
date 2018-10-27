@@ -100,7 +100,7 @@ export default {
   .help-t
     font-size: 16px
     font-weight: bold
-    color: $primarycolor.green
+    color: $primarycolor.blue
   .help-c
     font-size: 14px
 </style>

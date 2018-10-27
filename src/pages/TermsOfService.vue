@@ -106,5 +106,5 @@ export default {
   line-height: 42px
   font-size: 16px
   text-align: center
-  color: $primarycolor.green
+  color: $primarycolor.blue
 </style>

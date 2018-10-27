@@ -181,7 +181,7 @@ export default {
       line-height: 40px
       font-size: 32px
       text-align: center
-      color: $primarycolor.green
+      color: $primarycolor.blue
       padding: 10px 10px
     .label
       color: $secondarycolor.font
@@ -198,7 +198,7 @@ export default {
       line-height: 40px
       text-align: center
       font-size: 16px
-      color: $primarycolor.green
+      color: $primarycolor.blue
 
 </style>
 

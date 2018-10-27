@@ -485,11 +485,11 @@
   // text-align:center
 
 .itemstyleo
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:5px
 .itemstylet
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   text-align:left
 
@@ -563,11 +563,11 @@
   word-break:break-all
 .itemtype_change_trust
   font-size:16px
-  color:$primarycolor.green
+  color:$primarycolor.blue
   text-align:center
 .chitemdatetime
   font-size:16px
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-left:8px
 .chitemdatetimecontent
   font-size:16px
@@ -579,7 +579,7 @@
   color:$secondarycolor.font
   font-size:16px
 .chitemassetissurcontent
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:8px
 .chitemassetissur
@@ -589,7 +589,7 @@
   // text-align:center
   word-break:break-all
 .chitemlimit
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-left:8px
   font-size:16px
 .chitemlimitcontent
@@ -597,7 +597,7 @@
   font-size:16px
   padding-left:8px
 .chitemassetcode
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-left:8px
   font-size:16px
   // text-align:center
@@ -606,7 +606,7 @@
   padding-left:8px
   font-size:16px
 .chitemtx
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-left:8px
   font-size:16px
 .chitemtx_content
@@ -632,7 +632,7 @@
   text-align:center
   color:$secondarycolor.font
 .setdatetime
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:8px
 .setdatetime_content
@@ -641,7 +641,7 @@
   padding-left:8px
 .setinflation
   font-size:16px
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-left:8px
 .setinflation_content
   font-size:16px
@@ -650,7 +650,7 @@
   word-break:break-all
 .settx
   font-size:16px
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-left:8px
 .settx_content
   font-size:16px
@@ -659,7 +659,7 @@
   word-break:break-all
   padding-bottom:8px
 .setmesstyle
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   text-align:center
   // padding:5px 0px 5px 8px
@@ -706,7 +706,7 @@
   font-size:16px
   text-align:center
 .createaccountbalance
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-left:8px
   font-size:16px
 .createaccountbalancemsg
@@ -727,13 +727,13 @@
   color:$secondarycolor.font
 
 .langstyle
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   text-align:center
   // padding:5px 0px 5px 8px
   // border:1px solid $primarycolor.gray
 .createaccount_datetime
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:8px
 .createaccount_datetime_content
@@ -742,7 +742,7 @@
   padding-left:8px
   word-break:break-all
 .createaccount_tx
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:8px
 .createaccount_tx_content
@@ -763,9 +763,9 @@
 .operationtypestyle_payment
   text-align:center
   font-size:16px
-  color:$primarycolor.green
+  color:$primarycolor.blue
 .datetime_payment
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:5px
 .datetimevalue_payment
@@ -773,7 +773,7 @@
   font-size:16px
   padding-left:5px
 .ptostyle_payment
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:5px
 .ptostyleissuer_payment
@@ -782,7 +782,7 @@
   padding-left:5px
   word-break:break-all
 .amount_payment
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:5px
 .pamountstyle_add
@@ -794,7 +794,7 @@
   padding-left:5px
   font-size:16px
 .assetcodestyle_payment
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-left:5px
   font-size:16px
 .assetcodevaluestyle_payment
@@ -804,7 +804,7 @@
 .txstyle_payment
   font-size:16px
   padding-left:5px
-  color:$primarycolor.green
+  color:$primarycolor.blue
 .txcontentstyle_payment
   font-size:16px
   padding-left:5px
@@ -812,11 +812,11 @@
   color:$primarycolor.font
   word-break:break-all
 .memostyle_payment
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:5px
 .memostyle_payment
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:5px
 .memocontentstyle_payment
@@ -836,10 +836,10 @@
   text-align:center
 .manage_langstyle
   font-size:16px
-  color:$primarycolor.green
+  color:$primarycolor.blue
   text-align:center
 .manage_datetime
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:8px
 .manage_datetimecontent
@@ -847,7 +847,7 @@
   color:$primarycolor.font
   padding-left:8px
 .manage_price
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-left:8px
   font-size:16px
 .manage_pricecontent
@@ -855,7 +855,7 @@
   font-size:16px
   padding-left:8px
 .manage_amount
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-left:8px
   font-size:16px
 .manage_amountvalue
@@ -876,7 +876,7 @@
   padding-left:8px
 .manage_itemassetcode
   font-size:16px
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-left:8px
 .manage_totalbuy
   font-size:16px
@@ -884,7 +884,7 @@
   padding-left:8px
 .manage_tx
   font-size:16px
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-left:8px
 .manage_tx_content
   font-size:16px
@@ -898,11 +898,11 @@
   font-size:16px
   text-align:center
 .allow_trustlangstyle
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   text-align:center
 .allow_trust_datetime
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:5px
 .allow_trust_datetime_content
@@ -911,7 +911,7 @@
   padding-left:5px
   word-break:break-all
 .allow_trust_assetissuer
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:5px
 .allow_trust_assetissuercontent
@@ -920,7 +920,7 @@
   padding-left:5px
   word-break:break-all
 .allow_trust_assetcode
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:5px
 .allow_trust_assetcode_content
@@ -929,7 +929,7 @@
   padding-left:5px
   word-break:break-all
 .allow_trust_tx
-  color:$primarycolor.green
+  color:$primarycolor.blue
   font-size:16px
   padding-left:5px
 .allow_trust_tx_content

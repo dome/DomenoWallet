@@ -245,7 +245,7 @@ export default {
   display flex
   justify-content center
   align-items center
-  color: $primarycolor.green
+  color: $primarycolor.blue
   .iconfont
     font-size: .7rem
 .page
@@ -272,7 +272,7 @@ export default {
         height: 36px
 
 .horizon_pinstyle
-  background:$primarycolor.green
+  background:$primarycolor.blue
   border-radius:5px
   text-align:center
 .horizon_timeusestyle

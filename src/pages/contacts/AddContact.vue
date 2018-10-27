@@ -269,7 +269,7 @@ export default {
   width: 100%;
   background: transparent;
 .add
-  background-color: $primarycolor.green !important
+  background-color: $primarycolor.blue !important
 .hidebackground
   background none
   background-color: transparent

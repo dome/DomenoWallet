@@ -235,7 +235,7 @@ import { getXdrResultCode } from '@/api/xdr'
     .b-row.depth
       text-align: right
       & > a
-        color: $primarycolor.green
+        color: $primarycolor.blue
 
   .working
     display: block
@@ -272,7 +272,7 @@ import { getXdrResultCode } from '@/api/xdr'
     .pair-icon
       flex: 1
       .material-icons
-        //color: $primarycolor.green
+        //color: $primarycolor.blue
         font-size: 20px
         padding-top: 8px
     .pair-to

@@ -202,7 +202,7 @@ export default {
         width: 100%
         height: 36px
 .fed
-  color: $primarycolor.green
+  color: $primarycolor.blue
 .cancel_fed
   background: $primarycolor.red
   color: $primarycolor.font
@@ -219,7 +219,7 @@ export default {
 .btns
   font-size: 16px
 .dlg-green
-  color: $primarycolor.green
+  color: $primarycolor.blue
 .dlg-content
   background: $secondarycolor.gray
 </style>

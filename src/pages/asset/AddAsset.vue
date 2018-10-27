@@ -485,26 +485,26 @@ export default {
     .material-icons
       font-size: 24px
     .add
-      color: $primarycolor.green
+      color: $primarycolor.blue
     .done
-      color: $primarycolor.green
+      color: $primarycolor.blue
 
 .application
   .theme--light.btn.btn--disabled
     .icon
-      color: $primarycolor.green !important
+      color: $primarycolor.blue !important
 .menurow
   margin-bottom: 5px
 .menu
   padding-left: 5px
   padding-right: 5px
   &.active
-    border-bottom: 2px solid $primarycolor.green
+    border-bottom: 2px solid $primarycolor.blue
 .btn_trust
-  background-color: $primarycolor.green !important
+  background-color: $primarycolor.blue !important
 
 .addallasset
-  color:$primarycolor.green
+  color:$primarycolor.blue
   float:right
   padding-right:5px
 </style>

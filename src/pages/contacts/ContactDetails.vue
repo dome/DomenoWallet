@@ -170,7 +170,7 @@ export default {
 
         .avatar {
           font-size: 1.2em;
-          color: #21ce90;
+          color: #03A9F4;
         }
       }
 
@@ -206,12 +206,12 @@ export default {
   padding: 8px 8px
 
 .send {
-  background-color: #21ce90 !important;
+  background-color: #03A9F4 !important;
 
 }
 
 .moddel {
-  color: #21ce90 !important;
+  color: #03A9F4 !important;
 }
 
 .contactdetails_sendposition
@@ -225,12 +225,12 @@ export default {
 
 .contactdetails_addresslabel
   padding-left:5px
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-top:0px
   height:10px
 .contactdetails_memolabel
   padding-left:5px
-  color:$primarycolor.green
+  color:$primarycolor.blue
   padding-top:0px
 
 .contactdetails_addresslabelvalue
@@ -246,7 +246,7 @@ export default {
   position:relative
   padding-left:13px
   padding-top:20px
-  color:$primarycolor.green
+  color:$primarycolor.blue
 .contactdetails_contactnamevalue
   position:absolute
   margin-left:12px
@@ -255,7 +255,7 @@ export default {
 
 .contactdetails_stellaraddressbarcode
   text-align:center
-  color:$primarycolor.green
+  color:$primarycolor.blue
   margin-top:40px
   padding-bottom:40px
 .contactdetails_stellaraddressbarcode_text

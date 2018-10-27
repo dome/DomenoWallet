@@ -267,7 +267,7 @@ export default {
         },
         koption() {
             return {
-                color:['#21ce90'],
+                color:['#03A9F4'],
                 xAxis: {
                     show: false,
                     type: 'category',
@@ -376,7 +376,7 @@ export default {
 .rate
   vertical-align: middle
   &.up
-    color: $primarycolor.green
+    color: $primarycolor.blue
   &.down
     color: $primarycolor.red
 .price

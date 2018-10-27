@@ -180,7 +180,7 @@ export default {
   margin-top: -20px
   .inflation
     .suggest
-      color: $primarycolor.green
+      color: $primarycolor.blue
 
 
 .btn-group

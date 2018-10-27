@@ -169,6 +169,6 @@ export default {
 .footer
   background: transparent;
 .modify
-  background-color #21ce90  !important
+  background-color #03A9F4  !important
 </style>
 

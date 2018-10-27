@@ -189,7 +189,7 @@ export default {
           white-space: nowrap
         .avatar
           font-size: 1.2em
-          color: #21ce90
+          color: #03A9F4
         .myaddress-address
           font-weight: lighter
           font-size: 14px
@@ -211,7 +211,7 @@ export default {
     align-items: center
     background-color: $primarycolor.gray
     // background-color: $secondarycolor.green
-    color: $primarycolor.green
+    color: $primarycolor.blue
     padding: 0 12px
   .receive
     border-left: 1px solid $primarycolor.gray
